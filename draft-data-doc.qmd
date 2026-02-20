@@ -1,3 +1,29 @@
 ---
 title: "Draft: Data Documentation"
 ---
+
+-   Goal is to give evidence to my boss that shark-infested storms are very rare, if not impossible.
+-   The data I found is from the NOAA data base. I extracted tornado data from Los Angeles (the setting of Sharknado), Florida (tropical storms are abundant), South Carolina (another more tropical place), and Oklahoma (the tornado capitol of the nation).
+-   All the data sets are the same format. They were collected from the same data base NOAA.gov.
+-   These are the important aspects of the data sets collected
+    -   County Location
+    -   Begin Location
+    -   Begin Date
+    -   Begin Time
+    -   Tornado F Scale
+    -   Direct Deaths
+    -   Direct Injuries
+    -   Property Damage
+    -   Tornado Length and Width
+    -   End Location
+    -   End Date
+    -   End Time
+-   Measurements are take by the MWS Storm Survey, Spotters, State officials and the Public
+
+Florida tornado data: @StormEventsDatabase
+
+South Carolina tornado data: @StormEventsDatabasea
+
+Oklahoma tornado data: @StormEventsDatabaseb
+
+Los Angeles tornado data: @StormEventsDatabasec
