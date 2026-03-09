@@ -27,3 +27,13 @@ South Carolina tornado data: @StormEventsDatabasea
 Oklahoma tornado data: @StormEventsDatabaseb
 
 Los Angeles tornado data: @StormEventsDatabasec
+
+-   For a tornado to lift up a Shark I compared the weight of a Great White Shark to a normal cars weight
+    -   Great White Shark Weight
+        -   NOAA Says up to 4,500 lbs
+    -   Car weight
+        -   According to autoinsurance.com a Car SUV is 3,986 lbs
+        -   According to autoinsurance.com a Truck SUV is 4,578 lbs
+    -   Great White Sharks and Car SUVs and Truck SUVs weigh relatively around the same weight.
+-   oteroadjusting.com says EF3 tornadoes are likely to toss cars and trucks and EF5 can "almost certainly lift and destroy cars."
+-   I will use this as a reference to say that EF3-EF5 tornadoes will be able to lift a great white shark.
