@@ -54,7 +54,27 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -229,54 +249,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>To see if a Sharknado can actually happen first we need to ___ how a greta white shark could be able to be picked up by a tornado. We will be looking at the weight of a great white shark first and compare it to other objects that can and have been picked up by tornados, cars. Next we need to figure out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornados from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 4 different places in the United States. These places are going to be Florida, South Carolina, Oklahoma, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and a coastal state. South Carolina is also another place that can be hit by tropical storms and is another coastal state. Oklahoma is not a coastal state but it is the tornado capital of the United States so we will just be looking at the amount of tornados that fit our criteria. Los Angeles was picked because that is the setting of the Sharknado movie.</p>
+<p>To see if a Sharknado can actually happen first we need to ___ how a great white shark could be able to be picked up by a tornado. We will be looking at the weight of a great white shark first and compare it to other objects that can and have been picked up by tornadoes, cars. Next we need to figure out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornados from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 4 different places in the United States. These places are going to be Florida, South Carolina, Oklahoma, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and a coastal state. South Carolina is also another place that can be hit by tropical storms and is another coastal state. Oklahoma is not a coastal state but it is the tornado capital of the United States so we will just be looking at the amount of tornadoes that fit our criteria. Los Angeles was picked because that is the setting of the Sharknado movie.</p>
+<p>Sharks and cars weigh relatively the same in pounds (lbs). The average great white shark weighs around 4,500 lbs according to NOAA. A car SUV weighs around 3,986 lbs while a truck SUV costs around 4,578 lbs according to autoinsurance.com. This means that your average great white shark weighs more than a big car and as much as a truck SUV. We will use a car as the base to find what EF scale level will be used to lift a great white shark out of water.</p>
+<p>The EF scale is made up of 6 different ratings of tornado based on 3 second wind speed in mph. An EF0 tornado is has the lowest wind speed ranging between 65-85 mph, EF1 has winds speeds between 86-110 mph, EF2 has wind speeds between 111-135 mph, EF3 has wind speeds of 136-165 mph, EF4 has speeds between 166-200 mph and EF5 has wind speed that are over 200 mph. According to oteroadjusting.com, an EF3 tornado is likely to toss cars and trucks, while an EF4 is very likely to toss cars many feet, and an EF5 tornado is almost certain to lift and destroy cars. Since we are comparing a great white shark to the size and weight of a car SUV and a truck SUV that gives us a good comparison to be able to put a shark in the place of those cars in the EF scales ability to lift cars. We are going to look at tornadoes that are only EF3 to EF5 because those are the strength of tornadoes that are able to lift a car.</p>
+<p>Lets take a look at some tornado data from a tropical place that gets some pretty bad storms regularly in Florida. Florida is also a place that is on the coast so it would be able to pick up a shark in the event of a strong enough tornado.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.6
-✔ forcats   1.0.1     ✔ stringr   1.6.0
-✔ ggplot2   4.0.1     ✔ tibble    3.3.1
-✔ lubridate 1.9.4     ✔ tidyr     1.3.2
-✔ purrr     1.2.1     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tornado_fl <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_data_florida.csv"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tornado_sc <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_SC.csv"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tornado_ok <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_oklahoma.csv"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>tornado_la <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_LA.csv"</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>tornado_fl<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_fl<span class="sc">$</span>TOR_F_SCALE)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>tornado_fl <span class="ot">&lt;-</span> tornado_fl<span class="sc">|&gt;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)<span class="sc">|&gt;</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    TOR_F_SCALE <span class="sc">&gt;</span> <span class="dv">2</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>tornado_fl <span class="sc">%&gt;%</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tornado_fl <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_data_florida.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>tornado_fl<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_fl<span class="sc">$</span>TOR_F_SCALE)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>tornado_fl <span class="ot">&lt;-</span> tornado_fl<span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)<span class="sc">|&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    TOR_F_SCALE <span class="sc">&gt;</span> <span class="dv">2</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>tornado_fl <span class="sc">|&gt;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="wncagcnels" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#wncagcnels table {
+<div id="fqoraufjfd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fqoraufjfd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#wncagcnels thead, #wncagcnels tbody, #wncagcnels tfoot, #wncagcnels tr, #wncagcnels td, #wncagcnels th {
+#fqoraufjfd thead, #fqoraufjfd tbody, #fqoraufjfd tfoot, #fqoraufjfd tr, #fqoraufjfd td, #fqoraufjfd th {
   border-style: none;
 }
 
-#wncagcnels p {
+#fqoraufjfd p {
   margin: 0;
   padding: 0;
 }
 
-#wncagcnels .gt_table {
+#fqoraufjfd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -302,12 +310,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#wncagcnels .gt_caption {
+#fqoraufjfd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#wncagcnels .gt_title {
+#fqoraufjfd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -319,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#wncagcnels .gt_subtitle {
+#fqoraufjfd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -331,7 +339,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#wncagcnels .gt_heading {
+#fqoraufjfd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -343,13 +351,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wncagcnels .gt_bottom_border {
+#fqoraufjfd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wncagcnels .gt_col_headings {
+#fqoraufjfd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -364,7 +372,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wncagcnels .gt_col_heading {
+#fqoraufjfd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -384,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wncagcnels .gt_column_spanner_outer {
+#fqoraufjfd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -396,15 +404,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#wncagcnels .gt_column_spanner_outer:first-child {
+#fqoraufjfd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wncagcnels .gt_column_spanner_outer:last-child {
+#fqoraufjfd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wncagcnels .gt_column_spanner {
+#fqoraufjfd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -416,11 +424,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#wncagcnels .gt_spanner_row {
+#fqoraufjfd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#wncagcnels .gt_group_heading {
+#fqoraufjfd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -446,7 +454,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#wncagcnels .gt_empty_group_heading {
+#fqoraufjfd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -461,15 +469,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#wncagcnels .gt_from_md > :first-child {
+#fqoraufjfd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#wncagcnels .gt_from_md > :last-child {
+#fqoraufjfd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#wncagcnels .gt_row {
+#fqoraufjfd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -488,7 +496,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#wncagcnels .gt_stub {
+#fqoraufjfd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -501,7 +509,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wncagcnels .gt_stub_row_group {
+#fqoraufjfd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -515,15 +523,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#wncagcnels .gt_row_group_first td {
+#fqoraufjfd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#wncagcnels .gt_row_group_first th {
+#fqoraufjfd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#wncagcnels .gt_summary_row {
+#fqoraufjfd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -533,16 +541,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wncagcnels .gt_first_summary_row {
+#fqoraufjfd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#wncagcnels .gt_first_summary_row.thick {
+#fqoraufjfd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#wncagcnels .gt_last_summary_row {
+#fqoraufjfd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -552,7 +560,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wncagcnels .gt_grand_summary_row {
+#fqoraufjfd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -562,7 +570,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wncagcnels .gt_first_grand_summary_row {
+#fqoraufjfd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -572,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#wncagcnels .gt_last_grand_summary_row_top {
+#fqoraufjfd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -582,11 +590,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wncagcnels .gt_striped {
+#fqoraufjfd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wncagcnels .gt_table_body {
+#fqoraufjfd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -595,7 +603,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#wncagcnels .gt_footnotes {
+#fqoraufjfd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -609,7 +617,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wncagcnels .gt_footnote {
+#fqoraufjfd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -618,7 +626,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wncagcnels .gt_sourcenotes {
+#fqoraufjfd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -632,7 +640,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#wncagcnels .gt_sourcenote {
+#fqoraufjfd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -640,72 +648,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#wncagcnels .gt_left {
+#fqoraufjfd .gt_left {
   text-align: left;
 }
 
-#wncagcnels .gt_center {
+#fqoraufjfd .gt_center {
   text-align: center;
 }
 
-#wncagcnels .gt_right {
+#fqoraufjfd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wncagcnels .gt_font_normal {
+#fqoraufjfd .gt_font_normal {
   font-weight: normal;
 }
 
-#wncagcnels .gt_font_bold {
+#fqoraufjfd .gt_font_bold {
   font-weight: bold;
 }
 
-#wncagcnels .gt_font_italic {
+#fqoraufjfd .gt_font_italic {
   font-style: italic;
 }
 
-#wncagcnels .gt_super {
+#fqoraufjfd .gt_super {
   font-size: 65%;
 }
 
-#wncagcnels .gt_footnote_marks {
+#fqoraufjfd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#wncagcnels .gt_asterisk {
+#fqoraufjfd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#wncagcnels .gt_indent_1 {
+#fqoraufjfd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#wncagcnels .gt_indent_2 {
+#fqoraufjfd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#wncagcnels .gt_indent_3 {
+#fqoraufjfd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#wncagcnels .gt_indent_4 {
+#fqoraufjfd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#wncagcnels .gt_indent_5 {
+#fqoraufjfd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#wncagcnels .katex-display {
+#fqoraufjfd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#wncagcnels div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fqoraufjfd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -755,26 +763,2246 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tornado_sc<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_sc<span class="sc">$</span>TOR_F_SCALE)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tornado_sc <span class="ot">&lt;-</span> tornado_sc<span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)<span class="sc">|&gt;</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    TOR_F_SCALE <span class="sc">&gt;</span> <span class="dv">2</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>tornado_ok<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_ok<span class="sc">$</span>TOR_F_SCALE)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>tornado_ok <span class="ot">&lt;-</span> tornado_ok<span class="sc">|&gt;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)<span class="sc">|&gt;</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    TOR_F_SCALE <span class="sc">&gt;</span> <span class="dv">2</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>tornado_la<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_la<span class="sc">$</span>TOR_F_SCALE)</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>tornado_la <span class="ot">&lt;-</span> tornado_la<span class="sc">|&gt;</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>This table shows that there have been only 5 EF3 tornadoes in the last 10 years in the state of Florida. Because of an EF3 tornado being the highest EF rating and it being “likely to toss a car or truck” we can believe that a tornado in Florida is pretty unlikely to pick up the average great white shark. Having only five EF3 tornadoes in the past 10 years seems like the chances of a Sharknado happening look pretty slim.</p>
+<p>Next, let’s look at a place that has similar properties to Florida in having tropical storms frequently and being a coastal state, South Carolina. This gives us another place to compare to that is in an area where great white sharks are present.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>tornado_sc <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_SC.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>tornado_sc<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_sc<span class="sc">$</span>TOR_F_SCALE)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>tornado_sc <span class="ot">&lt;-</span> tornado_sc<span class="sc">|&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)<span class="sc">|&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    TOR_F_SCALE <span class="sc">&gt;</span> <span class="dv">2</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>tornado_sc <span class="sc">|&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="dtubflqjbq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dtubflqjbq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dtubflqjbq thead, #dtubflqjbq tbody, #dtubflqjbq tfoot, #dtubflqjbq tr, #dtubflqjbq td, #dtubflqjbq th {
+  border-style: none;
+}
+
+#dtubflqjbq p {
+  margin: 0;
+  padding: 0;
+}
+
+#dtubflqjbq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dtubflqjbq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dtubflqjbq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dtubflqjbq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dtubflqjbq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dtubflqjbq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dtubflqjbq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dtubflqjbq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dtubflqjbq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dtubflqjbq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dtubflqjbq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dtubflqjbq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dtubflqjbq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dtubflqjbq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dtubflqjbq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dtubflqjbq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dtubflqjbq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dtubflqjbq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dtubflqjbq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dtubflqjbq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dtubflqjbq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dtubflqjbq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dtubflqjbq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dtubflqjbq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dtubflqjbq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dtubflqjbq .gt_left {
+  text-align: left;
+}
+
+#dtubflqjbq .gt_center {
+  text-align: center;
+}
+
+#dtubflqjbq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dtubflqjbq .gt_font_normal {
+  font-weight: normal;
+}
+
+#dtubflqjbq .gt_font_bold {
+  font-weight: bold;
+}
+
+#dtubflqjbq .gt_font_italic {
+  font-style: italic;
+}
+
+#dtubflqjbq .gt_super {
+  font-size: 65%;
+}
+
+#dtubflqjbq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dtubflqjbq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dtubflqjbq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dtubflqjbq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dtubflqjbq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dtubflqjbq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dtubflqjbq .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#dtubflqjbq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dtubflqjbq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="STATE_ABBR" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">STATE_ABBR</th>
+<th id="EVENT_TYPE" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">EVENT_TYPE</th>
+<th id="TOR_F_SCALE" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">TOR_F_SCALE</th>
+<th id="DAMAGE_PROPERTY_NUM" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">DAMAGE_PROPERTY_NUM</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">100000000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">SC</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Looking at the table above South Carolina is similar to Florida. There are a lot of EF3 tornadoes with one EF4 tornado. But it’s in the same boat as Florida, there has been a very limited number of powerful tornadoes over the past 10 years for South Carolina. There has been nine EF3 tornadoes and one EF4 tornado over that span. The surprising thing is that the one EF4 and six of the EF3 tornadoes all happened on the same day. But the possibility of a sharknado is very low because these tornadoes all happened away from the coast. The EF4 happened in the Estill and Hampton Counties.</p>
+<p>Next let’s look at a place that has a ton of tornadoes so we can get a good comparison of the strength of tornadoes in a very tornado heavy area in Oklahoma.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tornado_ok <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_oklahoma.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tornado_ok<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_ok<span class="sc">$</span>TOR_F_SCALE)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>tornado_ok <span class="ot">&lt;-</span> tornado_ok<span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)<span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    TOR_F_SCALE <span class="sc">&gt;</span> <span class="dv">2</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  )<span class="sc">|&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(TOR_F_SCALE))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>tornado_ok_10 <span class="ot">&lt;-</span> <span class="fu">head</span>(tornado_ok, <span class="at">n=</span> <span class="dv">10</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>tornado_ok_10 <span class="sc">|&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="tbahtmqewk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tbahtmqewk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tbahtmqewk thead, #tbahtmqewk tbody, #tbahtmqewk tfoot, #tbahtmqewk tr, #tbahtmqewk td, #tbahtmqewk th {
+  border-style: none;
+}
+
+#tbahtmqewk p {
+  margin: 0;
+  padding: 0;
+}
+
+#tbahtmqewk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tbahtmqewk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tbahtmqewk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tbahtmqewk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tbahtmqewk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tbahtmqewk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tbahtmqewk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tbahtmqewk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tbahtmqewk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tbahtmqewk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tbahtmqewk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tbahtmqewk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tbahtmqewk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tbahtmqewk .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tbahtmqewk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tbahtmqewk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tbahtmqewk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tbahtmqewk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tbahtmqewk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tbahtmqewk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tbahtmqewk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tbahtmqewk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tbahtmqewk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tbahtmqewk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tbahtmqewk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tbahtmqewk .gt_left {
+  text-align: left;
+}
+
+#tbahtmqewk .gt_center {
+  text-align: center;
+}
+
+#tbahtmqewk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tbahtmqewk .gt_font_normal {
+  font-weight: normal;
+}
+
+#tbahtmqewk .gt_font_bold {
+  font-weight: bold;
+}
+
+#tbahtmqewk .gt_font_italic {
+  font-style: italic;
+}
+
+#tbahtmqewk .gt_super {
+  font-size: 65%;
+}
+
+#tbahtmqewk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tbahtmqewk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tbahtmqewk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tbahtmqewk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tbahtmqewk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tbahtmqewk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tbahtmqewk .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#tbahtmqewk .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#tbahtmqewk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="STATE_ABBR" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">STATE_ABBR</th>
+<th id="EVENT_TYPE" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">EVENT_TYPE</th>
+<th id="TOR_F_SCALE" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">TOR_F_SCALE</th>
+<th id="DAMAGE_PROPERTY_NUM" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">DAMAGE_PROPERTY_NUM</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">5</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">5</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">2000000000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">4</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">1000000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">3</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>From this table we are only looking at the ten highest EF scale tornadoes to hit Oklahoma because there are 27 tornadoes in the EF3 to EF5 rating. The ten highest tornadoes in Oklahoma over the last 10 years have been two EF5 tornadoes, seven EF4 tornadoes, and one EF3 tornado. This tells us that EF5s are a very rare occurrence even for the tornado capital of the country.</p>
+<p>To make a real connection to the Sharknado movie we should look at the actual setting of the movie which is Los Angeles, California. Looking at tornadoes in LA to give us a real idea of the possible strength of some tornadoes that have hit Los Angeles over the past ten years.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tornado_la <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tornado_LA.csv"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tornado_la<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tornado_la<span class="sc">$</span>TOR_F_SCALE)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>tornado_la <span class="ot">&lt;-</span> tornado_la<span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>tornado_la <span class="sc">|&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="cwsrrrgrac" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cwsrrrgrac table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#cwsrrrgrac thead, #cwsrrrgrac tbody, #cwsrrrgrac tfoot, #cwsrrrgrac tr, #cwsrrrgrac td, #cwsrrrgrac th {
+  border-style: none;
+}
+
+#cwsrrrgrac p {
+  margin: 0;
+  padding: 0;
+}
+
+#cwsrrrgrac .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#cwsrrrgrac .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cwsrrrgrac .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cwsrrrgrac .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#cwsrrrgrac .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cwsrrrgrac .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#cwsrrrgrac .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#cwsrrrgrac .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#cwsrrrgrac .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#cwsrrrgrac .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#cwsrrrgrac .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cwsrrrgrac .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#cwsrrrgrac .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#cwsrrrgrac .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#cwsrrrgrac .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cwsrrrgrac .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#cwsrrrgrac .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#cwsrrrgrac .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#cwsrrrgrac .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cwsrrrgrac .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#cwsrrrgrac .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cwsrrrgrac .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#cwsrrrgrac .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cwsrrrgrac .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cwsrrrgrac .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cwsrrrgrac .gt_left {
+  text-align: left;
+}
+
+#cwsrrrgrac .gt_center {
+  text-align: center;
+}
+
+#cwsrrrgrac .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cwsrrrgrac .gt_font_normal {
+  font-weight: normal;
+}
+
+#cwsrrrgrac .gt_font_bold {
+  font-weight: bold;
+}
+
+#cwsrrrgrac .gt_font_italic {
+  font-style: italic;
+}
+
+#cwsrrrgrac .gt_super {
+  font-size: 65%;
+}
+
+#cwsrrrgrac .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#cwsrrrgrac .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#cwsrrrgrac .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#cwsrrrgrac .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#cwsrrrgrac .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#cwsrrrgrac .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#cwsrrrgrac .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#cwsrrrgrac .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#cwsrrrgrac div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="STATE_ABBR" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">STATE_ABBR</th>
+<th id="EVENT_TYPE" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">EVENT_TYPE</th>
+<th id="TOR_F_SCALE" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">TOR_F_SCALE</th>
+<th id="DAMAGE_PROPERTY_NUM" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">DAMAGE_PROPERTY_NUM</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">CA</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">0</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">CA</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">0</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">CA</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">0</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">CA</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">CA</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">0</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">CA</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">0</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">CA</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">0</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Looking at the table above we can see all of the tornado data over the last ten years in Los Angeles. As you can see there have been only EF0 and EF1 tornadoes to hit Los Angeles over this span of time. By comparing the levels of EF ratings specified before (needing between EF3 - EF5), we can see there is not really a possibility of getting a tornado with wind speeds strong enough to pick up a shark to create a Sharknado. From https://science.howstuffworks.com/, they say the mph of wind speed needed to lift a shark off the ground is about 200 mph. The wind speed of an EF0 tornado is between 65 - 85 mph while an EF1 tornado has wind speeds between 86 - 110 mph. This shows us that we are barely able to get to half the wind speed of the speed needed to pick a shark up off the ground in Los Angeles.</p>
+<p>Lets compare all of the tornadoes for each location we chose (Florida, South Carolina, Oklahoma, Los Angeles) with an EF scale rating of EF3 to EF5 and compare to see which places have the best chance to start a Sharknado by looking at a stacked bar chart. Note that Los Angeles only has EF0 and EF1 tornadoes so we will use those only in this chart.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>all_tornado <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  tornado_fl,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  tornado_sc,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  tornado_ok_10,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  tornado_la</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(all_tornado, <span class="fu">aes</span>(<span class="at">x =</span> STATE_ABBR, <span class="at">fill =</span> <span class="fu">factor</span>(TOR_F_SCALE))) <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()<span class="sc">+</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_discrete</span>(</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">name =</span> <span class="st">"Tornado Strength"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"EF0"</span>,<span class="st">"EF1"</span>,<span class="st">"EF3"</span>,<span class="st">"EF4"</span>,<span class="st">"EF5"</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>,<span class="at">by =</span> <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="draft-results_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This graph allows us to look at the strength of each locations tornadoes on the EF scale compared to each other. According to <a href="https://science.howstuffworks.com/">science.howstuffworks.com/</a>, the wind speed needed to lift a shark off the ground is 200 mph. An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF5 tornado is only strong enough to lift a shark off the ground. As we can see there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that have been strong enough to be able to pick up a shark but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK there is Shark Adventure which is home to ten of the “most dangerous sharks known to man”. These sharks are bull sharks. Jenks, OK is in Tulsa County, so let’s look at some tornadoes over the last 10 years for Tulsa County, Oklahoma.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tulsa <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"tulsa_ok.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>tulsa<span class="sc">$</span>TOR_F_SCALE <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"[A-Za-z]"</span>, <span class="st">""</span>, tulsa<span class="sc">$</span>TOR_F_SCALE)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>tulsa <span class="ot">&lt;-</span> tulsa<span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)<span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(TOR_F_SCALE))</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>tulsa <span class="ot">&lt;-</span> <span class="fu">head</span>(tulsa, <span class="at">n=</span> <span class="dv">10</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>tulsa <span class="sc">|&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fqxkhgivnn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fqxkhgivnn table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fqxkhgivnn thead, #fqxkhgivnn tbody, #fqxkhgivnn tfoot, #fqxkhgivnn tr, #fqxkhgivnn td, #fqxkhgivnn th {
+  border-style: none;
+}
+
+#fqxkhgivnn p {
+  margin: 0;
+  padding: 0;
+}
+
+#fqxkhgivnn .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#fqxkhgivnn .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fqxkhgivnn .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fqxkhgivnn .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fqxkhgivnn .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fqxkhgivnn .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fqxkhgivnn .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fqxkhgivnn .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fqxkhgivnn .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#fqxkhgivnn .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#fqxkhgivnn .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fqxkhgivnn .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fqxkhgivnn .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fqxkhgivnn .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fqxkhgivnn .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fqxkhgivnn .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fqxkhgivnn .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fqxkhgivnn .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#fqxkhgivnn .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fqxkhgivnn .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fqxkhgivnn .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fqxkhgivnn .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fqxkhgivnn .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fqxkhgivnn .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fqxkhgivnn .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fqxkhgivnn .gt_left {
+  text-align: left;
+}
+
+#fqxkhgivnn .gt_center {
+  text-align: center;
+}
+
+#fqxkhgivnn .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fqxkhgivnn .gt_font_normal {
+  font-weight: normal;
+}
+
+#fqxkhgivnn .gt_font_bold {
+  font-weight: bold;
+}
+
+#fqxkhgivnn .gt_font_italic {
+  font-style: italic;
+}
+
+#fqxkhgivnn .gt_super {
+  font-size: 65%;
+}
+
+#fqxkhgivnn .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#fqxkhgivnn .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fqxkhgivnn .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fqxkhgivnn .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fqxkhgivnn .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fqxkhgivnn .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fqxkhgivnn .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#fqxkhgivnn .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#fqxkhgivnn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="STATE_ABBR" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">STATE_ABBR</th>
+<th id="EVENT_TYPE" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">EVENT_TYPE</th>
+<th id="TOR_F_SCALE" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">TOR_F_SCALE</th>
+<th id="DAMAGE_PROPERTY_NUM" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">DAMAGE_PROPERTY_NUM</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">2</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">2000000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">2</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">50000000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">150000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">100000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">10000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">200000</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">125000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">250000</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="STATE_ABBR">OK</td>
+<td class="gt_row gt_left" headers="EVENT_TYPE">Tornado</td>
+<td class="gt_row gt_right" headers="TOR_F_SCALE">1</td>
+<td class="gt_row gt_right" headers="DAMAGE_PROPERTY_NUM">10000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Looking at the tornadoes that have gone through Tulsa County Oklahoma we can see that the tornadoes don’t reach EF3 or higher at all. But Bull Sharks only weigh around 500 lbs. This means that they are much easier for a tornado to lift up than a great white shark. According to <a href="https://www.oreateai.com/" class="uri">https://www.oreateai.com/</a>, an EF2 tornado has the strength to slightly move houses off its foundations and destroy mobile homes. If an EF2 tornado went through the Oklahoma Aquarium in Jenks and destroyed the aquarium it could potentially pick up sharks from the “most dangerous sharks known to man” exhibit to create a real life Sharknado. Thinking of this logic this could also apply to a lot of other aquariums throughout the country. But the chances of this happening is relatively low. The last time a tornado hit an aquarium was in 2024 when an EF1 tornado went through the Pittsburgh Zoo &amp; Aquarium. This only resulted in some damage to the property and some trees to get knocked over. Thinking about the possibility of a Sharknado is pretty slim when there is record of a tornado that went through an aquarium there was still not a chance.</p>
+<p>References</p>
+<p><span class="citation" data-cites="StormEventsDatabase"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabase" role="doc-biblioref">n.d.a</a>)</span></p>
+<p><span class="citation" data-cites="StormEventsDatabasea"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabasea" role="doc-biblioref">n.d.b</a>)</span></p>
+<p><span class="citation" data-cites="StormEventsDatabaseb"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseb" role="doc-biblioref">n.d.c</a>)</span></p>
+<p><span class="citation" data-cites="StormEventsDatabasec"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabasec" role="doc-biblioref">n.d.d</a>)</span></p>
+<p><span class="citation" data-cites="StormEventsDatabasec"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabasec" role="doc-biblioref">n.d.d</a>)</span></p>
+<p><span class="citation" data-cites="noauthor_storm_nodate"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-noauthor_storm_nodate" role="doc-biblioref">n.d.e</a>)</span></p>
+<p><span class="citation" data-cites="noauthor_can_2025"><span>“Can a Car Be Picked up by a Tornado? <span></span> Otero Property Adjusting &amp; Appraisals”</span> (<a href="references.html#ref-noauthor_can_2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="fisheries_white_2025">Fisheries (<a href="references.html#ref-fisheries_white_2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="noauthor_how_nodate"><span>“How Much Does the Average Car Weigh? <span>AutoInsurance</span>.com”</span> (<a href="references.html#ref-noauthor_how_nodate" role="doc-biblioref">n.d.</a>)</span></p>
+<p><span class="citation" data-cites="quach_can_2025">Quach (<a href="references.html#ref-quach_can_2025" role="doc-biblioref">2025</a>)</span></p>
+<p><span class="citation" data-cites="salaita_how_1970">Salaita (<a href="references.html#ref-salaita_how_1970" role="doc-biblioref">1970</a>)</span></p>
+<p><span class="citation" data-cites="us_department_of_commerce_enhanced_nodate">US Department of Commerce (<a href="references.html#ref-us_department_of_commerce_enhanced_nodate" role="doc-biblioref">n.d.</a>)</span></p>
+<p><span class="citation" data-cites="noauthor_shark_nodate"><span>“Shark Adventure <span></span> Oklahoma Aquarium Jenks, <span>OK</span>”</span> (<a href="references.html#ref-noauthor_shark_nodate" role="doc-biblioref">n.d.</a>)</span></p>
+<p><span class="citation" data-cites="zotero-item-1">Climatology Office (<a href="references.html#ref-zotero-item-1" role="doc-biblioref">2020</a>)</span></p>
+<p><span class="citation" data-cites="noauthor_bull_nodate"><span>“Bull Shark. National Wildlife Federation”</span> (<a href="references.html#ref-noauthor_bull_nodate" role="doc-biblioref">n.d.</a>)</span></p>
+<p><span class="citation" data-cites="noauthor_pittsburgh_2024">Shannon (<a href="references.html#ref-noauthor_pittsburgh_2024" role="doc-biblioref">2024</a>)</span></p>
+<p><span class="citation" data-cites="noauthor_weighty_2025"><span>“The Weighty Truth: How Much Can a Tornado Lift? - Oreate <span>AI</span> Blog”</span> (<a href="references.html#ref-noauthor_weighty_2025" role="doc-biblioref">2025</a>)</span></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-noauthor_bull_nodate" class="csl-entry" role="listitem">
+<span>“Bull Shark. National Wildlife Federation.”</span> n.d. Accessed March 12, 2026. <a href="https://www.nwf.org/Home/Educational-Resources/Wildlife-Guide/Fish/Bull-Shark">https://www.nwf.org/Home/Educational-Resources/Wildlife-Guide/Fish/Bull-Shark</a>.
+</div>
+<div id="ref-noauthor_can_2025" class="csl-entry" role="listitem">
+<span>“Can a Car Be Picked up by a Tornado? <span></span> Otero Property Adjusting &amp; Appraisals.”</span> 2025. November 6, 2025. <a href="https://oteroadjusting.com/can-a-car-be-picked-up-by-a-tornado/">https://oteroadjusting.com/can-a-car-be-picked-up-by-a-tornado/</a>.
+</div>
+<div id="ref-zotero-item-1" class="csl-entry" role="listitem">
+Climatology Office, South Carolina State. 2020. <span>“South Carolina Tornado Outbreak – <span>OPEN</span> <span>FILE</span> <span>REPORT</span>,”</span> April.
+</div>
+<div id="ref-fisheries_white_2025" class="csl-entry" role="listitem">
+Fisheries, NOAA. 2025. <span>“White Shark <span></span> <span>NOAA</span> Fisheries. <span>NOAA</span>.”</span> February 19, 2025. <a href="https://www.fisheries.noaa.gov/species/white-shark">https://www.fisheries.noaa.gov/species/white-shark</a>.
+</div>
+<div id="ref-noauthor_how_nodate" class="csl-entry" role="listitem">
+<span>“How Much Does the Average Car Weigh? <span>AutoInsurance</span>.com.”</span> n.d. Accessed March 9, 2026. <a href="https://www.autoinsurance.com/guide/average-car-weight/">https://www.autoinsurance.com/guide/average-car-weight/</a>.
+</div>
+<div id="ref-quach_can_2025" class="csl-entry" role="listitem">
+Quach, Jacqueline. 2025. <span>“Can a Car Be Picked up by a Tornado? <span></span> Otero Property Adjusting &amp; Appraisals.”</span> November 6, 2025. <a href="https://oteroadjusting.com/can-a-car-be-picked-up-by-a-tornado/">https://oteroadjusting.com/can-a-car-be-picked-up-by-a-tornado/</a>.
+</div>
+<div id="ref-salaita_how_1970" class="csl-entry" role="listitem">
+Salaita, Meisa. 1970. <span>“How a Sharknado Would Work. <span>HowStuffWorks</span>.”</span> January 1, 1970. <a href="https://science.howstuffworks.com/nature/natural-disasters/sharknado.htm">https://science.howstuffworks.com/nature/natural-disasters/sharknado.htm</a>.
+</div>
+<div id="ref-noauthor_pittsburgh_2024" class="csl-entry" role="listitem">
+Shannon, Jess. 2024. <span>“Pittsburgh Zoo &amp; Aquarium Assessing Damage After <span>EF</span>-1 Tornado Touched down in Highland Park. Yahoo News.”</span> May 17, 2024. <a href="https://www.yahoo.com/news/pittsburgh-zoo-aquarium-assessing-damage-233609618.html">https://www.yahoo.com/news/pittsburgh-zoo-aquarium-assessing-damage-233609618.html</a>.
+</div>
+<div id="ref-noauthor_shark_nodate" class="csl-entry" role="listitem">
+<span>“Shark Adventure <span></span> Oklahoma Aquarium Jenks, <span>OK</span>.”</span> n.d. Accessed March 11, 2026. <a href="https://www.okaquarium.org/176/Shark-Adventure">https://www.okaquarium.org/176/Shark-Adventure</a>.
+</div>
+<div id="ref-StormEventsDatabase" class="csl-entry" role="listitem">
+<span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information.”</span> n.d.a. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=12%2CFLORIDA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=12%2CFLORIDA</a>.
+</div>
+<div id="ref-StormEventsDatabasea" class="csl-entry" role="listitem">
+———. n.d.b. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=LOS%2BANGELES%3A37&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=LOS%2BANGELES%3A37&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA</a>.
+</div>
+<div id="ref-StormEventsDatabaseb" class="csl-entry" role="listitem">
+———. n.d.c. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=45%2CSOUTH+CAROLINA#">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=45%2CSOUTH+CAROLINA#</a>.
+</div>
+<div id="ref-StormEventsDatabasec" class="csl-entry" role="listitem">
+———. n.d.d. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA</a>.
+</div>
+<div id="ref-noauthor_storm_nodate" class="csl-entry" role="listitem">
+———. n.d.e. Accessed March 11, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=04&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=11&amp;endDate_dd=30&amp;endDate_yyyy=2025&amp;county=TULSA%3A143&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=04&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=11&amp;endDate_dd=30&amp;endDate_yyyy=2025&amp;county=TULSA%3A143&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA</a>.
+</div>
+<div id="ref-noauthor_weighty_2025" class="csl-entry" role="listitem">
+<span>“The Weighty Truth: How Much Can a Tornado Lift? - Oreate <span>AI</span> Blog.”</span> 2025. December 29, 2025. <a href="https://www.oreateai.com/blog/the-weighty-truth-how-much-can-a-tornado-lift/22e09faa7969386318853dd21fb2fbe4">https://www.oreateai.com/blog/the-weighty-truth-how-much-can-a-tornado-lift/22e09faa7969386318853dd21fb2fbe4</a>.
+</div>
+<div id="ref-us_department_of_commerce_enhanced_nodate" class="csl-entry" role="listitem">
+US Department of Commerce, NOAA. n.d. <span>“The Enhanced Fujita Scale (<span>EF</span> Scale).”</span> <span>NOAA</span>’s National Weather Service. Accessed March 11, 2026. <a href="https://www.weather.gov/oun/efscale">https://www.weather.gov/oun/efscale</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
