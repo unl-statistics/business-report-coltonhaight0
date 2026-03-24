@@ -27,6 +27,10 @@ If you remove the PDF format from the _quarto.yml file, I think your references 
 
 If you say "According to <url>", you should instead state the claim "An EF2 tornado has the strength to slightly move houses off of their foundations and to destroy mobile homes [@<citation>]" and cite the URL properly as a bibliography entry.
 
+Summarize your results appropriately in a callout box for skimmability.
+
+Also, an EF1 tornado isn't supposed to be able to destroy buildings enough to be able to grab a shark from an aquarium. So that's hardly proof of anything. LMK when an aquarium is obliterated in Oklahoma or something. :)
+
 :::
 
 To see if a Sharknado can actually happen first we need to \_\_\_ how a great white shark could be able to be picked up by a tornado. We will be looking at the weight of a great white shark first and compare it to other objects that can and have been picked up by tornadoes, cars. Next we need to figure out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornados from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 4 different places in the United States. These places are going to be Florida, South Carolina, Oklahoma, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and a coastal state. South Carolina is also another place that can be hit by tropical storms and is another coastal state. Oklahoma is not a coastal state but it is the tornado capital of the United States so we will just be looking at the amount of tornadoes that fit our criteria. Los Angeles was picked because that is the setting of the Sharknado movie.
