@@ -2,9 +2,44 @@
 title: "Draft: Results"
 ---
 
+<<<<<<< HEAD
 # fix comments
 
 To see if a Sharknado can actually happen first we need to see how a great white shark could be able to be picked up by a tornado. We will be looking at the weight of a great white shark first and compare it to other objects that can and have been picked up by tornadoes, cars. Next we need to figure out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornados from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 4 different places in the United States. These places are going to be Florida, South Carolina, Oklahoma, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and a coastal state. South Carolina is also another place that can be hit by tropical storms and is another coastal state. Oklahoma is not a coastal state but it is the tornado capital of the United States so we will just be looking at the amount of tornadoes that fit our criteria. Los Angeles was picked because that is the setting of the Sharknado movie.
+=======
+::: callout-note
+The language you're using is a bit narrative and informal - can you make it slightly more professional
+
+"A Sharknado event requires that a shark is picked up from the ocean by a tornado and deposited inland. We first consider the physics: how much does a shark weigh, and what types of objects do tornadoes regularly disrupt? What strength of tornado is required in order to lift an object as heavy as a shark?" <then, add your logic, which is great>
+
+"This report considers tornadoes between 2015 and 2026 occurring in four states which were chosen because of specific characteristics which may impact the probability of a sharknado event occurring. <additional logic>"
+
+It is a bit odd to consider LA specifically instead of California?
+
+You need to cite the autoinsurance.com claim properly.
+
+Don't show code or messages/warnings.
+
+Lots of grammar mistakes -- subject/verb agreement, tense -- "There has been nine EF3 tornadoes with one EF4 tornado"
+
+Should you use a table or perhaps consider a stacked bar chart to show the distribution of tornado strength across the regions you are considering? What would be more effective? Your figure looks reasonable to me, but the color scheme is a bit ... icky. Choose something that has a monochrome gradient, since the EF scale has a specific meaning and order.
+
+All tables and figures should have captions and labels and be referenced in the text.
+
+"Let's take a look" is a reasonable thing in a user guide but is too casual for a business report.
+
+If you remove the PDF format from the _quarto.yml file, I think your references will work better.
+
+If you say "According to <url>", you should instead state the claim "An EF2 tornado has the strength to slightly move houses off of their foundations and to destroy mobile homes [@<citation>]" and cite the URL properly as a bibliography entry.
+
+Summarize your results appropriately in a callout box for skimmability.
+
+Also, an EF1 tornado isn't supposed to be able to destroy buildings enough to be able to grab a shark from an aquarium. So that's hardly proof of anything. LMK when an aquarium is obliterated in Oklahoma or something. :)
+
+:::
+
+To see if a Sharknado can actually happen first we need to find how a great white shark could be able to be picked up by a tornado. We will be looking at the weight of a great white shark first and compare it to other objects that can and have been picked up by tornadoes, cars. Next we need to figure out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornados from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 4 different places in the United States. These places are going to be Florida, South Carolina, Oklahoma, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and a coastal state. South Carolina is also another place that can be hit by tropical storms and is another coastal state. Oklahoma is not a coastal state but it is the tornado capital of the United States so we will just be looking at the amount of tornadoes that fit our criteria. Los Angeles was picked because that is the setting of the Sharknado movie.
+>>>>>>> b741a23af739b879a0ef6a6a6dfe469ce1ad0c5e
 
 Sharks and cars weigh relatively the same in pounds (lbs). The average great white shark weighs around 4,500 lbs according to NOAA. A car SUV weighs around 3,986 lbs while a truck SUV costs around 4,578 lbs according to autoinsurance.com. This means that your average great white shark weighs more than a big car and as much as a truck SUV. We will use a car as the base to find what EF scale level will be used to lift a great white shark out of water.
 
@@ -51,7 +86,7 @@ tornado_sc |>
   gt()
 ```
 
-Looking at @fig-table2 South Carolina is similar to Florida. There are a lot of EF3 tornadoes with one EF4 tornado. But it's in the same boat as Florida, there has been a very limited number of powerful tornadoes over the past 10 years for South Carolina. There has been nine EF3 tornadoes and one EF4 tornado over that span. The surprising thing is that the one EF4 and six of the EF3 tornadoes all happened on the same day. But the possibility of a sharknado is very low because these tornadoes all happened away from the coast. The EF4 happened in the Estill and Hampton Counties.
+South Carolina is similar to Florida from @fig-table2. There are a lot of EF3 tornadoes with one EF4 tornado. But it's in the same boat as Florida, there has been a very limited number of powerful tornadoes over the past 10 years for South Carolina. There has been nine EF3 tornadoes and one EF4 tornado over that span. The surprising thing is that the one EF4 and six of the EF3 tornadoes all happened on the same day. But the possibility of a sharknado is very low because these tornadoes all happened away from the coast. The EF4 happened in the Estill and Hampton Counties.
 
 Next let's look at a place that has a ton of tornadoes so we can get a good comparison of the strength of tornadoes in a very tornado heavy area in Oklahoma.
 
@@ -73,9 +108,9 @@ tornado_ok_10 |>
   gt()
 ```
 
-From @fig-table3 we are only looking at the ten highest EF scale tornadoes to hit Oklahoma because there are 27 tornadoes in the EF3 to EF5 rating. The ten highest tornadoes in Oklahoma over the last 10 years have been two EF5 tornadoes, seven EF4 tornadoes, and one EF3 tornado. This tells us that EF5s are a very rare occurrence even for the tornado capital of the country.
+From @fig-table3, thsi deplays only ten highest EF scale tornadoes to hit Oklahoma because there are 27 tornadoes in the EF3 to EF5 rating. The ten highest tornadoes in Oklahoma over the last 10 years have been two EF5 tornadoes, seven EF4 tornadoes, and one EF3 tornado. This data tells that EF5s are a very rare occurrence even for the tornado capital of the country.
 
-To make a real connection to the Sharknado movie we should look at the actual setting of the movie which is Los Angeles, California. Looking at tornadoes in LA to give us a real idea of the possible strength of some tornadoes that have hit Los Angeles over the past ten years.
+To make a real connection to the Sharknado movie, look at the actual setting of the movie which is Los Angeles, California. Looking at tornadoes in LA to gives a real idea of the possible strength of some tornadoes that have hit Los Angeles over the past ten years.
 
 ```{r, message=FALSE, warning=FALSE}
 #| label: fig-table4
@@ -90,9 +125,9 @@ tornado_la |>
   gt()
 ```
 
-Looking at @fig-table4 above we can see all of the tornado data over the last ten years in Los Angeles. As you can see there have been only EF0 and EF1 tornadoes to hit Los Angeles over this span of time. By comparing the levels of EF ratings specified before (needing between EF3 - EF5), we can see there is not really a possibility of getting a tornado with wind speeds strong enough to pick up a shark to create a Sharknado. From https://science.howstuffworks.com/, they say the mph of wind speed needed to lift a shark off the ground is about 200 mph. The wind speed of an EF0 tornado is between 65 - 85 mph while an EF1 tornado has wind speeds between 86 - 110 mph. This shows us that we are barely able to get to half the wind speed of the speed needed to pick a shark up off the ground in Los Angeles.
+All of the tornado data over the last ten years in Los Angeles can be seen in @fig-table4. As shown there have been only EF0 and EF1 tornadoes to hit Los Angeles over this span of time. By comparing the levels of EF ratings specified before (needing between EF3 - EF5), we can see there is not really a possibility of getting a tornado with wind speeds strong enough to pick up a shark to create a Sharknado. From https://science.howstuffworks.com/, they say the mph of wind speed needed to lift a shark off the ground is about 200 mph. The wind speed of an EF0 tornado is between 65 - 85 mph while an EF1 tornado has wind speeds between 86 - 110 mph. This shows us that we are barely able to get to half the wind speed of the speed needed to pick a shark up off the ground in Los Angeles.
 
-Lets compare all of the tornadoes for each location we chose (Florida, South Carolina, Oklahoma, Los Angeles) with an EF scale rating of EF3 to EF5 and compare to see which places have the best chance to start a Sharknado by looking at a stacked bar chart. Note that Los Angeles only has EF0 and EF1 tornadoes so we will use those only in this chart.
+Next, compare all of the tornadoes for each location we chose (Florida, South Carolina, Oklahoma, Los Angeles) with an EF scale rating of EF3 to EF5 and compare to see which places have the best chance to start a Sharknado by looking at a stacked bar chart. Note that Los Angeles only has EF0 and EF1 tornadoes so we will use those only in this chart.
 
 ```{r, message=FALSE, warning=FALSE}
 #| label: fig-plot
@@ -114,7 +149,7 @@ ggplot(all_tornado, aes(x = STATE_ABBR, fill = factor(TOR_F_SCALE))) +
   theme_minimal()
 ```
 
-This graph allows us to look at the strength of each locations tornadoes on the EF scale compared to each other. According to [science.howstuffworks.com/](https://science.howstuffworks.com/), the wind speed needed to lift a shark off the ground is 200 mph. An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF5 tornado is only strong enough to lift a shark off the ground. As we can see there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that have been strong enough to be able to pick up a shark but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK there is Shark Adventure which is home to ten of the "most dangerous sharks known to man". These sharks are bull sharks. Jenks, OK is in Tulsa County, so let's look at some tornadoes over the last 10 years for Tulsa County, Oklahoma.
+This graph allows us to look at the strength of each locations tornadoes on the EF scale compared to each other. According to [science.howstuffworks.com/](https://science.howstuffworks.com/), the wind speed needed to lift a shark off the ground is 200 mph. An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that have been strong enough to be able to pick up a shark but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK there is Shark Adventure which is home to ten of the "most dangerous sharks known to man". These sharks are bull sharks. Jenks, OK is in Tulsa County, so let's look at some tornadoes over the last 10 years for Tulsa County, Oklahoma.
 
 ```{r, message=FALSE, warning=FALSE}
 tulsa <- read.csv("tulsa_ok.csv")
@@ -132,15 +167,13 @@ Looking at the tornadoes that have gone through Tulsa County Oklahoma we can see
 
 References
 
-@StormEventsDatabase
+@StormEventsDatabaseFL
 
-@StormEventsDatabasea
+@StormEventsDatabaseCA
 
-@StormEventsDatabaseb
+@StormEventsDatabaseSC
 
-@StormEventsDatabasec
-
-@StormEventsDatabasec
+@StormEventsDatabaseOK
 
 @noauthor_storm_nodate
 

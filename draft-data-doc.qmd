@@ -2,6 +2,18 @@
 title: "Draft: Data Documentation"
 ---
 
+
+::: callout-note
+
+Put your name on your work and give it an appropriate title -- edit your _quarto.yml file
+
+This needs to be in paragraph format (notes are fine in the draft, but for the real thing, please format everything and connect things with words.)
+
+
+Make sure you add a date -- the release date? -- to your bibliography entry, and make sure the other fields are filled in. Zotero doesn't always catch everything perfectly.
+
+:::
+
 -   Goal is to give evidence to my boss that shark-infested storms are very rare, if not impossible.
 -   The data I found is from the NOAA data base. I extracted tornado data from Los Angeles (the setting of Sharknado), Florida (tropical storms are abundant), South Carolina (another more tropical place), and Oklahoma (the tornado capitol of the nation).
 -   All the data sets are the same format. They were collected from the same data base NOAA.gov.
