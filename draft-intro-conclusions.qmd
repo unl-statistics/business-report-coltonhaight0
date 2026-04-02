@@ -6,7 +6,6 @@ title: "Draft: Intro/Conclusions"
 
 This study goes over the idea of the possibility of a Sharknado scenario for insurance payouts for property damage purposes. A Sharknado is explained by a tornado that generates enough wind speed to be able to lift a heavy animal, such as a great white shark, out of the water and into its vortex. A Sharknado can also be called a "Shark infested tornado".
 
-<<<<<<< HEAD
 ::: callout-note
 Start with a more gentle introduction -- define the event, treat it seriously. You can even cite the movie as a documentary if you'd like (just for the laughs).
 
