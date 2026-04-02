@@ -2,11 +2,6 @@
 title: "Draft: Results"
 ---
 
-<<<<<<< HEAD
-# fix comments
-
-To see if a Sharknado can actually happen first we need to see how a great white shark could be able to be picked up by a tornado. We will be looking at the weight of a great white shark first and compare it to other objects that can and have been picked up by tornadoes, cars. Next we need to figure out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornados from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 4 different places in the United States. These places are going to be Florida, South Carolina, Oklahoma, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and a coastal state. South Carolina is also another place that can be hit by tropical storms and is another coastal state. Oklahoma is not a coastal state but it is the tornado capital of the United States so we will just be looking at the amount of tornadoes that fit our criteria. Los Angeles was picked because that is the setting of the Sharknado movie.
-=======
 ::: callout-note
 The language you're using is a bit narrative and informal - can you make it slightly more professional
 
@@ -34,14 +29,15 @@ If you say "According to <url>", you should instead state the claim "An EF2 torn
 
 Summarize your results appropriately in a callout box for skimmability.
 
-Also, an EF1 tornado isn't supposed to be able to destroy buildings enough to be able to grab a shark from an aquarium. So that's hardly proof of anything. LMK when an aquarium is obliterated in Oklahoma or something. :)
+Also, an EF1 tornado isn't supposed to be able to destroy buildings enough to be able to grab a shark from an aquarium. So that's hardly proof of anything. LMK when an aquarium is obliterated in Oklahoma or something. :) (actually, https://www.theguardian.com/us-news/2015/may/06/oklahoma-tornado-severe-weather-texas-kansas-nebraska is relevant -- but the tigers escaped because of the damage and don't seem to have been picked up by the storm itself).
 
 :::
 
 To see if a Sharknado can actually happen first we need to find how a great white shark could be able to be picked up by a tornado. We will be looking at the weight of a great white shark first and compare it to other objects that can and have been picked up by tornadoes, cars. Next we need to figure out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornados from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 4 different places in the United States. These places are going to be Florida, South Carolina, Oklahoma, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and a coastal state. South Carolina is also another place that can be hit by tropical storms and is another coastal state. Oklahoma is not a coastal state but it is the tornado capital of the United States so we will just be looking at the amount of tornadoes that fit our criteria. Los Angeles was picked because that is the setting of the Sharknado movie.
->>>>>>> b741a23af739b879a0ef6a6a6dfe469ce1ad0c5e
 
-Sharks and cars weigh relatively the same in pounds (lbs). The average great white shark weighs around 4,500 lbs according to NOAA. A car SUV weighs around 3,986 lbs while a truck SUV costs around 4,578 lbs according to autoinsurance.com. This means that your average great white shark weighs more than a big car and as much as a truck SUV. We will use a car as the base to find what EF scale level will be used to lift a great white shark out of water.
+
+
+Sharks and cars weigh relatively the same in pounds (lbs). The average great white shark weighs around 4,500 lbs according to NOAA. A car SUV weighs around 3,986 lbs while a truck SUV costs (? weighs?) around 4,578 lbs according to autoinsurance.com. This means that your average great white shark weighs more than a big car and as much as a truck SUV. We will use a car as the base to find what EF scale level will be used to lift a great white shark out of water.
 
 The EF scale is made up of 6 different ratings of tornado based on 3 second wind speed in mph. An EF0 tornado is has the lowest wind speed ranging between 65-85 mph, EF1 has winds speeds between 86-110 mph, EF2 has wind speeds between 111-135 mph, EF3 has wind speeds of 136-165 mph, EF4 has speeds between 166-200 mph and EF5 has wind speed that are over 200 mph. According to oteroadjusting.com, an EF3 tornado is likely to toss cars and trucks, while an EF4 is very likely to toss cars many feet, and an EF5 tornado is almost certain to lift and destroy cars. Since we are comparing a great white shark to the size and weight of a car SUV and a truck SUV that gives us a good comparison to be able to put a shark in the place of those cars in the EF scales ability to lift cars. We are going to look at tornadoes that are only EF3 to EF5 because those are the strength of tornadoes that are able to lift a car.
 
@@ -149,6 +145,12 @@ ggplot(all_tornado, aes(x = STATE_ABBR, fill = factor(TOR_F_SCALE))) +
   theme_minimal()
 ```
 
+::: callout-note
+
+You *must* use quarto citations, not just links, for things that you're citing. That way, they show up in the bibliography.
+
+:::
+
 This graph allows us to look at the strength of each locations tornadoes on the EF scale compared to each other. According to [science.howstuffworks.com/](https://science.howstuffworks.com/), the wind speed needed to lift a shark off the ground is 200 mph. An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that have been strong enough to be able to pick up a shark but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK there is Shark Adventure which is home to ten of the "most dangerous sharks known to man". These sharks are bull sharks. Jenks, OK is in Tulsa County, so let's look at some tornadoes over the last 10 years for Tulsa County, Oklahoma.
 
 ```{r, message=FALSE, warning=FALSE}
@@ -164,6 +166,13 @@ tulsa |>
 ```
 
 Looking at the tornadoes that have gone through Tulsa County Oklahoma we can see that the tornadoes don't reach EF3 or higher at all. But Bull Sharks only weigh around 500 lbs. This means that they are much easier for a tornado to lift up than a great white shark. According to <https://www.oreateai.com/>, an EF2 tornado has the strength to slightly move houses off its foundations and destroy mobile homes. If an EF2 tornado went through the Oklahoma Aquarium in Jenks and destroyed the aquarium it could potentially pick up sharks from the "most dangerous sharks known to man" exhibit to create a real life Sharknado. Thinking of this logic this could also apply to a lot of other aquariums throughout the country. But the chances of this happening is relatively low. The last time a tornado hit an aquarium was in 2024 when an EF1 tornado went through the Pittsburgh Zoo & Aquarium. This only resulted in some damage to the property and some trees to get knocked over. Thinking about the possibility of a Sharknado is pretty slim when there is record of a tornado that went through an aquarium there was still not a chance.
+
+
+::: callout-note
+
+Use these inline, and quarto will make a bibliography section at the end of your report. Adding them at the end is not how we do this.
+
+:::
 
 References
 
