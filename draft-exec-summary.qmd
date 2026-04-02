@@ -1,3 +1,25 @@
 ---
 title: "Draft: Executive Summary"
 ---
+
+# Executive Summary
+
+### Purpose of Report
+
+This study dives into the possibility of a Sharknado event. A Sharknado can be explained as a "shark infested tornado". This is a tornado that generates enough wind speed to lift a great white shark from the water and into its vortex. The purpose of this study is to assess a Sharknado event could be considered as a risk for property damage insurance pay outs.
+
+### Methods
+
+To start, a comparison of the weight of a great white shark (around 4500 lbs) and vehicles (around 4000 - 4600 lbs for SUV and Trucks) is used because cars are known to be lifted and destroyed by tornadoes. Using the EF (Enhanced Fujita) Scale the strength of tornado able to lift and toss cars (or a great white shark) is found to be between EF3 - EF5 tornadoes. This is wind speeds of 136 mph to 200+ mph. This study will only be looking at tornadoes of EF3 - EF5 because of this reason. This study also looks at four locations of tornado data from 2015-2026. These locations are Florida, South Carolina, Oklahoma, California, and Los Angeles County, CA. These places were chosen because of their abundant tropical storms and coastal area (Florida and South Carolina), historic tornado amounts and strength (Oklahoma), and the setting of the movie Sharknado (Los Angeles, CA).
+
+### Findings 
+
+Tornadoes of strength EF3 - EF5 are fairly uncommon for coastal states like Florida, and South Carolina. Florida had only five tornadoes in the last 10 years that are of strength EF3 and zero EF4 and EF5 tornadoes. All but one of these tornadoes are started started and ended on land. The one tornado other tornado started on a beach in Florida where the water is not deep enough for sharks. South Carolina had nine EF3 and one EF4 tornado over the last 10 years. All of these tornadoes started and stayed on land making a Sharknado impossible. Oklahoma has had plenty of tornadoes strong enough to lift and carry a shark but there are no sharks in Oklahoma besides in the Oklahoma Aquarium in Jenks, OK. California has not had a tornado above an EF2 over the last 10 years.
+
+### Conclusions
+
+The probability of a Sharknado event is extremely low, if not a zero percent chance. There was one tornado in the three coastal states that might have had the ability to lift a shark. This South Carolina tornado happened to start and end on land making a Sharknado impossible. The Oklahoma Aquarium houses sharks in a state that is known for its amount and strengths of tornadoes. The Oklahoma Aquarium is in Tulsa County, OK where only EF2 or lower tornadoes have touched down in the last 10 years rendering this as very improbable. From the findings of this study, the probability of a Sharknado happening is almost, if not, a zero percent chance.
+
+### Recommendations
+
+From this study it is fairly certain that Sharknado's are extremely unlikely if not a zero percent chance. Even though, strong storms and tornadoes without sharks are still a cause for concern. Property damage and their resulting insurance payouts will still be present with storms and tornadoes that have high wind speeds and extreme precipitation events. These are real and worrisome outcomes that happen all over the country that are more probable than a Sharknado and should be taken more into account.

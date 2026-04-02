@@ -4,8 +4,9 @@ title: "Draft: Intro/Conclusions"
 
 # Introduction
 
-This study goes over the idea the possibility of a Sharknado scenario for insurance payouts for property damage purposes. A Sharknado is explained by a tornado that generates enough wind speed to be able to lift a heavy animal, such as a great white shark, out of the water and into its vortex. A Sharknado can also be called a "Shark infested tornado".
+This study goes over the idea of the possibility of a Sharknado scenario for insurance payouts for property damage purposes. A Sharknado is explained by a tornado that generates enough wind speed to be able to lift a heavy animal, such as a great white shark, out of the water and into its vortex. A Sharknado can also be called a "Shark infested tornado".
 
+<<<<<<< HEAD
 ::: callout-note
 Start with a more gentle introduction -- define the event, treat it seriously. You can even cite the movie as a documentary if you'd like (just for the laughs).
 
@@ -25,19 +26,30 @@ Grammar check needed, though I made a couple of edits below.
 :::
 
 Finally, looking at places that are near the coast to be able to pick up a great white shark is essential to actually generating a Sharknado. There are 3 locations observed for their tornado data that fit this agenda in this study: Florida, South Carolina, and Los Angeles (this is the setting of the Sharknado movie). For another comparison of tornado strength and amount, Oklahoma is also looked at for its tornado EF rating, even though it is landlocked and does not have any native shark population. These locations are have tornado data taken from 2015 - 2026 using NOAA tornado data.
+=======
+This study starts by comparing the average great white shark to objects of similar weight, specifically cars or pickup trucks. Tornadoes are known for destroying homes and tossing around vehicles thus finding the types of vehicles that are similar enough in weight to a great white shark makes finding the right magnitude of tornadoes required to lift a great white shark easier.
 
-By combining the magnitude of tornadoes with the areas where these tornadoes touch down gives an idea to the possibility of a potential Sharknado event occurring.
+Next, finding the magnitude of a tornado capable of picking up a great white shark, or a car, is found using the EF scale (Enhanced Fujita Scale) by looking at EF ratings (@us_department_of_commerce_enhanced_nodate). The Enhanced Fujita Scale uses rating of EF0 to EF5. Tornadoes of interest for this study are tornadoes of rating EF3 to EF5. These tornadoes have strong enough wind speeds to potentially pick up and throw cars or, in this case, a great white shark.
+
+Finally, looking at places that are near the coast to be able to pick up a great white shark is essential to actually generating a Sharknado. There are 3 locations observed for their tornado data that fit this agenda in this study. Those places being Florida, South Carolina, and Los Angeles (this is the setting of the Sharknado movie). For another comparison of tornado strength and amount, Oklahoma is also looked at for its tornado EF rating. These locations have tornado data taken from 2015 - 2026 using NOAA tornado data.
+>>>>>>> 4b514f6122ff1d628c351e0c749bc6add0f7e707
+
+Combining the magnitude of tornadoes with the areas where these tornadoes touch down gives an idea to the possibility of a potential Sharknado event occurring.
 
 # Conclusion
 
+<<<<<<< HEAD
 ::: callout-note
 You might want to make this a bit more skimmable and/or executive friendly using techniques discussed in class.
 :::
 
 In conclusion, this study shows that the likelihood of a Sharknado occurring is very low. By comparing the weight of a great white shark to different car types of similar weight there is a way to determine the strength of tornado on the EF (Enhanced Fujita) Scale able to pick up a car (or a great white shark of similar weight). The EF rating required for this to happen is an EF3-EF5 tornado. This range of tornado strength has wind speeds of 136 mph to 200+ mph. For a Sharknado to happen tornadoes of these strengths need to happen where great white sharks are. Florida, South Carolina, and Los Angeles, California (chosen because its the setting of the Sharknado movie) are coastal places. Oklahoma was also chosen to compare the amount and EF scale types to the other places mentioned. This study looks at tornado data from 2015-2026 and their strength from the EF scale.
+=======
+In conclusion, this study shows that the likelihood of a Sharknado occurring is very low. By comparing the weight of a great white shark to different car types of similar weight there is a way to determine the strength of a tornado on the EF (Enhanced Fujita) Scale, able to pick up a car (or a great white shark of similar weight). The EF rating required for this to happen is an EF3-EF5 tornado. This range of tornado strength has wind speeds of 136 mph to 200+ mph. For a Sharknado to happen tornadoes of these strengths need to happen where great white sharks are. Florida, South Carolina, and Los Angeles, California (chosen because its the setting of the Sharknado movie) are coastal places. Oklahoma was also chosen to compare the amount and EF scale types to the other places mentioned. This study looks at tornado data from 2015-2026 and their strength from the EF scale.
+>>>>>>> 4b514f6122ff1d628c351e0c749bc6add0f7e707
 
-Florida and South Carolina have very few tornadoes with the desired strength to be bale to pick up great white sharks. Florida had just 5 tornadoes with an EF3 scale rating while South Carolina has nine EF3 tornadoes and one EF4 tornado. These tornadoes all happened inland so the possibility of picking up a great white shark is very unlikely. Los Angeles, California have had no tornadoes of strength EF3 or higher in the last 10 years. There will not be another Sharknado hitting LA again.
+Florida and South Carolina have very few tornadoes with the desired strength to be able to pick up great white sharks. Florida had just 5 tornadoes with an EF3 scale rating while South Carolina had nine EF3 tornadoes and one EF4 tornado. These tornadoes all happened inland so the possibility of picking up a great white shark is very unlikely. Los Angeles, California have had no tornadoes of strength EF3 or higher in the last 10 years. There will not be another Sharknado hitting LA again.
 
 Even though Oklahoma has had many tornadoes strong enough (EF3 to EF5) to be able to pick up a great white shark over the last 10 years, there are no great whites in Oklahoma. The most likely scenario to make a Sharknado inland is having an EF3-EF5 tornado destroy an aquarium in inland places where strong enough tornadoes occur. Even then, this event is not very likely.
 
-Overall, the insurance payouts for property damage from the event of a Sharknado is extreme unlikely, if not a zero percent chance. Tornadoes and strong storms will still exist which is still a concern for property damage purposes.
+Overall, the insurance payouts for property damage from the event of a Sharknado is extremely unlikely, if not a zero percent chance. Tornadoes and strong storms will still exist which is still a concern for property damage purposes.
