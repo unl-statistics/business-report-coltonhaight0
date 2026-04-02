@@ -55,3 +55,10 @@ Great White Shark Info: @fisheries_white_2025
 How much does a car weigh: @noauthor_how_nodate
 
 Can a car be picked up by a tornado: @noauthor_can_2025
+
+
+::: callout-note
+
+These are fine (other than the author being missing), but you need to incorporate them into your writing as an organic part of the paragraphs.
+
+:::
