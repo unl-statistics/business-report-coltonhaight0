@@ -49,14 +49,31 @@ Lets take a look at some tornado data from a tropical place that gets some prett
 
 library(tidyverse)
 library(gt)
+install.packages("maps")
+library(maps)
+
 tornado_fl <- read.csv("tornado_data_florida.csv")
 
 tornado_fl$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_fl$TOR_F_SCALE)
+
 tornado_fl <- tornado_fl|>
-  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
   filter(
     TOR_F_SCALE > 2
   )
+
+fl_map <- map_data("state") |>
+  filter(region == "florida")
+
+ggplot() +
+  geom_polygon(data = fl_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_fl,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .5)+
+  theme_minimal()
 
 tornado_fl |>
   gt()
@@ -73,10 +90,23 @@ tornado_sc <- read.csv("tornado_SC.csv")
 
 tornado_sc$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_sc$TOR_F_SCALE)
 tornado_sc <- tornado_sc|>
-  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
   filter(
     TOR_F_SCALE > 2
   )
+
+sc_map <- map_data("state") |>
+  filter(region == "south carolina")
+
+ggplot() +
+  geom_polygon(data = sc_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_sc,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .5) +
+  theme_minimal()
 
 tornado_sc |>
   gt()
@@ -93,12 +123,25 @@ tornado_ok <- read.csv("tornado_oklahoma.csv")
 
 tornado_ok$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_ok$TOR_F_SCALE)
 tornado_ok <- tornado_ok|>
-  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
   filter(
     TOR_F_SCALE > 2
   )|>
   arrange(desc(TOR_F_SCALE))
 tornado_ok_10 <- head(tornado_ok, n= 10)
+
+ok_map <- map_data("state") |>
+  filter(region == "oklahoma")
+
+ggplot() +
+  geom_polygon(data = ok_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_ok,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .5) +
+  theme_minimal()
 
 tornado_ok_10 |>
   gt()
@@ -112,10 +155,33 @@ To make a real connection to the Sharknado movie, look at the actual setting of 
 #| label: fig-table4
 #| fig-cap: "California Tornado Data"
 tornado_la <- read.csv("tornado_LA.csv")
+tornado_ca <- read.csv("california_tornado.csv")
 
 tornado_la$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_la$TOR_F_SCALE)
 tornado_la <- tornado_la|>
-  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)
+
+tornado_ca$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_ca$TOR_F_SCALE)
+tornado_ca <- tornado_ca|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON) |>
+  arrange(desc(TOR_F_SCALE))
+tornado_ca_10 <- head(tornado_ca, n = 10)
+
+la_map <- map_data("county") |>
+  filter(region == "california", subregion == "los angeles")
+
+ca_map <- map_data("state") |>
+  filter(region == "california")
+
+ggplot() +
+  geom_polygon(data = ca_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_ca,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .5) +
+  theme_minimal()
 
 tornado_la |>
   gt()
@@ -165,7 +231,9 @@ tulsa |>
   gt()
 ```
 
-Looking at the tornadoes that have gone through Tulsa County Oklahoma we can see that the tornadoes don't reach EF3 or higher at all. But Bull Sharks only weigh around 500 lbs. This means that they are much easier for a tornado to lift up than a great white shark. According to <https://www.oreateai.com/>, an EF2 tornado has the strength to slightly move houses off its foundations and destroy mobile homes. If an EF2 tornado went through the Oklahoma Aquarium in Jenks and destroyed the aquarium it could potentially pick up sharks from the "most dangerous sharks known to man" exhibit to create a real life Sharknado. Thinking of this logic this could also apply to a lot of other aquariums throughout the country. But the chances of this happening is relatively low. The last time a tornado hit an aquarium was in 2024 when an EF1 tornado went through the Pittsburgh Zoo & Aquarium. This only resulted in some damage to the property and some trees to get knocked over. Thinking about the possibility of a Sharknado is pretty slim when there is record of a tornado that went through an aquarium there was still not a chance.
+Looking at the tornadoes that have gone through Tulsa County Oklahoma we can see that the tornadoes don't reach EF3 or higher at all. But Bull Sharks only weigh around 500 lbs. This means that they are much easier for a tornado to lift up than a great white shark. According to <https://www.oreateai.com/>, an EF2 tornado has the strength to slightly move houses off its foundations and destroy mobile homes. If an EF2 tornado went through the Oklahoma Aquarium in Jenks and destroyed the aquarium it could potentially pick up sharks from the "most dangerous sharks known to man" exhibit to create a real life Sharknado. Thinking of this logic this could also apply to a lot of other aquariums throughout the country. But the chances of this happening is relatively low. The last time a tornado hit an aquarium was in 2024 when an EF1 tornado went through the Pittsburgh Zoo & Aquarium. This only resulted in little damage to the property and some trees to get knocked over. This means that an EF1 tornado going through a zoo/aquarium will not cause enough damage to destroy buildings and have wind speeds strong enough to pick up objects as heavy as a shark. Thinking about the possibility of a Sharknado is pretty slim when there is record of a tornado that went through an aquarium there was still not a chance. 
+
+Just thinking with the insurance payout possibilities in mind, storms and tornadoes that are not shark infested will still cause property damage. Storms and tornadoes with high wind speeds and storms with varying precipitation types and amounts are still possible and can still cause massive amounts of property damage. Sharknadoes may be out of the picture but there are many other ways that weather related events can cause property damage.
 
 
 ::: callout-note
