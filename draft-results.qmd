@@ -32,7 +32,44 @@ A Sharknado event involves a tornado being able to lift a great white shark out 
 
 Sharks and cars weigh relatively the same in pounds (lbs). The average great white shark weighs around 4,500 lbs (@fisheries_white_2025). A car SUV weighs around 3,986 lbs while a truck SUV weighs around 4,578 lbs (@noauthor_how_nodate). This means that your average great white shark weighs more than a big car and as much as a truck or SUV. We will use a car as the base to find what EF scale level will be used to lift a great white shark out of the water.
 
-The EF scale is made up of 6 different ratings of tornado based on 3-second wind speed in mph (\@us_department_of_commerce_enhanced_nodate). An EF0 tornado has the lowest wind speed, ranging between 65-85 mph, EF1 has wind speeds between 86-110 mph, EF2 has wind speeds between 111-135 mph, EF3 has wind speeds of 136-165 mph, EF4 has speeds between 166-200 mph, and EF5 has wind speeds that are over 200 mph. An EF3 tornado is likely to toss cars and trucks, while an EF4 is very likely to toss cars many feet, and an EF5 tornado is almost certain to lift and destroy cars. Since we are comparing a great white shark to the size and weight of a car SUV, and a truck SUV, that gives us a good comparison to be able to put a shark in the place of those cars in the EF scales' ability to lift cars (\@quach_can_2025). We are going to look at tornadoes that are only EF3 to EF5 because those are the strength of tornadoes that are able to lift a car (\@salaita_how_nodate).
+The EF scale is made up of 6 different ratings of tornado based on 3-second wind speed in mph (@us_department_of_commerce_enhanced_nodate). An EF0 tornado has the lowest wind speed, ranging between 65-85 mph, EF1 has wind speeds between 86-110 mph, EF2 has wind speeds between 111-135 mph, EF3 has wind speeds of 136-165 mph, EF4 has speeds between 166-200 mph, and EF5 has wind speeds that are over 200 mph. An EF3 tornado is likely to toss cars and trucks, while an EF4 is very likely to toss cars many feet, and an EF5 tornado is almost certain to lift and destroy cars. Since we are comparing a great white shark to the size and weight of a car SUV, and a truck SUV, that gives us a good comparison to be able to put a shark in the place of those cars in the EF scales' ability to lift cars (@quach_can_2025). We are going to look at tornadoes that are only EF3 to EF5 because those are the strength of tornadoes that are able to lift a car (@salaita_how_nodate).
+
+This map below shows tornado data
+
+```{r, message=FALSE, warning=FALSE}
+#| code-fold: true
+#| code-summary: "Code"
+#| label: fig-plot1
+#| fig-cap: "Higher Than EF2 Tornado Data Accross USA"
+
+library(tidyverse)
+library(gt)
+#install.packages("maps")
+library(maps)
+
+usa_tornado <- read.csv("all_tornado_data.csv")
+
+usa_tornado$TOR_F_SCALE <- gsub("[A-Za-z]", "", usa_tornado$TOR_F_SCALE)
+
+usa_tornado <- usa_tornado|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)
+
+usa_map <- map_data("state")
+
+ggplot() +
+  geom_polygon(data = usa_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = usa_tornado,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .5)+
+  coord_fixed(1.3)+
+  theme_minimal()
+
+```
+
+The places with the most tornadoes close to the coast
 
 Let's take a look at some tornado data from a tropical place that gets some pretty bad storms regularly in Florida. Florida is also a place that is on the coast, so it would be able to pick up a shark in the event of a strong enough tornado.
 
@@ -42,20 +79,12 @@ Let's take a look at some tornado data from a tropical place that gets some pret
 #| label: fig-table1
 #| fig-cap: "Florida Higher Than EF2 Tornado Data"
 
-library(tidyverse)
-library(gt)
-#install.packages("maps")
-library(maps)
-
-tornado_fl <- read.csv("tornado_data_florida.csv")
+tornado_fl <- read.csv("fl_tornado.csv")
 
 tornado_fl$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_fl$TOR_F_SCALE)
 
 tornado_fl <- tornado_fl|>
-  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
-  filter(
-    TOR_F_SCALE > 2
-  )
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)
 
 tornado_fl |>
   gt()
@@ -66,7 +95,7 @@ tornado_fl |>
 ```{r, message=FALSE, warning=FALSE}
 #| code-fold: true
 #| code-summary: "Code"
-#| label: fig-plot1
+#| label: fig-plot2
 #| fig-cap: "Florida Higher Than EF2 Tornado Map"
 
 fl_map <- map_data("state") |>
@@ -83,7 +112,7 @@ ggplot() +
   theme_minimal()
 ```
 
-@fig-plot1 shows a map of Florida showing the five EF3 tornadoes that have occurred in the last 10 years. There is one tornado that shows up close to the water, but looking at the coordinates, it appears on the beach. EF3 tornadoes are likely to toss cars and trucks (@quach_can_2025). Tossing and picking up are not the same thing in this scenario, so an EF3 tornado is not very likely to fully pick up a shark.
+@fig-plot2 shows a map of Florida showing the five EF3 tornadoes that have occurred in the last 10 years. There is one tornado that shows up close to the water, but looking at the coordinates, it appears on the beach. EF3 tornadoes are likely to toss cars and trucks (@quach_can_2025). Tossing and picking up are not the same thing in this scenario, so an EF3 tornado is not very likely to fully pick up a shark.
 
 A place that has similar properties to Florida, in having tropical storms frequently and being a coastal state, is South Carolina. The data below gives us another place to compare to that is in an area where great white sharks are present.
 
@@ -110,7 +139,7 @@ South Carolina is similar to Florida from @fig-table2. There are a lot of EF3 to
 ```{r}
 #| code-fold: true
 #| code-summary: "Code"
-#| label: fig-plot2
+#| label: fig-plot3
 #| fig-cap: "South Carolina Higher Than EF2 Tornado Map"
 
 sc_map <- map_data("state") |>
@@ -127,7 +156,7 @@ ggplot() +
   theme_minimal()
 ```
 
-The EF4 tornado is the main Sharknado threat. As seen in @fig-plot2, all tornadoes EF3 and above only appear on land and are far enough from the coast to have any real threat of a Sharknado. From the evidence from Florida and now South Carolina, a Sharknado is looking less and less possible.
+The EF4 tornado is the main Sharknado threat. As seen in @fig-plot3, all tornadoes EF3 and above only appear on land and are far enough from the coast to have any real threat of a Sharknado. From the evidence from Florida and now South Carolina, a Sharknado is looking less and less possible.
 
 Next, let's look at a place that has a ton of tornadoes, so we can get a good comparison of the strength of tornadoes in a very tornado-heavy area in Oklahoma.
 
@@ -197,7 +226,7 @@ All of the tornado data over the last ten years in Los Angeles can be seen in @f
 ```{r}
 #| code-fold: true
 #| code-summary: "Code"
-#| label: fig-plot3
+#| label: fig-plot4
 #| fig-cap: "California Higher Than EF2 Tornado Map"
 
 la_map <- map_data("county") |>
@@ -223,7 +252,7 @@ Next, using a stacked bar chart allows easier comparison of all the tornadoes fo
 ```{r, message=FALSE, warning=FALSE}
 #| code-fold: true
 #| code-summary: "Code"
-#| label: fig-plot4
+#| label: fig-plot5
 #| fig-cap: "Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for FL, SC, and OK, All Tornadoes Over Last 10 Years for CA"
 all_tornado <- bind_rows(
   tornado_fl,
@@ -242,7 +271,7 @@ ggplot(all_tornado, aes(x = STATE_ABBR, fill = factor(TOR_F_SCALE))) +
   theme_minimal()
 ```
 
-@fig-plot4 allows us to look at the strength of each location's tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (@salaita_how_nodate). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the "most dangerous sharks known to man" (@noauthor_shark_nodate). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so let's look at some tornadoes over the last 10 years for Tulsa County, Oklahoma.
+@fig-plot5 allows us to look at the strength of each location's tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (@salaita_how_nodate). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the "most dangerous sharks known to man" (@noauthor_shark_nodate). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so let's look at some tornadoes over the last 10 years for Tulsa County, Oklahoma.
 
 ```{r, message=FALSE, warning=FALSE}
 #| code-fold: true
