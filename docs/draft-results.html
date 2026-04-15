@@ -190,8 +190,23 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#methods" id="toc-methods" class="nav-link active" data-scroll-target="#methods"><span class="header-section-number">C</span> Methods</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">D</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#results-florida" id="toc-results-florida" class="nav-link" data-scroll-target="#results-florida"><span class="header-section-number">D.1</span> Results: Florida</a></li>
+  <li><a href="#results-south-carolina" id="toc-results-south-carolina" class="nav-link" data-scroll-target="#results-south-carolina"><span class="header-section-number">D.2</span> Results: South Carolina</a></li>
+  <li><a href="#results-virginia" id="toc-results-virginia" class="nav-link" data-scroll-target="#results-virginia"><span class="header-section-number">D.3</span> Results: Virginia</a></li>
+  <li><a href="#results-oklahoma" id="toc-results-oklahoma" class="nav-link" data-scroll-target="#results-oklahoma"><span class="header-section-number">D.4</span> Results: Oklahoma</a></li>
+  <li><a href="#results-califorinia-los-angeles-ca" id="toc-results-califorinia-los-angeles-ca" class="nav-link" data-scroll-target="#results-califorinia-los-angeles-ca"><span class="header-section-number">D.5</span> Results: Califorinia &amp; Los Angeles, CA</a></li>
+  <li><a href="#all-states" id="toc-all-states" class="nav-link" data-scroll-target="#all-states"><span class="header-section-number">D.6</span> All States</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -239,10 +254,16 @@ Note
 <p>Also, an EF1 tornado isn’t supposed to be able to destroy buildings enough to be able to grab a shark from an aquarium. So that’s hardly proof of anything. LMK when an aquarium is obliterated in Oklahoma or something. :) (actually, https://www.theguardian.com/us-news/2015/may/06/oklahoma-tornado-severe-weather-texas-kansas-nebraska is relevant – but the tigers escaped because of the damage and don’t seem to have been picked up by the storm itself).</p>
 </div>
 </div>
+<section id="methods" class="level1" data-number="C">
+<h1 data-number="C"><span class="header-section-number">C</span> Methods</h1>
 <p>A Sharknado event involves a tornado being able to lift a great white shark out of the ocean and carry it onto land. To see if this is possible, we need to look at the physics: the weight of a great white shark, what objects are known to be picked up by tornadoes, and the magnitude of tornadoes required to pick up a shark. First, we need to find out how a great white shark could be picked up by a tornado. We will be looking at the weight of a great white shark first and comparing it to other objects that can and have been picked up by tornadoes, such as cars. Next, figuring out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, we are going to look at some tornadoes from 2015-2026 that are in the desired EF scale range (EF3-EF5) from 5 different places in the United States. These places are going to be Florida, South Carolina, Virginia, Oklahoma, California, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and is a coastal state (Florida, <span class="citation" data-cites="StormEventsDatabaseFL">(<a href="references.html#ref-StormEventsDatabaseFL" role="doc-biblioref">n.d.</a>)</span>). South Carolina is also another place that can be hit by tropical storms and is another coastal state (South Carolina, <span class="citation" data-cites="StormEventsDatabaseSC">(<a href="references.html#ref-StormEventsDatabaseSC" role="doc-biblioref">n.d.</a>)</span>). Virginia is a coastal state htat has had a good amount of tornadoes of our criteria (Virginia, <span class="citation" data-cites="StormEventsDatabaseVA">(<a href="references.html#ref-StormEventsDatabaseVA" role="doc-biblioref">n.d.b</a>)</span>). Oklahoma is not a coastal state, but it is the tornado capital of the United States, so we will just look at the number of tornadoes that meet our criteria (Oklahoma, <span class="citation" data-cites="StormEventsDatabaseOK">(<a href="references.html#ref-StormEventsDatabaseOK" role="doc-biblioref">n.d.</a>)</span>). California (<span class="citation" data-cites="StormEventsDatabaseCA">(<a href="references.html#ref-StormEventsDatabaseCA" role="doc-biblioref">n.d.a</a>)</span>) was chosen because it is the state setting of Sharknado, while Los Angeles (<span class="citation" data-cites="StormEventsDatabaseLA">(<a href="references.html#ref-StormEventsDatabaseLA" role="doc-biblioref">n.d.</a>)</span>) was picked because it is the city setting of the Sharknado movie.</p>
 <p>Sharks and cars weigh relatively the same in pounds (lbs). The average great white shark weighs around 4,500 lbs (<span class="citation" data-cites="fisheries_white_2025">Fisheries (<a href="references.html#ref-fisheries_white_2025" role="doc-biblioref">2025</a>)</span>). A car SUV weighs around 3,986 lbs while a truck SUV weighs around 4,578 lbs (<span class="citation" data-cites="noauthor_how_nodate">AutoInsurance (<a href="references.html#ref-noauthor_how_nodate" role="doc-biblioref">n.d.</a>)</span>). This means that your average great white shark weighs more than a big car and as much as a truck or SUV. We will use a car as the base to find what EF scale level will be used to lift a great white shark out of the water.</p>
 <p>The EF scale is made up of 6 different ratings of tornado based on 3-second wind speed in mph (<span class="citation" data-cites="us_department_of_commerce_enhanced_nodate">US Department of Commerce (<a href="references.html#ref-us_department_of_commerce_enhanced_nodate" role="doc-biblioref">n.d.</a>)</span>). An EF0 tornado has the lowest wind speed, ranging between 65-85 mph, EF1 has wind speeds between 86-110 mph, EF2 has wind speeds between 111-135 mph, EF3 has wind speeds of 136-165 mph, EF4 has speeds between 166-200 mph, and EF5 has wind speeds that are over 200 mph. An EF3 tornado is likely to toss cars and trucks, while an EF4 is very likely to toss cars many feet, and an EF5 tornado is almost certain to lift and destroy cars. Since we are comparing a great white shark to the size and weight of a car SUV, and a truck SUV, that gives us a good comparison to be able to put a shark in the place of those cars in the EF scales’ ability to lift cars (<span class="citation" data-cites="quach_can_2025">Quach (<a href="references.html#ref-quach_can_2025" role="doc-biblioref">2025</a>)</span>). We are going to look at tornadoes that are only EF3 to EF5 because those are the strength of tornadoes that are able to lift a car (<span class="citation" data-cites="salaita_how_nodate">Salaita (<a href="references.html#ref-salaita_how_nodate" role="doc-biblioref">n.d.</a>)</span>).</p>
-<p>This map below shows tornado data</p>
+</section>
+<section id="results" class="level1" data-number="D">
+<h1 data-number="D"><span class="header-section-number">D</span> Results</h1>
+<p>The results of this study examines tornado activity over the last 10 years from specific states across the United States. Tornado strength of EF3 - EF5 is chosen due to their capabilites to lift and toss objects that are similar to sharks weight wise, these objecting being cars or trucks. The findings are shown by state and area (FL, SC, VA, CA, Los Angeles) to be able to see where and which tornadoes had the strength and location to start a Sharknado event. California and Los Angeles, CA were chosen due to being the location of the film “Sharknado”.</p>
+<p>Below is these such tornadoes being mapped on the entire United States to get an idea of where these states and their tornadoes are and why they were chosen for this study.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-plot1" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -251,35 +272,37 @@ Note
 <img src="draft-results_files/figure-html/fig-plot1-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
+Figure&nbsp;D.1: Higher Than EF2 Tornado Data Accross USA
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Most tornadoes happen on the eastern side of the country as shown in <a href="#fig-plot1" class="quarto-xref">Figure&nbsp;<span>B.1</span></a>. This gives the best ideas of where to check to see if Sharknadoes are possible. The east coast is the best place to start the search. By what this plot displays Virginia wil be added to our earlier group of states to analyze</p>
-<p>From <a href="#fig-plot1" class="quarto-xref">Figure&nbsp;<span>B.1</span></a>, Florida is a place that is on the coast, so it would be possible to pick up a shark in the event of a strong enough tornado. There are ample enough tornadoes in Florida over the last 10 years which a reason Florida is a state that will be analyzed.</p>
+<p>Most tornadoes happen on the eastern side of the country as shown in <a href="#fig-plot1" class="quarto-xref">Figure&nbsp;<span>D.1</span></a>. This gives the best ideas of where to check to see if Sharknadoes are possible. The east coast is the best place to start the search. The states that have enough tornadoes, and the states that will be examined, are Florida, South Carolina, and Virginia.</p>
+<section id="results-florida" class="level2" data-number="D.1">
+<h2 data-number="D.1" class="anchored" data-anchor-id="results-florida"><span class="header-section-number">D.1</span> Results: Florida</h2>
+<p>From <a href="#fig-plot1" class="quarto-xref">Figure&nbsp;<span>D.1</span></a>, Florida is a place that is on the coast, so it would be possible to pick up a shark in the event of a strong enough tornado. There are enough tornadoes that touched down in Florida over the last 10 years which is a reason Florida is a state that will be analyzed.</p>
 <div class="cell">
 <div id="fig-table1" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="imrqorgfof" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#imrqorgfof table {
+<div id="ykuocietob" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ykuocietob table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#imrqorgfof thead, #imrqorgfof tbody, #imrqorgfof tfoot, #imrqorgfof tr, #imrqorgfof td, #imrqorgfof th {
+#ykuocietob thead, #ykuocietob tbody, #ykuocietob tfoot, #ykuocietob tr, #ykuocietob td, #ykuocietob th {
   border-style: none;
 }
 
-#imrqorgfof p {
+#ykuocietob p {
   margin: 0;
   padding: 0;
 }
 
-#imrqorgfof .gt_table {
+#ykuocietob .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -305,12 +328,12 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-left-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_caption {
+#ykuocietob .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#imrqorgfof .gt_title {
+#ykuocietob .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -322,7 +345,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-bottom-width: 0;
 }
 
-#imrqorgfof .gt_subtitle {
+#ykuocietob .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -334,7 +357,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-top-width: 0;
 }
 
-#imrqorgfof .gt_heading {
+#ykuocietob .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -346,13 +369,13 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-right-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_bottom_border {
+#ykuocietob .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_col_headings {
+#ykuocietob .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -367,7 +390,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-right-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_col_heading {
+#ykuocietob .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -387,7 +410,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   overflow-x: hidden;
 }
 
-#imrqorgfof .gt_column_spanner_outer {
+#ykuocietob .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -399,15 +422,15 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   padding-right: 4px;
 }
 
-#imrqorgfof .gt_column_spanner_outer:first-child {
+#ykuocietob .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#imrqorgfof .gt_column_spanner_outer:last-child {
+#ykuocietob .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#imrqorgfof .gt_column_spanner {
+#ykuocietob .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -419,11 +442,11 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   width: 100%;
 }
 
-#imrqorgfof .gt_spanner_row {
+#ykuocietob .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#imrqorgfof .gt_group_heading {
+#ykuocietob .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -449,7 +472,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   text-align: left;
 }
 
-#imrqorgfof .gt_empty_group_heading {
+#ykuocietob .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -464,15 +487,15 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   vertical-align: middle;
 }
 
-#imrqorgfof .gt_from_md > :first-child {
+#ykuocietob .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#imrqorgfof .gt_from_md > :last-child {
+#ykuocietob .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#imrqorgfof .gt_row {
+#ykuocietob .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -491,7 +514,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   overflow-x: hidden;
 }
 
-#imrqorgfof .gt_stub {
+#ykuocietob .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -504,7 +527,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   padding-right: 5px;
 }
 
-#imrqorgfof .gt_stub_row_group {
+#ykuocietob .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -518,15 +541,15 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   vertical-align: top;
 }
 
-#imrqorgfof .gt_row_group_first td {
+#ykuocietob .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#imrqorgfof .gt_row_group_first th {
+#ykuocietob .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#imrqorgfof .gt_summary_row {
+#ykuocietob .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -536,16 +559,16 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   padding-right: 5px;
 }
 
-#imrqorgfof .gt_first_summary_row {
+#ykuocietob .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_first_summary_row.thick {
+#ykuocietob .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#imrqorgfof .gt_last_summary_row {
+#ykuocietob .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -555,7 +578,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-bottom-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_grand_summary_row {
+#ykuocietob .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -565,7 +588,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   padding-right: 5px;
 }
 
-#imrqorgfof .gt_first_grand_summary_row {
+#ykuocietob .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -575,7 +598,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-top-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_last_grand_summary_row_top {
+#ykuocietob .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -585,11 +608,11 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-bottom-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_striped {
+#ykuocietob .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#imrqorgfof .gt_table_body {
+#ykuocietob .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -598,7 +621,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-bottom-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_footnotes {
+#ykuocietob .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -612,7 +635,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-right-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_footnote {
+#ykuocietob .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -621,7 +644,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   padding-right: 5px;
 }
 
-#imrqorgfof .gt_sourcenotes {
+#ykuocietob .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -635,7 +658,7 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   border-right-color: #D3D3D3;
 }
 
-#imrqorgfof .gt_sourcenote {
+#ykuocietob .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -643,72 +666,72 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
   padding-right: 5px;
 }
 
-#imrqorgfof .gt_left {
+#ykuocietob .gt_left {
   text-align: left;
 }
 
-#imrqorgfof .gt_center {
+#ykuocietob .gt_center {
   text-align: center;
 }
 
-#imrqorgfof .gt_right {
+#ykuocietob .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#imrqorgfof .gt_font_normal {
+#ykuocietob .gt_font_normal {
   font-weight: normal;
 }
 
-#imrqorgfof .gt_font_bold {
+#ykuocietob .gt_font_bold {
   font-weight: bold;
 }
 
-#imrqorgfof .gt_font_italic {
+#ykuocietob .gt_font_italic {
   font-style: italic;
 }
 
-#imrqorgfof .gt_super {
+#ykuocietob .gt_super {
   font-size: 65%;
 }
 
-#imrqorgfof .gt_footnote_marks {
+#ykuocietob .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#imrqorgfof .gt_asterisk {
+#ykuocietob .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#imrqorgfof .gt_indent_1 {
+#ykuocietob .gt_indent_1 {
   text-indent: 5px;
 }
 
-#imrqorgfof .gt_indent_2 {
+#ykuocietob .gt_indent_2 {
   text-indent: 10px;
 }
 
-#imrqorgfof .gt_indent_3 {
+#ykuocietob .gt_indent_3 {
   text-indent: 15px;
 }
 
-#imrqorgfof .gt_indent_4 {
+#ykuocietob .gt_indent_4 {
   text-indent: 20px;
 }
 
-#imrqorgfof .gt_indent_5 {
+#ykuocietob .gt_indent_5 {
   text-indent: 25px;
 }
 
-#imrqorgfof .katex-display {
+#ykuocietob .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#imrqorgfof div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ykuocietob div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -786,12 +809,12 @@ Figure&nbsp;B.1: Higher Than EF2 Tornado Data Accross USA
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.2: Florida Higher Than EF2 Tornado Data
+Figure&nbsp;D.2: Florida Higher Than EF2 Tornado Data
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a href="#fig-table1" class="quarto-xref">Figure&nbsp;<span>B.2</span></a> shows that there have been only 5 EF3 tornadoes in the last 10 years in the state of Florida. Because of an EF3 tornado being the highest EF rating, and it being “likely to toss a car or truck” we can believe that a tornado in Florida is pretty unlikely to pick up the average great white shark. Having only five EF3 tornadoes in the past 10 years seems like the chances of a Sharknado happening look pretty slim. Below is a map showing these tornadoes.</p>
+<p><a href="#fig-table1" class="quarto-xref">Figure&nbsp;<span>D.2</span></a> shows that there have been only 5 EF3 tornadoes in the last 10 years in the state of Florida. Because of an EF3 tornado being the highest EF rating, and it being “likely to toss a car or truck” we can believe that a tornado in Florida is pretty unlikely to pick up the average great white shark. Having only five EF3 tornadoes in the past 10 years seems like the chances of a Sharknado happening look pretty slim. Below is a map showing these tornadoes.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-plot2" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -800,35 +823,38 @@ Figure&nbsp;B.2: Florida Higher Than EF2 Tornado Data
 <img src="draft-results_files/figure-html/fig-plot2-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
+Figure&nbsp;D.3: Florida Higher Than EF2 Tornado Map
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p><a href="#fig-plot2" class="quarto-xref">Figure&nbsp;<span>B.3</span></a> shows a map of Florida showing the five EF3 tornadoes that have occurred in the last 10 years. There is one tornado that shows up close to the water, but looking at the coordinates, it appears on the beach. EF3 tornadoes are likely to toss cars and trucks (<span class="citation" data-cites="quach_can_2025">Quach (<a href="references.html#ref-quach_can_2025" role="doc-biblioref">2025</a>)</span>). Tossing and picking up are not the same thing in this scenario, so an EF3 tornado is not very likely to fully pick up a shark.</p>
+<p><a href="#fig-plot2" class="quarto-xref">Figure&nbsp;<span>D.3</span></a> shows a map of Florida showing the five EF3 tornadoes that have occurred in the last 10 years. There is one tornado that shows up close to the water, but looking at the coordinates, it appears on the beach. EF3 tornadoes are likely to toss cars and trucks (<span class="citation" data-cites="quach_can_2025">Quach (<a href="references.html#ref-quach_can_2025" role="doc-biblioref">2025</a>)</span>). Tossing and picking up are not the same thing in this scenario, so an EF3 tornado is not very likely to fully pick up a shark.</p>
+</section>
+<section id="results-south-carolina" class="level2" data-number="D.2">
+<h2 data-number="D.2" class="anchored" data-anchor-id="results-south-carolina"><span class="header-section-number">D.2</span> Results: South Carolina</h2>
 <p>A place that has similar properties to Florida, in having tropical storms frequently and being a coastal state, is South Carolina. The data below gives another place to compare to that is in an area where great white sharks are present.</p>
 <div class="cell">
 <div id="fig-table2" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="dpuexljoyd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dpuexljoyd table {
+<div id="drndpnefti" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#drndpnefti table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dpuexljoyd thead, #dpuexljoyd tbody, #dpuexljoyd tfoot, #dpuexljoyd tr, #dpuexljoyd td, #dpuexljoyd th {
+#drndpnefti thead, #drndpnefti tbody, #drndpnefti tfoot, #drndpnefti tr, #drndpnefti td, #drndpnefti th {
   border-style: none;
 }
 
-#dpuexljoyd p {
+#drndpnefti p {
   margin: 0;
   padding: 0;
 }
 
-#dpuexljoyd .gt_table {
+#drndpnefti .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -854,12 +880,12 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-left-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_caption {
+#drndpnefti .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dpuexljoyd .gt_title {
+#drndpnefti .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -871,7 +897,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-bottom-width: 0;
 }
 
-#dpuexljoyd .gt_subtitle {
+#drndpnefti .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -883,7 +909,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-top-width: 0;
 }
 
-#dpuexljoyd .gt_heading {
+#drndpnefti .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -895,13 +921,13 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_bottom_border {
+#drndpnefti .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_col_headings {
+#drndpnefti .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -916,7 +942,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_col_heading {
+#drndpnefti .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -936,7 +962,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   overflow-x: hidden;
 }
 
-#dpuexljoyd .gt_column_spanner_outer {
+#drndpnefti .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -948,15 +974,15 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   padding-right: 4px;
 }
 
-#dpuexljoyd .gt_column_spanner_outer:first-child {
+#drndpnefti .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dpuexljoyd .gt_column_spanner_outer:last-child {
+#drndpnefti .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dpuexljoyd .gt_column_spanner {
+#drndpnefti .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -968,11 +994,11 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   width: 100%;
 }
 
-#dpuexljoyd .gt_spanner_row {
+#drndpnefti .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dpuexljoyd .gt_group_heading {
+#drndpnefti .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -998,7 +1024,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   text-align: left;
 }
 
-#dpuexljoyd .gt_empty_group_heading {
+#drndpnefti .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1013,15 +1039,15 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   vertical-align: middle;
 }
 
-#dpuexljoyd .gt_from_md > :first-child {
+#drndpnefti .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dpuexljoyd .gt_from_md > :last-child {
+#drndpnefti .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dpuexljoyd .gt_row {
+#drndpnefti .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1040,7 +1066,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   overflow-x: hidden;
 }
 
-#dpuexljoyd .gt_stub {
+#drndpnefti .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1053,7 +1079,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#dpuexljoyd .gt_stub_row_group {
+#drndpnefti .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1067,15 +1093,15 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   vertical-align: top;
 }
 
-#dpuexljoyd .gt_row_group_first td {
+#drndpnefti .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dpuexljoyd .gt_row_group_first th {
+#drndpnefti .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dpuexljoyd .gt_summary_row {
+#drndpnefti .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1085,16 +1111,16 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#dpuexljoyd .gt_first_summary_row {
+#drndpnefti .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_first_summary_row.thick {
+#drndpnefti .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dpuexljoyd .gt_last_summary_row {
+#drndpnefti .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1104,7 +1130,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_grand_summary_row {
+#drndpnefti .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1114,7 +1140,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#dpuexljoyd .gt_first_grand_summary_row {
+#drndpnefti .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1124,7 +1150,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-top-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_last_grand_summary_row_top {
+#drndpnefti .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1134,11 +1160,11 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_striped {
+#drndpnefti .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dpuexljoyd .gt_table_body {
+#drndpnefti .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1147,7 +1173,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_footnotes {
+#drndpnefti .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1161,7 +1187,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_footnote {
+#drndpnefti .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1170,7 +1196,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#dpuexljoyd .gt_sourcenotes {
+#drndpnefti .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1184,7 +1210,7 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#dpuexljoyd .gt_sourcenote {
+#drndpnefti .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1192,72 +1218,72 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#dpuexljoyd .gt_left {
+#drndpnefti .gt_left {
   text-align: left;
 }
 
-#dpuexljoyd .gt_center {
+#drndpnefti .gt_center {
   text-align: center;
 }
 
-#dpuexljoyd .gt_right {
+#drndpnefti .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dpuexljoyd .gt_font_normal {
+#drndpnefti .gt_font_normal {
   font-weight: normal;
 }
 
-#dpuexljoyd .gt_font_bold {
+#drndpnefti .gt_font_bold {
   font-weight: bold;
 }
 
-#dpuexljoyd .gt_font_italic {
+#drndpnefti .gt_font_italic {
   font-style: italic;
 }
 
-#dpuexljoyd .gt_super {
+#drndpnefti .gt_super {
   font-size: 65%;
 }
 
-#dpuexljoyd .gt_footnote_marks {
+#drndpnefti .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dpuexljoyd .gt_asterisk {
+#drndpnefti .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dpuexljoyd .gt_indent_1 {
+#drndpnefti .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dpuexljoyd .gt_indent_2 {
+#drndpnefti .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dpuexljoyd .gt_indent_3 {
+#drndpnefti .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dpuexljoyd .gt_indent_4 {
+#drndpnefti .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dpuexljoyd .gt_indent_5 {
+#drndpnefti .gt_indent_5 {
   text-indent: 25px;
 }
 
-#dpuexljoyd .katex-display {
+#drndpnefti .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#dpuexljoyd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#drndpnefti div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1349,12 +1375,12 @@ Figure&nbsp;B.3: Florida Higher Than EF2 Tornado Map
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.4: South Carolina Higher Than EF2 Tornado Data
+Figure&nbsp;D.4: South Carolina Higher Than EF2 Tornado Data
 </figcaption>
 </figure>
 </div>
 </div>
-<p>South Carolina is similar to Florida from <a href="#fig-table2" class="quarto-xref">Figure&nbsp;<span>B.4</span></a>. There are a lot of EF3 tornadoes with one EF4 tornado. But it’s in the same boat as Florida; there has been a very limited number of powerful tornadoes over the past 10 years in South Carolina. There have been nine EF3 tornadoes and one EF4 tornado over that span. The surprising thing is that the EF4 and six of the EF3 tornadoes all happened on the same day. But the possibility of a Sharknado is very low because these tornadoes all happened away from the coast. The EF4 happened in Estill and Hampton Counties (<span class="citation" data-cites="zotero-item-1">Climatology Office (<a href="references.html#ref-zotero-item-1" role="doc-biblioref">2020</a>)</span>). Below is a map showing all the tornadoes from South Carolina over the last 10 years.</p>
+<p>South Carolina is similar to Florida from <a href="#fig-table2" class="quarto-xref">Figure&nbsp;<span>D.4</span></a>. There are a lot of EF3 tornadoes with one EF4 tornado. But it’s in the same boat as Florida; there has been a very limited number of powerful tornadoes over the past 10 years in South Carolina. There have been nine EF3 tornadoes and one EF4 tornado over that span. The surprising thing is that the EF4 and six of the EF3 tornadoes all happened on the same day. But the possibility of a Sharknado is very low because these tornadoes all happened away from the coast. The EF4 happened in Estill and Hampton Counties (<span class="citation" data-cites="zotero-item-1">Climatology Office (<a href="references.html#ref-zotero-item-1" role="doc-biblioref">2020</a>)</span>). Below is a map showing all the tornadoes from South Carolina over the last 10 years.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-plot3" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1363,35 +1389,38 @@ Figure&nbsp;B.4: South Carolina Higher Than EF2 Tornado Data
 <img src="draft-results_files/figure-html/fig-plot3-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
+Figure&nbsp;D.5: South Carolina Higher Than EF2 Tornado Map
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The EF4 tornado is the main Sharknado threat. As seen in <a href="#fig-plot3" class="quarto-xref">Figure&nbsp;<span>B.5</span></a>, all tornadoes EF3 and above only appear on land and are far enough from the coast to have any real threat of a Sharknado. From the evidence from Florida and now South Carolina, a Sharknado is looking less and less possible.</p>
-<p>Another coastal state that was added to the group of states to look at is Virginia. <a href="#fig-plot1" class="quarto-xref">Figure&nbsp;<span>B.1</span></a> shows a plethora of tornadoes in VA over the last 10 years that fit the criteria of EF3 or higher tornadoes to test the potential of a Sharknado. Below is Virginia tornado data from the last 10 years.</p>
+<p>The EF4 tornado is the main Sharknado threat. As seen in <a href="#fig-plot3" class="quarto-xref">Figure&nbsp;<span>D.5</span></a>, all tornadoes EF3 and above only appear on land and are far enough from the coast to have any real threat of a Sharknado. From the evidence from Florida and now South Carolina, a Sharknado is looking less and less possible.</p>
+</section>
+<section id="results-virginia" class="level2" data-number="D.3">
+<h2 data-number="D.3" class="anchored" data-anchor-id="results-virginia"><span class="header-section-number">D.3</span> Results: Virginia</h2>
+<p>Another coastal state that was added to the group of states to look at is Virginia. <a href="#fig-plot1" class="quarto-xref">Figure&nbsp;<span>D.1</span></a> shows a plethora of tornadoes in VA over the last 10 years that fit the criteria of EF3 or higher tornadoes to test the potential of a Sharknado. Below is Virginia tornado data from the last 10 years.</p>
 <div class="cell">
 <div id="fig-table3" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="qjkerwrdij" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qjkerwrdij table {
+<div id="yuryebwbue" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#yuryebwbue table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qjkerwrdij thead, #qjkerwrdij tbody, #qjkerwrdij tfoot, #qjkerwrdij tr, #qjkerwrdij td, #qjkerwrdij th {
+#yuryebwbue thead, #yuryebwbue tbody, #yuryebwbue tfoot, #yuryebwbue tr, #yuryebwbue td, #yuryebwbue th {
   border-style: none;
 }
 
-#qjkerwrdij p {
+#yuryebwbue p {
   margin: 0;
   padding: 0;
 }
 
-#qjkerwrdij .gt_table {
+#yuryebwbue .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1417,12 +1446,12 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-left-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_caption {
+#yuryebwbue .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qjkerwrdij .gt_title {
+#yuryebwbue .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1434,7 +1463,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-bottom-width: 0;
 }
 
-#qjkerwrdij .gt_subtitle {
+#yuryebwbue .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1446,7 +1475,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-top-width: 0;
 }
 
-#qjkerwrdij .gt_heading {
+#yuryebwbue .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1458,13 +1487,13 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_bottom_border {
+#yuryebwbue .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_col_headings {
+#yuryebwbue .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1479,7 +1508,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_col_heading {
+#yuryebwbue .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1499,7 +1528,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   overflow-x: hidden;
 }
 
-#qjkerwrdij .gt_column_spanner_outer {
+#yuryebwbue .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1511,15 +1540,15 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   padding-right: 4px;
 }
 
-#qjkerwrdij .gt_column_spanner_outer:first-child {
+#yuryebwbue .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qjkerwrdij .gt_column_spanner_outer:last-child {
+#yuryebwbue .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qjkerwrdij .gt_column_spanner {
+#yuryebwbue .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1531,11 +1560,11 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   width: 100%;
 }
 
-#qjkerwrdij .gt_spanner_row {
+#yuryebwbue .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qjkerwrdij .gt_group_heading {
+#yuryebwbue .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1561,7 +1590,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   text-align: left;
 }
 
-#qjkerwrdij .gt_empty_group_heading {
+#yuryebwbue .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1576,15 +1605,15 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   vertical-align: middle;
 }
 
-#qjkerwrdij .gt_from_md > :first-child {
+#yuryebwbue .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qjkerwrdij .gt_from_md > :last-child {
+#yuryebwbue .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qjkerwrdij .gt_row {
+#yuryebwbue .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1603,7 +1632,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   overflow-x: hidden;
 }
 
-#qjkerwrdij .gt_stub {
+#yuryebwbue .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1616,7 +1645,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#qjkerwrdij .gt_stub_row_group {
+#yuryebwbue .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1630,15 +1659,15 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   vertical-align: top;
 }
 
-#qjkerwrdij .gt_row_group_first td {
+#yuryebwbue .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qjkerwrdij .gt_row_group_first th {
+#yuryebwbue .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qjkerwrdij .gt_summary_row {
+#yuryebwbue .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1648,16 +1677,16 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#qjkerwrdij .gt_first_summary_row {
+#yuryebwbue .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_first_summary_row.thick {
+#yuryebwbue .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qjkerwrdij .gt_last_summary_row {
+#yuryebwbue .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1667,7 +1696,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_grand_summary_row {
+#yuryebwbue .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1677,7 +1706,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#qjkerwrdij .gt_first_grand_summary_row {
+#yuryebwbue .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1687,7 +1716,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-top-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_last_grand_summary_row_top {
+#yuryebwbue .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1697,11 +1726,11 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_striped {
+#yuryebwbue .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qjkerwrdij .gt_table_body {
+#yuryebwbue .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1710,7 +1739,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_footnotes {
+#yuryebwbue .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1724,7 +1753,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_footnote {
+#yuryebwbue .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1733,7 +1762,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#qjkerwrdij .gt_sourcenotes {
+#yuryebwbue .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1747,7 +1776,7 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#qjkerwrdij .gt_sourcenote {
+#yuryebwbue .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1755,72 +1784,72 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#qjkerwrdij .gt_left {
+#yuryebwbue .gt_left {
   text-align: left;
 }
 
-#qjkerwrdij .gt_center {
+#yuryebwbue .gt_center {
   text-align: center;
 }
 
-#qjkerwrdij .gt_right {
+#yuryebwbue .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qjkerwrdij .gt_font_normal {
+#yuryebwbue .gt_font_normal {
   font-weight: normal;
 }
 
-#qjkerwrdij .gt_font_bold {
+#yuryebwbue .gt_font_bold {
   font-weight: bold;
 }
 
-#qjkerwrdij .gt_font_italic {
+#yuryebwbue .gt_font_italic {
   font-style: italic;
 }
 
-#qjkerwrdij .gt_super {
+#yuryebwbue .gt_super {
   font-size: 65%;
 }
 
-#qjkerwrdij .gt_footnote_marks {
+#yuryebwbue .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qjkerwrdij .gt_asterisk {
+#yuryebwbue .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qjkerwrdij .gt_indent_1 {
+#yuryebwbue .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qjkerwrdij .gt_indent_2 {
+#yuryebwbue .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qjkerwrdij .gt_indent_3 {
+#yuryebwbue .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qjkerwrdij .gt_indent_4 {
+#yuryebwbue .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qjkerwrdij .gt_indent_5 {
+#yuryebwbue .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qjkerwrdij .katex-display {
+#yuryebwbue .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qjkerwrdij div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#yuryebwbue div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1877,12 +1906,12 @@ Figure&nbsp;B.5: South Carolina Higher Than EF2 Tornado Map
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.6: Virginia Higher Than EF2 Tornado Data
+Figure&nbsp;D.6: Virginia Higher Than EF2 Tornado Data
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a href="#fig-table3" class="quarto-xref">Figure&nbsp;<span>B.6</span></a> shows 5 tornadoes that are only EF3 tornadoes. Below is a map of the tornadoes for Virginia to get a better idea of the data.</p>
+<p><a href="#fig-table3" class="quarto-xref">Figure&nbsp;<span>D.6</span></a> shows 5 tornadoes that are only EF3 tornadoes. This looks very similar to what Florida’s tornado data looked like in <a href="#fig-table1" class="quarto-xref">Figure&nbsp;<span>D.2</span></a>. By the looks of the longitude and latitude, the tornadoes seem to be spread out and not concentrated in one area of the state. Below is a map of the tornadoes for Virginia to get a better idea of where the tornadoes are located.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-plot4" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1891,35 +1920,38 @@ Figure&nbsp;B.6: Virginia Higher Than EF2 Tornado Data
 <img src="draft-results_files/figure-html/fig-plot4-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
+Figure&nbsp;D.7: Virginia Higher Than EF2 Tornado Map
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>From <a href="#fig-plot4" class="quarto-xref">Figure&nbsp;<span>B.7</span></a>, there is really only one tornado that looks like it could have the potential to become a Sharknado. That one tornado starts on the land so that limits the chances of this really becoming a Sharknado. This is also the same as what happened with the one Florida tornado, EF3 is really only able to toss a car or truck (<span class="citation" data-cites="quach_can_2025">Quach (<a href="references.html#ref-quach_can_2025" role="doc-biblioref">2025</a>)</span>). This makes Virginia an unlikely candidate to have a Sharknado occur.</p>
-<p>The next place being to look at has a ton of tornadoes, so there is a good comparison of the strength of tornadoes in a very tornado-heavy area in Oklahoma.</p>
+<p>From <a href="#fig-plot4" class="quarto-xref">Figure&nbsp;<span>D.7</span></a>, there is really only one tornado that looks like it could have the potential to become a Sharknado. That one tornado starts on the land so that limits the chances of this really becoming a Sharknado. This is also the same as what happened with the one Florida tornado, EF3 is really only able to toss a car or truck (<span class="citation" data-cites="quach_can_2025">Quach (<a href="references.html#ref-quach_can_2025" role="doc-biblioref">2025</a>)</span>). This makes Virginia an unlikely candidate to have a Sharknado occur.</p>
+</section>
+<section id="results-oklahoma" class="level2" data-number="D.4">
+<h2 data-number="D.4" class="anchored" data-anchor-id="results-oklahoma"><span class="header-section-number">D.4</span> Results: Oklahoma</h2>
+<p>Oklahoma is known as the tornado capital of the United States. Tornado data from Oklahoma will give a good comparison for the amount of tornadoes that occur at the levels needed to cause a Sharknado.</p>
 <div class="cell">
 <div id="fig-table4" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="vowjuohqub" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vowjuohqub table {
+<div id="ihymbecfkl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ihymbecfkl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vowjuohqub thead, #vowjuohqub tbody, #vowjuohqub tfoot, #vowjuohqub tr, #vowjuohqub td, #vowjuohqub th {
+#ihymbecfkl thead, #ihymbecfkl tbody, #ihymbecfkl tfoot, #ihymbecfkl tr, #ihymbecfkl td, #ihymbecfkl th {
   border-style: none;
 }
 
-#vowjuohqub p {
+#ihymbecfkl p {
   margin: 0;
   padding: 0;
 }
 
-#vowjuohqub .gt_table {
+#ihymbecfkl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1945,12 +1977,12 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-left-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_caption {
+#ihymbecfkl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vowjuohqub .gt_title {
+#ihymbecfkl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1962,7 +1994,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-bottom-width: 0;
 }
 
-#vowjuohqub .gt_subtitle {
+#ihymbecfkl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1974,7 +2006,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-top-width: 0;
 }
 
-#vowjuohqub .gt_heading {
+#ihymbecfkl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1986,13 +2018,13 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_bottom_border {
+#ihymbecfkl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_col_headings {
+#ihymbecfkl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2007,7 +2039,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_col_heading {
+#ihymbecfkl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2027,7 +2059,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   overflow-x: hidden;
 }
 
-#vowjuohqub .gt_column_spanner_outer {
+#ihymbecfkl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2039,15 +2071,15 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   padding-right: 4px;
 }
 
-#vowjuohqub .gt_column_spanner_outer:first-child {
+#ihymbecfkl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vowjuohqub .gt_column_spanner_outer:last-child {
+#ihymbecfkl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vowjuohqub .gt_column_spanner {
+#ihymbecfkl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2059,11 +2091,11 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   width: 100%;
 }
 
-#vowjuohqub .gt_spanner_row {
+#ihymbecfkl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vowjuohqub .gt_group_heading {
+#ihymbecfkl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2089,7 +2121,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   text-align: left;
 }
 
-#vowjuohqub .gt_empty_group_heading {
+#ihymbecfkl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2104,15 +2136,15 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   vertical-align: middle;
 }
 
-#vowjuohqub .gt_from_md > :first-child {
+#ihymbecfkl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vowjuohqub .gt_from_md > :last-child {
+#ihymbecfkl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vowjuohqub .gt_row {
+#ihymbecfkl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2131,7 +2163,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   overflow-x: hidden;
 }
 
-#vowjuohqub .gt_stub {
+#ihymbecfkl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2144,7 +2176,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#vowjuohqub .gt_stub_row_group {
+#ihymbecfkl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2158,15 +2190,15 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   vertical-align: top;
 }
 
-#vowjuohqub .gt_row_group_first td {
+#ihymbecfkl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vowjuohqub .gt_row_group_first th {
+#ihymbecfkl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vowjuohqub .gt_summary_row {
+#ihymbecfkl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2176,16 +2208,16 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#vowjuohqub .gt_first_summary_row {
+#ihymbecfkl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_first_summary_row.thick {
+#ihymbecfkl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vowjuohqub .gt_last_summary_row {
+#ihymbecfkl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2195,7 +2227,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_grand_summary_row {
+#ihymbecfkl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2205,7 +2237,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#vowjuohqub .gt_first_grand_summary_row {
+#ihymbecfkl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2215,7 +2247,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-top-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_last_grand_summary_row_top {
+#ihymbecfkl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2225,11 +2257,11 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_striped {
+#ihymbecfkl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vowjuohqub .gt_table_body {
+#ihymbecfkl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2238,7 +2270,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-bottom-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_footnotes {
+#ihymbecfkl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2252,7 +2284,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_footnote {
+#ihymbecfkl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2261,7 +2293,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#vowjuohqub .gt_sourcenotes {
+#ihymbecfkl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2275,7 +2307,7 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   border-right-color: #D3D3D3;
 }
 
-#vowjuohqub .gt_sourcenote {
+#ihymbecfkl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2283,72 +2315,72 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
   padding-right: 5px;
 }
 
-#vowjuohqub .gt_left {
+#ihymbecfkl .gt_left {
   text-align: left;
 }
 
-#vowjuohqub .gt_center {
+#ihymbecfkl .gt_center {
   text-align: center;
 }
 
-#vowjuohqub .gt_right {
+#ihymbecfkl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vowjuohqub .gt_font_normal {
+#ihymbecfkl .gt_font_normal {
   font-weight: normal;
 }
 
-#vowjuohqub .gt_font_bold {
+#ihymbecfkl .gt_font_bold {
   font-weight: bold;
 }
 
-#vowjuohqub .gt_font_italic {
+#ihymbecfkl .gt_font_italic {
   font-style: italic;
 }
 
-#vowjuohqub .gt_super {
+#ihymbecfkl .gt_super {
   font-size: 65%;
 }
 
-#vowjuohqub .gt_footnote_marks {
+#ihymbecfkl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vowjuohqub .gt_asterisk {
+#ihymbecfkl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vowjuohqub .gt_indent_1 {
+#ihymbecfkl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vowjuohqub .gt_indent_2 {
+#ihymbecfkl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vowjuohqub .gt_indent_3 {
+#ihymbecfkl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vowjuohqub .gt_indent_4 {
+#ihymbecfkl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vowjuohqub .gt_indent_5 {
+#ihymbecfkl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vowjuohqub .katex-display {
+#ihymbecfkl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vowjuohqub div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ihymbecfkl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2440,34 +2472,37 @@ Figure&nbsp;B.7: Virginia Higher Than EF2 Tornado Map
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
+Figure&nbsp;D.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
 </figcaption>
 </figure>
 </div>
 </div>
-<p>From <a href="#fig-table4" class="quarto-xref">Figure&nbsp;<span>B.8</span></a>, this displays only the ten highest EF scale tornadoes to hit Oklahoma because there are 27 tornadoes in the EF3 to EF5 rating. The ten highest tornadoes in Oklahoma over the last 10 years have been two EF5 tornadoes, seven EF4 tornadoes, and one EF3 tornado. This data tells that EF5s are a very rare occurrence even for the tornado capital of the country.</p>
-<p>To make a real connection to the Sharknado movie, looking at the actual setting of the movie, which is California and Los Angeles, CA is the next step. The tornadoes recorded in California over the past ten years give a real idea of the possible strength of tornadoes that could hit Los Angeles, to see how it compares to the Sharknado film. The table below shows the top 10 tornadoes in EF scale magnitude over the last 10 years.</p>
+<p>From <a href="#fig-table4" class="quarto-xref">Figure&nbsp;<span>D.8</span></a>, this displays only the ten highest EF scale tornadoes to hit Oklahoma because there are 27 tornadoes in the EF3 to EF5 rating. The ten highest tornadoes in Oklahoma over the last 10 years have been two EF5 tornadoes, seven EF4 tornadoes, and one EF3 tornado. This data tells that EF5s are a very rare occurrence even for the tornado capital of the country. Sharknado’s would be very rare even in a place that gets strong tornadoes at the highest rate in the country.</p>
+</section>
+<section id="results-califorinia-los-angeles-ca" class="level2" data-number="D.5">
+<h2 data-number="D.5" class="anchored" data-anchor-id="results-califorinia-los-angeles-ca"><span class="header-section-number">D.5</span> Results: Califorinia &amp; Los Angeles, CA</h2>
+<p>To make a real connection to the Sharknado movie, examining the actual setting of the movie, which is California and Los Angeles, CA is the next step. The tornadoes recorded in California over the past ten years give a real idea of the possible strength of tornadoes that could hit Los Angeles, to see how it compares to the Sharknado film. The table below shows the top 10 tornadoes in EF scale strength over the last 10 years.</p>
 <div class="cell">
 <div id="fig-table5" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="eeigdvlmaj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#eeigdvlmaj table {
+<div id="tliumuogru" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tliumuogru table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#eeigdvlmaj thead, #eeigdvlmaj tbody, #eeigdvlmaj tfoot, #eeigdvlmaj tr, #eeigdvlmaj td, #eeigdvlmaj th {
+#tliumuogru thead, #tliumuogru tbody, #tliumuogru tfoot, #tliumuogru tr, #tliumuogru td, #tliumuogru th {
   border-style: none;
 }
 
-#eeigdvlmaj p {
+#tliumuogru p {
   margin: 0;
   padding: 0;
 }
 
-#eeigdvlmaj .gt_table {
+#tliumuogru .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2493,12 +2528,12 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-left-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_caption {
+#tliumuogru .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#eeigdvlmaj .gt_title {
+#tliumuogru .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2510,7 +2545,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-bottom-width: 0;
 }
 
-#eeigdvlmaj .gt_subtitle {
+#tliumuogru .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2522,7 +2557,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-top-width: 0;
 }
 
-#eeigdvlmaj .gt_heading {
+#tliumuogru .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2534,13 +2569,13 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-right-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_bottom_border {
+#tliumuogru .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_col_headings {
+#tliumuogru .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2555,7 +2590,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-right-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_col_heading {
+#tliumuogru .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2575,7 +2610,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   overflow-x: hidden;
 }
 
-#eeigdvlmaj .gt_column_spanner_outer {
+#tliumuogru .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2587,15 +2622,15 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   padding-right: 4px;
 }
 
-#eeigdvlmaj .gt_column_spanner_outer:first-child {
+#tliumuogru .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eeigdvlmaj .gt_column_spanner_outer:last-child {
+#tliumuogru .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eeigdvlmaj .gt_column_spanner {
+#tliumuogru .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2607,11 +2642,11 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   width: 100%;
 }
 
-#eeigdvlmaj .gt_spanner_row {
+#tliumuogru .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#eeigdvlmaj .gt_group_heading {
+#tliumuogru .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2637,7 +2672,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   text-align: left;
 }
 
-#eeigdvlmaj .gt_empty_group_heading {
+#tliumuogru .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2652,15 +2687,15 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   vertical-align: middle;
 }
 
-#eeigdvlmaj .gt_from_md > :first-child {
+#tliumuogru .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eeigdvlmaj .gt_from_md > :last-child {
+#tliumuogru .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eeigdvlmaj .gt_row {
+#tliumuogru .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2679,7 +2714,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   overflow-x: hidden;
 }
 
-#eeigdvlmaj .gt_stub {
+#tliumuogru .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2692,7 +2727,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   padding-right: 5px;
 }
 
-#eeigdvlmaj .gt_stub_row_group {
+#tliumuogru .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2706,15 +2741,15 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   vertical-align: top;
 }
 
-#eeigdvlmaj .gt_row_group_first td {
+#tliumuogru .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#eeigdvlmaj .gt_row_group_first th {
+#tliumuogru .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#eeigdvlmaj .gt_summary_row {
+#tliumuogru .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2724,16 +2759,16 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   padding-right: 5px;
 }
 
-#eeigdvlmaj .gt_first_summary_row {
+#tliumuogru .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_first_summary_row.thick {
+#tliumuogru .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#eeigdvlmaj .gt_last_summary_row {
+#tliumuogru .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2743,7 +2778,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-bottom-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_grand_summary_row {
+#tliumuogru .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2753,7 +2788,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   padding-right: 5px;
 }
 
-#eeigdvlmaj .gt_first_grand_summary_row {
+#tliumuogru .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2763,7 +2798,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-top-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_last_grand_summary_row_top {
+#tliumuogru .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2773,11 +2808,11 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-bottom-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_striped {
+#tliumuogru .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eeigdvlmaj .gt_table_body {
+#tliumuogru .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2786,7 +2821,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-bottom-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_footnotes {
+#tliumuogru .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2800,7 +2835,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-right-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_footnote {
+#tliumuogru .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2809,7 +2844,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   padding-right: 5px;
 }
 
-#eeigdvlmaj .gt_sourcenotes {
+#tliumuogru .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2823,7 +2858,7 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   border-right-color: #D3D3D3;
 }
 
-#eeigdvlmaj .gt_sourcenote {
+#tliumuogru .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2831,72 +2866,72 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
   padding-right: 5px;
 }
 
-#eeigdvlmaj .gt_left {
+#tliumuogru .gt_left {
   text-align: left;
 }
 
-#eeigdvlmaj .gt_center {
+#tliumuogru .gt_center {
   text-align: center;
 }
 
-#eeigdvlmaj .gt_right {
+#tliumuogru .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eeigdvlmaj .gt_font_normal {
+#tliumuogru .gt_font_normal {
   font-weight: normal;
 }
 
-#eeigdvlmaj .gt_font_bold {
+#tliumuogru .gt_font_bold {
   font-weight: bold;
 }
 
-#eeigdvlmaj .gt_font_italic {
+#tliumuogru .gt_font_italic {
   font-style: italic;
 }
 
-#eeigdvlmaj .gt_super {
+#tliumuogru .gt_super {
   font-size: 65%;
 }
 
-#eeigdvlmaj .gt_footnote_marks {
+#tliumuogru .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#eeigdvlmaj .gt_asterisk {
+#tliumuogru .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#eeigdvlmaj .gt_indent_1 {
+#tliumuogru .gt_indent_1 {
   text-indent: 5px;
 }
 
-#eeigdvlmaj .gt_indent_2 {
+#tliumuogru .gt_indent_2 {
   text-indent: 10px;
 }
 
-#eeigdvlmaj .gt_indent_3 {
+#tliumuogru .gt_indent_3 {
   text-indent: 15px;
 }
 
-#eeigdvlmaj .gt_indent_4 {
+#tliumuogru .gt_indent_4 {
   text-indent: 20px;
 }
 
-#eeigdvlmaj .gt_indent_5 {
+#tliumuogru .gt_indent_5 {
   text-indent: 25px;
 }
 
-#eeigdvlmaj .katex-display {
+#tliumuogru .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#eeigdvlmaj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tliumuogru div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2988,34 +3023,34 @@ Figure&nbsp;B.8: Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.9: California Tornado Data
+Figure&nbsp;D.9: California Tornado Data
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a href="#fig-table5" class="quarto-xref">Figure&nbsp;<span>B.9</span></a> shows the 10 highest tornadoes from the last 10 years in California. There are no tornadoes that are EF3 or higher that have taken place in CA from this table. There are no tornadoes that can pick up a great white shark.</p>
+<p><a href="#fig-table5" class="quarto-xref">Figure&nbsp;<span>D.9</span></a> shows the 10 highest tornadoes from the last 10 years in California. There are no tornadoes that are EF3 or higher that have taken place in CA from this table. There are no tornadoes that can pick up a great white shark.</p>
 <p>Sharknado takes place in Los Angeles, CA, as the main setting for the movie. Because of this, the table below shows only tornadoes from Los Angeles County. Los Angeles County is where the city of Los Angeles is located.</p>
 <div class="cell">
 <div id="fig-table6" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="ulcgukdqyx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ulcgukdqyx table {
+<div id="fvyatvzugn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fvyatvzugn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ulcgukdqyx thead, #ulcgukdqyx tbody, #ulcgukdqyx tfoot, #ulcgukdqyx tr, #ulcgukdqyx td, #ulcgukdqyx th {
+#fvyatvzugn thead, #fvyatvzugn tbody, #fvyatvzugn tfoot, #fvyatvzugn tr, #fvyatvzugn td, #fvyatvzugn th {
   border-style: none;
 }
 
-#ulcgukdqyx p {
+#fvyatvzugn p {
   margin: 0;
   padding: 0;
 }
 
-#ulcgukdqyx .gt_table {
+#fvyatvzugn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3041,12 +3076,12 @@ Figure&nbsp;B.9: California Tornado Data
   border-left-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_caption {
+#fvyatvzugn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ulcgukdqyx .gt_title {
+#fvyatvzugn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3058,7 +3093,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-bottom-width: 0;
 }
 
-#ulcgukdqyx .gt_subtitle {
+#fvyatvzugn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3070,7 +3105,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-top-width: 0;
 }
 
-#ulcgukdqyx .gt_heading {
+#fvyatvzugn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3082,13 +3117,13 @@ Figure&nbsp;B.9: California Tornado Data
   border-right-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_bottom_border {
+#fvyatvzugn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_col_headings {
+#fvyatvzugn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3103,7 +3138,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-right-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_col_heading {
+#fvyatvzugn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3123,7 +3158,7 @@ Figure&nbsp;B.9: California Tornado Data
   overflow-x: hidden;
 }
 
-#ulcgukdqyx .gt_column_spanner_outer {
+#fvyatvzugn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3135,15 +3170,15 @@ Figure&nbsp;B.9: California Tornado Data
   padding-right: 4px;
 }
 
-#ulcgukdqyx .gt_column_spanner_outer:first-child {
+#fvyatvzugn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ulcgukdqyx .gt_column_spanner_outer:last-child {
+#fvyatvzugn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ulcgukdqyx .gt_column_spanner {
+#fvyatvzugn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3155,11 +3190,11 @@ Figure&nbsp;B.9: California Tornado Data
   width: 100%;
 }
 
-#ulcgukdqyx .gt_spanner_row {
+#fvyatvzugn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ulcgukdqyx .gt_group_heading {
+#fvyatvzugn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3185,7 +3220,7 @@ Figure&nbsp;B.9: California Tornado Data
   text-align: left;
 }
 
-#ulcgukdqyx .gt_empty_group_heading {
+#fvyatvzugn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3200,15 +3235,15 @@ Figure&nbsp;B.9: California Tornado Data
   vertical-align: middle;
 }
 
-#ulcgukdqyx .gt_from_md > :first-child {
+#fvyatvzugn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ulcgukdqyx .gt_from_md > :last-child {
+#fvyatvzugn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ulcgukdqyx .gt_row {
+#fvyatvzugn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3227,7 +3262,7 @@ Figure&nbsp;B.9: California Tornado Data
   overflow-x: hidden;
 }
 
-#ulcgukdqyx .gt_stub {
+#fvyatvzugn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3240,7 +3275,7 @@ Figure&nbsp;B.9: California Tornado Data
   padding-right: 5px;
 }
 
-#ulcgukdqyx .gt_stub_row_group {
+#fvyatvzugn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3254,15 +3289,15 @@ Figure&nbsp;B.9: California Tornado Data
   vertical-align: top;
 }
 
-#ulcgukdqyx .gt_row_group_first td {
+#fvyatvzugn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ulcgukdqyx .gt_row_group_first th {
+#fvyatvzugn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ulcgukdqyx .gt_summary_row {
+#fvyatvzugn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3272,16 +3307,16 @@ Figure&nbsp;B.9: California Tornado Data
   padding-right: 5px;
 }
 
-#ulcgukdqyx .gt_first_summary_row {
+#fvyatvzugn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_first_summary_row.thick {
+#fvyatvzugn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ulcgukdqyx .gt_last_summary_row {
+#fvyatvzugn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3291,7 +3326,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-bottom-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_grand_summary_row {
+#fvyatvzugn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3301,7 +3336,7 @@ Figure&nbsp;B.9: California Tornado Data
   padding-right: 5px;
 }
 
-#ulcgukdqyx .gt_first_grand_summary_row {
+#fvyatvzugn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3311,7 +3346,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-top-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_last_grand_summary_row_top {
+#fvyatvzugn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3321,11 +3356,11 @@ Figure&nbsp;B.9: California Tornado Data
   border-bottom-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_striped {
+#fvyatvzugn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ulcgukdqyx .gt_table_body {
+#fvyatvzugn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3334,7 +3369,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-bottom-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_footnotes {
+#fvyatvzugn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3348,7 +3383,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-right-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_footnote {
+#fvyatvzugn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3357,7 +3392,7 @@ Figure&nbsp;B.9: California Tornado Data
   padding-right: 5px;
 }
 
-#ulcgukdqyx .gt_sourcenotes {
+#fvyatvzugn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3371,7 +3406,7 @@ Figure&nbsp;B.9: California Tornado Data
   border-right-color: #D3D3D3;
 }
 
-#ulcgukdqyx .gt_sourcenote {
+#fvyatvzugn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3379,72 +3414,72 @@ Figure&nbsp;B.9: California Tornado Data
   padding-right: 5px;
 }
 
-#ulcgukdqyx .gt_left {
+#fvyatvzugn .gt_left {
   text-align: left;
 }
 
-#ulcgukdqyx .gt_center {
+#fvyatvzugn .gt_center {
   text-align: center;
 }
 
-#ulcgukdqyx .gt_right {
+#fvyatvzugn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ulcgukdqyx .gt_font_normal {
+#fvyatvzugn .gt_font_normal {
   font-weight: normal;
 }
 
-#ulcgukdqyx .gt_font_bold {
+#fvyatvzugn .gt_font_bold {
   font-weight: bold;
 }
 
-#ulcgukdqyx .gt_font_italic {
+#fvyatvzugn .gt_font_italic {
   font-style: italic;
 }
 
-#ulcgukdqyx .gt_super {
+#fvyatvzugn .gt_super {
   font-size: 65%;
 }
 
-#ulcgukdqyx .gt_footnote_marks {
+#fvyatvzugn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ulcgukdqyx .gt_asterisk {
+#fvyatvzugn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ulcgukdqyx .gt_indent_1 {
+#fvyatvzugn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ulcgukdqyx .gt_indent_2 {
+#fvyatvzugn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ulcgukdqyx .gt_indent_3 {
+#fvyatvzugn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ulcgukdqyx .gt_indent_4 {
+#fvyatvzugn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ulcgukdqyx .gt_indent_5 {
+#fvyatvzugn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ulcgukdqyx .katex-display {
+#fvyatvzugn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ulcgukdqyx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#fvyatvzugn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3515,12 +3550,12 @@ Figure&nbsp;B.9: California Tornado Data
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.10: Los Angeles, California Tornado Data
+Figure&nbsp;D.10: Los Angeles, California Tornado Data
 </figcaption>
 </figure>
 </div>
 </div>
-<p>All of the tornado data over the last ten years in Los Angeles can be seen in <a href="#fig-table6" class="quarto-xref">Figure&nbsp;<span>B.10</span></a>. As shown, there have been only EF0 and EF1 tornadoes to hit Los Angeles over this span of time. By comparing the levels of EF ratings specified before (needing between EF3 - EF5), we can see there is not really a possibility of getting a tornado with wind speeds strong enough to pick up a shark to create a Sharknado. The mph of wind speed needed to lift a shark off the ground is about 200 mph (<span class="citation" data-cites="salaita_how_nodate">Salaita (<a href="references.html#ref-salaita_how_nodate" role="doc-biblioref">n.d.</a>)</span>). The wind speed of an EF0 tornado is 65 - 85 mph, while an EF1 tornado has wind speeds 86 - 110 mph. This shows us that we are barely able to get to half the wind speed needed to pick a shark up off the ground in Los Angeles. Below is a map showing the tornadoes that occurred in California over the last 10 years.</p>
+<p>All of the tornado data over the last ten years in Los Angeles can be seen in <a href="#fig-table6" class="quarto-xref">Figure&nbsp;<span>D.10</span></a>. As shown, there have been only EF0 and EF1 tornadoes to hit Los Angeles over this span of time. By comparing the levels of EF ratings specified before (needing between EF3 - EF5), we can see there is not really a possibility of getting a tornado with wind speeds strong enough to pick up a shark to create a Sharknado. The mph of wind speed needed to lift a shark off the ground is about 200 mph (<span class="citation" data-cites="salaita_how_nodate">Salaita (<a href="references.html#ref-salaita_how_nodate" role="doc-biblioref">n.d.</a>)</span>). The wind speed of an EF0 tornado is 65 - 85 mph, while an EF1 tornado has wind speeds 86 - 110 mph. This shows us that we are barely able to get to half the wind speed needed to pick a shark up off the ground in Los Angeles. Below is a map showing the tornadoes that occurred in California over the last 10 years.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-plot5" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -3529,13 +3564,17 @@ Figure&nbsp;B.10: Los Angeles, California Tornado Data
 <img src="draft-results_files/figure-html/fig-plot5-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.11: California Higher Than EF2 Tornado Map
+Figure&nbsp;D.11: California Higher Than EF2 Tornado Map
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Next, using a stacked bar chart allows easier comparison of all the tornadoes for each location we chose (Florida, South Carolina, Oklahoma, California) with an EF scale rating of EF3 to EF5, and compare them to see which locations have the highest possibility of a Sharknado to occur. Note that California only has EF0 and EF1 tornadoes, so we will use those only in this chart.</p>
+<p>As seen in <a href="#fig-plot5" class="quarto-xref">Figure&nbsp;<span>D.11</span></a> and <a href="#fig-table5" class="quarto-xref">Figure&nbsp;<span>D.9</span></a>, there are no tornadoes strong enough to be able to lift a shark at all over the last 10 years. There are tornadoes that have started along the coast but each one lacked the EF strength needed to lift an object like a shark.</p>
+</section>
+<section id="all-states" class="level2" data-number="D.6">
+<h2 data-number="D.6" class="anchored" data-anchor-id="all-states"><span class="header-section-number">D.6</span> All States</h2>
+<p>A stacked bar chart is used to see an easier comparison of all the tornadoes for each location we chose (Florida, South Carolina, Virginia, Oklahoma, California) with an EF scale rating of EF3 to EF5, and compare them to see which locations have the highest possibility of a Sharknado to occur. Note that California only has EF0 and EF1 tornadoes, so we will use those only in this chart.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-plot6" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -3544,34 +3583,34 @@ Figure&nbsp;B.11: California Higher Than EF2 Tornado Map
 <img src="draft-results_files/figure-html/fig-plot6-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for FL, SC, VA, and OK, All Tornadoes Over Last 10 Years for CA
+Figure&nbsp;D.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for FL, SC, VA, and OK, All Tornadoes Over Last 10 Years for CA
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p><a href="#fig-plot5" class="quarto-xref">Figure&nbsp;<span>B.11</span></a> allows us to look at the strength of each location’s tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (<span class="citation" data-cites="salaita_how_nodate">Salaita (<a href="references.html#ref-salaita_how_nodate" role="doc-biblioref">n.d.</a>)</span>). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF4 or EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the “most dangerous sharks known to man” (<span class="citation" data-cites="noauthor_shark_nodate">Aquarium (<a href="references.html#ref-noauthor_shark_nodate" role="doc-biblioref">n.d.</a>)</span>). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so let’s look at some tornadoes over the last 10 years for Tulsa County, Oklahoma.</p>
+<p><a href="#fig-plot5" class="quarto-xref">Figure&nbsp;<span>D.11</span></a> allows us to look at the strength of each location’s tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (<span class="citation" data-cites="salaita_how_nodate">Salaita (<a href="references.html#ref-salaita_how_nodate" role="doc-biblioref">n.d.</a>)</span>). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF4 or EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the “most dangerous sharks known to man” (<span class="citation" data-cites="noauthor_shark_nodate">Aquarium (<a href="references.html#ref-noauthor_shark_nodate" role="doc-biblioref">n.d.</a>)</span>). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so looking at tornadoes over the last 10 years for Tulsa County, Oklahoma will give an insight into this possibility.</p>
 <div class="cell">
 <div id="fig-table7" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-table7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="mijpkrowky" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mijpkrowky table {
+<div id="pearuzotcn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pearuzotcn table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mijpkrowky thead, #mijpkrowky tbody, #mijpkrowky tfoot, #mijpkrowky tr, #mijpkrowky td, #mijpkrowky th {
+#pearuzotcn thead, #pearuzotcn tbody, #pearuzotcn tfoot, #pearuzotcn tr, #pearuzotcn td, #pearuzotcn th {
   border-style: none;
 }
 
-#mijpkrowky p {
+#pearuzotcn p {
   margin: 0;
   padding: 0;
 }
 
-#mijpkrowky .gt_table {
+#pearuzotcn .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3597,12 +3636,12 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-left-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_caption {
+#pearuzotcn .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mijpkrowky .gt_title {
+#pearuzotcn .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3614,7 +3653,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-bottom-width: 0;
 }
 
-#mijpkrowky .gt_subtitle {
+#pearuzotcn .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3626,7 +3665,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-top-width: 0;
 }
 
-#mijpkrowky .gt_heading {
+#pearuzotcn .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3638,13 +3677,13 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-right-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_bottom_border {
+#pearuzotcn .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_col_headings {
+#pearuzotcn .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3659,7 +3698,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-right-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_col_heading {
+#pearuzotcn .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3679,7 +3718,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   overflow-x: hidden;
 }
 
-#mijpkrowky .gt_column_spanner_outer {
+#pearuzotcn .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3691,15 +3730,15 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   padding-right: 4px;
 }
 
-#mijpkrowky .gt_column_spanner_outer:first-child {
+#pearuzotcn .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mijpkrowky .gt_column_spanner_outer:last-child {
+#pearuzotcn .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mijpkrowky .gt_column_spanner {
+#pearuzotcn .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3711,11 +3750,11 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   width: 100%;
 }
 
-#mijpkrowky .gt_spanner_row {
+#pearuzotcn .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mijpkrowky .gt_group_heading {
+#pearuzotcn .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3741,7 +3780,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   text-align: left;
 }
 
-#mijpkrowky .gt_empty_group_heading {
+#pearuzotcn .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3756,15 +3795,15 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   vertical-align: middle;
 }
 
-#mijpkrowky .gt_from_md > :first-child {
+#pearuzotcn .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mijpkrowky .gt_from_md > :last-child {
+#pearuzotcn .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mijpkrowky .gt_row {
+#pearuzotcn .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3783,7 +3822,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   overflow-x: hidden;
 }
 
-#mijpkrowky .gt_stub {
+#pearuzotcn .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3796,7 +3835,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   padding-right: 5px;
 }
 
-#mijpkrowky .gt_stub_row_group {
+#pearuzotcn .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3810,15 +3849,15 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   vertical-align: top;
 }
 
-#mijpkrowky .gt_row_group_first td {
+#pearuzotcn .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mijpkrowky .gt_row_group_first th {
+#pearuzotcn .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mijpkrowky .gt_summary_row {
+#pearuzotcn .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3828,16 +3867,16 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   padding-right: 5px;
 }
 
-#mijpkrowky .gt_first_summary_row {
+#pearuzotcn .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_first_summary_row.thick {
+#pearuzotcn .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mijpkrowky .gt_last_summary_row {
+#pearuzotcn .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3847,7 +3886,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-bottom-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_grand_summary_row {
+#pearuzotcn .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3857,7 +3896,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   padding-right: 5px;
 }
 
-#mijpkrowky .gt_first_grand_summary_row {
+#pearuzotcn .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3867,7 +3906,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-top-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_last_grand_summary_row_top {
+#pearuzotcn .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3877,11 +3916,11 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-bottom-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_striped {
+#pearuzotcn .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mijpkrowky .gt_table_body {
+#pearuzotcn .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3890,7 +3929,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-bottom-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_footnotes {
+#pearuzotcn .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3904,7 +3943,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-right-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_footnote {
+#pearuzotcn .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3913,7 +3952,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   padding-right: 5px;
 }
 
-#mijpkrowky .gt_sourcenotes {
+#pearuzotcn .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3927,7 +3966,7 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   border-right-color: #D3D3D3;
 }
 
-#mijpkrowky .gt_sourcenote {
+#pearuzotcn .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3935,72 +3974,72 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
   padding-right: 5px;
 }
 
-#mijpkrowky .gt_left {
+#pearuzotcn .gt_left {
   text-align: left;
 }
 
-#mijpkrowky .gt_center {
+#pearuzotcn .gt_center {
   text-align: center;
 }
 
-#mijpkrowky .gt_right {
+#pearuzotcn .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mijpkrowky .gt_font_normal {
+#pearuzotcn .gt_font_normal {
   font-weight: normal;
 }
 
-#mijpkrowky .gt_font_bold {
+#pearuzotcn .gt_font_bold {
   font-weight: bold;
 }
 
-#mijpkrowky .gt_font_italic {
+#pearuzotcn .gt_font_italic {
   font-style: italic;
 }
 
-#mijpkrowky .gt_super {
+#pearuzotcn .gt_super {
   font-size: 65%;
 }
 
-#mijpkrowky .gt_footnote_marks {
+#pearuzotcn .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mijpkrowky .gt_asterisk {
+#pearuzotcn .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mijpkrowky .gt_indent_1 {
+#pearuzotcn .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mijpkrowky .gt_indent_2 {
+#pearuzotcn .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mijpkrowky .gt_indent_3 {
+#pearuzotcn .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mijpkrowky .gt_indent_4 {
+#pearuzotcn .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mijpkrowky .gt_indent_5 {
+#pearuzotcn .gt_indent_5 {
   text-indent: 25px;
 }
 
-#mijpkrowky .katex-display {
+#pearuzotcn .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#mijpkrowky div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pearuzotcn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4081,12 +4120,12 @@ Figure&nbsp;B.12: Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-table7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;B.13: Tulsa County, OK Tornado Data
+Figure&nbsp;D.13: Tulsa County, OK Tornado Data
 </figcaption>
 </figure>
 </div>
 </div>
-<p><a href="#fig-table7" class="quarto-xref">Figure&nbsp;<span>B.13</span></a> shows all tornadoes that have gone through Tulsa County, Oklahoma, and shows that these tornadoes don’t reach EF3 or higher at all. But Bull Sharks only weigh around 500 lbs (<span class="citation" data-cites="noauthor_bull_nodate"><span>“Bull Shark. National Wildlife Federation”</span> (<a href="references.html#ref-noauthor_bull_nodate" role="doc-biblioref">n.d.</a>)</span>). This means that they are much easier for a tornado to lift up than a great white shark. An EF2 tornado has the strength to slightly move houses off their foundations and destroy mobile homes (<span class="citation" data-cites="noauthor_weighty_2025"><span>“The Weighty Truth: How Much Can a Tornado Lift? - Oreate <span>AI</span> Blog”</span> (<a href="references.html#ref-noauthor_weighty_2025" role="doc-biblioref">2025</a>)</span>). If an EF2 tornado went through the Oklahoma Aquarium in Jenks and destroyed the aquarium, it could potentially pick up sharks from the “most dangerous sharks known to man” exhibit to create a real-life Sharknado. Thinking of this logic, this could also apply to a lot of other aquariums throughout the country. But the chances of this happening are relatively low. The last time a tornado hit an aquarium was in 2024 when an EF1 tornado went through the Pittsburgh Zoo &amp; Aquarium (<span class="citation" data-cites="noauthor_pittsburgh_2024">Shannon (<a href="references.html#ref-noauthor_pittsburgh_2024" role="doc-biblioref">2024</a>)</span>). This only resulted in little damage to the property and some trees being knocked over. This means that an EF1 tornado going through a zoo/aquarium will not cause enough damage to destroy buildings and have wind speeds strong enough to pick up objects as heavy as a shark. Thinking about the possibility of a Sharknado is pretty slim when there is a record of a tornado that went through an aquarium; there was still no chance.</p>
+<p><a href="#fig-table7" class="quarto-xref">Figure&nbsp;<span>D.13</span></a> shows all tornadoes that have gone through Tulsa County, Oklahoma, and shows that these tornadoes don’t reach EF3 or higher at all. But Bull Sharks only weigh around 500 lbs (<span class="citation" data-cites="noauthor_bull_nodate"><span>“Bull Shark. National Wildlife Federation”</span> (<a href="references.html#ref-noauthor_bull_nodate" role="doc-biblioref">n.d.</a>)</span>). This means that they are much easier for a tornado to lift up than a great white shark. An EF2 tornado has the strength to slightly move houses off their foundations and destroy mobile homes (<span class="citation" data-cites="noauthor_weighty_2025"><span>“The Weighty Truth: How Much Can a Tornado Lift? - Oreate <span>AI</span> Blog”</span> (<a href="references.html#ref-noauthor_weighty_2025" role="doc-biblioref">2025</a>)</span>). If an EF2 tornado went through the Oklahoma Aquarium in Jenks and destroyed the aquarium, it could potentially pick up sharks from the “most dangerous sharks known to man” exhibit to create a real-life Sharknado. Thinking of this logic, this could also apply to a lot of other aquariums throughout the country. But the chances of this happening are relatively low. The last time a tornado hit an aquarium was in 2024 when an EF1 tornado went through the Pittsburgh Zoo &amp; Aquarium (<span class="citation" data-cites="noauthor_pittsburgh_2024">Shannon (<a href="references.html#ref-noauthor_pittsburgh_2024" role="doc-biblioref">2024</a>)</span>). This only resulted in little damage to the property and some trees being knocked over. This means that an EF1 tornado going through a zoo/aquarium will not cause enough damage to destroy buildings and have wind speeds strong enough to pick up objects as heavy as a shark. Thinking about the possibility of a Sharknado is pretty slim when there is a record of a tornado that went through an aquarium; there was still no chance.</p>
 <p>Just thinking with the insurance payout possibilities in mind, storms and tornadoes that are not shark-infested will still cause property damage. Storms and tornadoes with high wind speeds and storms with varying precipitation types and amounts are still possible and can still cause massive amounts of property damage. Sharknados may be out of the picture, but there are many other ways that weather-related events can cause property damage.</p>
 
 
@@ -4140,6 +4179,8 @@ Shannon, Jess. 2024. <span>“Pittsburgh Zoo &amp; Aquarium Assessing Damage Aft
 US Department of Commerce, NOAA. n.d. <span>“The Enhanced Fujita Scale (<span>EF</span> Scale).”</span> <span>NOAA</span>’s National Weather Service. Accessed March 11, 2026. <a href="https://www.weather.gov/oun/efscale">https://www.weather.gov/oun/efscale</a>.
 </div>
 </div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
