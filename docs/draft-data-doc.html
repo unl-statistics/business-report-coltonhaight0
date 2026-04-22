@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix A — Draft: Data Documentation – Evaluation of </title>
+<title>Appendix A — Draft: Data Documentation – Evaluation of Sharknado!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,7 +116,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Evaluation of <scenario></scenario></a> 
+      <a href="./">Evaluation of Sharknado!</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -190,8 +190,14 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-documentation" id="toc-data-documentation" class="nav-link active" data-scroll-target="#data-documentation"><span class="header-section-number">B</span> Data Documentation</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -215,6 +221,21 @@ div.csl-indent {
 </header>
 
 
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Put your name on your work and give it an appropriate title – edit your _quarto.yml file</p>
+<p>This needs to be in paragraph format (notes are fine in the draft, but for the real thing, please format everything and connect things with words.)</p>
+<p>Make sure you add a date – the release date? – to your bibliography entry, and make sure the other fields are filled in. Zotero doesn’t always catch everything perfectly.</p>
+</div>
+</div>
 <ul>
 <li>Goal is to give evidence to my boss that shark-infested storms are very rare, if not impossible.</li>
 <li>The data I found is from the NOAA data base. I extracted tornado data from Los Angeles (the setting of Sharknado), Florida (tropical storms are abundant), South Carolina (another more tropical place), and Oklahoma (the tornado capitol of the nation).</li>
@@ -236,55 +257,63 @@ div.csl-indent {
 </ul></li>
 <li>Measurements are take by the MWS Storm Survey, Spotters, State officials and the Public</li>
 </ul>
-<p>Florida tornado data: <span class="citation" data-cites="StormEventsDatabase"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabase" role="doc-biblioref">n.d.a</a>)</span></p>
-<p>South Carolina tornado data: <span class="citation" data-cites="StormEventsDatabasea"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabasea" role="doc-biblioref">n.d.b</a>)</span></p>
-<p>Oklahoma tornado data: <span class="citation" data-cites="StormEventsDatabaseb"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseb" role="doc-biblioref">n.d.c</a>)</span></p>
-<p>Los Angeles tornado data: <span class="citation" data-cites="StormEventsDatabasec"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabasec" role="doc-biblioref">n.d.d</a>)</span></p>
+<p>Florida tornado data: <span class="citation" data-cites="StormEventsDatabaseFL"><span>“Storm Events Database - Search Results Florida National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseFL" role="doc-biblioref">n.d.</a>)</span></p>
+<p>South Carolina tornado data: <span class="citation" data-cites="StormEventsDatabaseSC"><span>“Storm Events Database - Search Results South Carolina National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseSC" role="doc-biblioref">n.d.</a>)</span></p>
+<p>Virginia tornado data: <span class="citation" data-cites="StormEventsDatabaseVA"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseVA" role="doc-biblioref">n.d.a</a>)</span></p>
+<p>Oklahoma tornado data: <span class="citation" data-cites="StormEventsDatabaseOK"><span>“Storm Events Database - Search Results Oklahoma National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseOK" role="doc-biblioref">n.d.</a>)</span></p>
+<p>California tornado data: <span class="citation" data-cites="StormEventsDatabaseCA"><span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseCA" role="doc-biblioref">n.d.b</a>)</span></p>
+<p>Los Angeles tornado data: <span class="citation" data-cites="StormEventsDatabaseLA"><span>“Storm Events Database - Search Results California National Centers for Environmental Information”</span> (<a href="references.html#ref-StormEventsDatabaseLA" role="doc-biblioref">n.d.</a>)</span></p>
+<p>R packages</p>
+<p>tidyverse, gt, maps</p>
+<section id="data-documentation" class="level1" data-number="B">
+<h1 data-number="B"><span class="header-section-number">B</span> Data Documentation</h1>
+<p>All data was collected from NOAA (National Oceanic and Atmospheric Administration) Storm Events Database. The NOAA’s storm events database contains records on various types fo severe weather collected by NOAA’s National Weather Service.</p>
+<p>Tornado data from NOAA Storm Events Database was collected for five different states and one county across the United States (<span class="citation" data-cites="NOAA"><span>“Storm Events Database <span></span> National Centers for Environmental Information”</span> (<a href="references.html#ref-NOAA" role="doc-biblioref">n.d.</a>)</span>). These locations were chosen because of their amount of EF3 or higher tornadoes, location close to the ocean, and setting of the Sharknado movie. These locations are:</p>
 <ul>
-<li>For a tornado to lift up a Shark I compared the weight of a Great White Shark to a normal cars weight
-<ul>
-<li>Great White Shark Weight
-<ul>
-<li>NOAA Says up to 4,500 lbs</li>
-</ul></li>
-<li>Car weight
-<ul>
-<li>According to autoinsurance.com a Car SUV is 3,986 lbs</li>
-<li>According to autoinsurance.com a Truck SUV is 4,578 lbs</li>
-</ul></li>
-<li>Great White Sharks and Car SUVs and Truck SUVs weigh relatively around the same weight.</li>
-</ul></li>
-<li>oteroadjusting.com says EF3 tornadoes are likely to toss cars and trucks and EF5 can “almost certainly lift and destroy cars.”</li>
-<li>I will use this as a reference to say that EF3-EF5 tornadoes will be able to lift a great white shark.</li>
+<li><p>Florida: high frequency of tornadoes EF3 or higher for a coastal region</p></li>
+<li><p>South Carolina: high frequency of tornadoes EF3 or higher for a coastal region</p></li>
+<li><p>Virginia: high frequency of tornadoes EF3 or higher for a coastal region</p></li>
+<li><p>Oklahoma: high amount of powerful tornadoes to compare the amount of</p></li>
 </ul>
-<p>Great White Shark Info: <span class="citation" data-cites="fisheries_white_2025">Fisheries (<a href="references.html#ref-fisheries_white_2025" role="doc-biblioref">2025</a>)</span></p>
-<p>How much does a car weigh: <span class="citation" data-cites="noauthor_how_nodate"><span>“How Much Does the Average Car Weigh? <span>AutoInsurance</span>.com”</span> (<a href="references.html#ref-noauthor_how_nodate" role="doc-biblioref">n.d.</a>)</span></p>
-<p>Can a car be picked up by a tornado: <span class="citation" data-cites="noauthor_can_2025"><span>“Can a Car Be Picked up by a Tornado? <span></span> Otero Property Adjusting &amp; Appraisals”</span> (<a href="references.html#ref-noauthor_can_2025" role="doc-biblioref">2025</a>)</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These are fine (other than the author being missing), but you need to incorporate them into your writing as an organic part of the paragraphs.</p>
+</div>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-noauthor_can_2025" class="csl-entry" role="listitem">
-<span>“Can a Car Be Picked up by a Tornado? <span></span> Otero Property Adjusting &amp; Appraisals.”</span> 2025. November 6, 2025. <a href="https://oteroadjusting.com/can-a-car-be-picked-up-by-a-tornado/">https://oteroadjusting.com/can-a-car-be-picked-up-by-a-tornado/</a>.
+<div id="ref-StormEventsDatabaseLA" class="csl-entry" role="listitem">
+<span>“Storm Events Database - Search Results California National Centers for Environmental Information.”</span> n.d. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=LOS%2BANGELES%3A37&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=LOS%2BANGELES%3A37&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA</a>.
 </div>
-<div id="ref-fisheries_white_2025" class="csl-entry" role="listitem">
-Fisheries, NOAA. 2025. <span>“White Shark <span></span> <span>NOAA</span> Fisheries. <span>NOAA</span>.”</span> February 19, 2025. <a href="https://www.fisheries.noaa.gov/species/white-shark">https://www.fisheries.noaa.gov/species/white-shark</a>.
+<div id="ref-StormEventsDatabaseFL" class="csl-entry" role="listitem">
+<span>“Storm Events Database - Search Results Florida National Centers for Environmental Information.”</span> n.d. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=12%2CFLORIDA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=12%2CFLORIDA</a>.
 </div>
-<div id="ref-noauthor_how_nodate" class="csl-entry" role="listitem">
-<span>“How Much Does the Average Car Weigh? <span>AutoInsurance</span>.com.”</span> n.d. Accessed March 9, 2026. <a href="https://www.autoinsurance.com/guide/average-car-weight/">https://www.autoinsurance.com/guide/average-car-weight/</a>.
+<div id="ref-StormEventsDatabaseCA" class="csl-entry" role="listitem">
+<span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information.”</span> n.d.b. Accessed April 8, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=12&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=12&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=12&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=12&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA</a>.
 </div>
-<div id="ref-StormEventsDatabase" class="csl-entry" role="listitem">
-<span>“Storm Events Database - Search Results <span></span> National Centers for Environmental Information.”</span> n.d.a. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=12%2CFLORIDA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=12%2CFLORIDA</a>.
+<div id="ref-StormEventsDatabaseVA" class="csl-entry" role="listitem">
+———. n.d.a. Accessed April 14, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=12&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=12&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=3&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=51%2CVIRGINIA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=12&amp;beginDate_dd=01&amp;beginDate_yyyy=2015&amp;endDate_mm=12&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=3&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=51%2CVIRGINIA</a>.
 </div>
-<div id="ref-StormEventsDatabasea" class="csl-entry" role="listitem">
-———. n.d.b. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=LOS%2BANGELES%3A37&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=LOS%2BANGELES%3A37&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=6%2CCALIFORNIA</a>.
+<div id="ref-StormEventsDatabaseOK" class="csl-entry" role="listitem">
+<span>“Storm Events Database - Search Results Oklahoma National Centers for Environmental Information.”</span> n.d. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA</a>.
 </div>
-<div id="ref-StormEventsDatabaseb" class="csl-entry" role="listitem">
-———. n.d.c. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=45%2CSOUTH+CAROLINA#">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=45%2CSOUTH+CAROLINA#</a>.
+<div id="ref-StormEventsDatabaseSC" class="csl-entry" role="listitem">
+<span>“Storm Events Database - Search Results South Carolina National Centers for Environmental Information.”</span> n.d. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=45%2CSOUTH+CAROLINA#">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=45%2CSOUTH+CAROLINA#</a>.
 </div>
-<div id="ref-StormEventsDatabasec" class="csl-entry" role="listitem">
-———. n.d.d. Accessed February 20, 2026. <a href="https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA">https://www.ncei.noaa.gov/stormevents/listevents.jsp?eventType=%28C%29+Tornado&amp;beginDate_mm=10&amp;beginDate_dd=01&amp;beginDate_yyyy=2010&amp;endDate_mm=10&amp;endDate_dd=31&amp;endDate_yyyy=2025&amp;county=ALL&amp;hailfilter=0.00&amp;tornfilter=0&amp;windfilter=000&amp;sort=DT&amp;submitbutton=Search&amp;statefips=40%2COKLAHOMA</a>.
+<div id="ref-NOAA" class="csl-entry" role="listitem">
+<span>“Storm Events Database <span></span> National Centers for Environmental Information.”</span> n.d. Accessed April 22, 2026. <a href="https://www.ncei.noaa.gov/stormevents/">https://www.ncei.noaa.gov/stormevents/</a>.
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -723,7 +752,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2025, Author Name</p>
+<p>Copyright 2026, Colton Haight</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

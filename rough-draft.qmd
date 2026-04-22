@@ -30,6 +30,7 @@ Below is these such tornadoes being mapped on the entire United States to get an
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-plot1
 #| fig-cap: "Higher Than EF2 Tornado Data Accross USA"
 
@@ -76,6 +77,7 @@ From @fig-plot1, Florida is a place that is on the coast, so it would be possibl
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-table1
 #| fig-cap: "Florida Higher Than EF2 Tornado Data"
 
@@ -94,7 +96,8 @@ tornado_fl |>
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
-#| label: fig-plot2
+#| out-width: 70%
+#| label: fig-plot
 #| fig-cap: "Florida Higher Than EF2 Tornado Map"
 
 fl_map <- map_data("state") |>
@@ -108,7 +111,6 @@ ggplot() +
   geom_point(data = tornado_fl,
              aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
              size = 2, alpha = .7) +
-  scale_color_manual(values = c(
   scale_color_manual(values = c(
   "5" = "#2d0709",
   "4" = "#740937",
@@ -129,6 +131,7 @@ A place that has similar properties to Florida, in having tropical storms freque
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-table2
 #| fig-cap: "South Carolina Higher Than EF2 Tornado Data"
 tornado_sc <- read.csv("tornado_SC.csv")
@@ -148,6 +151,7 @@ South Carolina is similar to Florida from @fig-table2. There are a lot of EF3 to
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-plot3
 #| fig-cap: "South Carolina Higher Than EF2 Tornado Map"
 
@@ -162,7 +166,6 @@ ggplot() +
   geom_point(data = tornado_sc,
              aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
              size = 2, alpha = .7) +
-  scale_color_manual(values = c(
   scale_color_manual(values = c(
   "5" = "#2d0709",
   "4" = "#740937",
@@ -183,6 +186,7 @@ Another coastal state that was added to the group of states to look at is Virgin
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-table3
 #| fig-cap: "Virginia Higher Than EF2 Tornado Data"
 tornado_va <- read.csv("virginia_tornado.csv")
@@ -199,6 +203,7 @@ tornado_va |>
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-plot4
 #| fig-cap: "Virginia Higher Than EF2 Tornado Map"
 
@@ -233,6 +238,7 @@ Oklahoma is known as the tornado capital of the United States. Tornado data from
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-table4
 #| fig-cap: "Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes"
 tornado_ok <- read.csv("tornado_oklahoma.csv")
@@ -258,6 +264,7 @@ To make a real connection to the Sharknado movie, examining the actual setting o
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-table5
 #| fig-cap: "California Tornado Data"
 
@@ -280,6 +287,7 @@ Sharknado takes place in Los Angeles, CA, as the main setting for the movie. Bec
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-table6
 #| fig-cap: "Los Angeles, California Tornado Data"
 tornado_la <- read.csv("tornado_LA.csv")
@@ -296,7 +304,8 @@ All of the tornado data over the last ten years in Los Angeles can be seen in @f
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
-#| label: fig-plot5
+#| out-width: 70%
+#| label: fig-plot6
 #| fig-cap: "California Higher Than EF2 Tornado Map"
 
 la_map <- map_data("county") |>
@@ -325,7 +334,7 @@ ggplot() +
 
 ```
 
-As seen in @fig-plot5 and @fig-table5, there are no tornadoes strong enough to be able to lift a shark at all over the last 10 years. There are tornadoes that have started along the coast but each one lacked the EF strength needed to lift an object like a shark. 
+As seen in @fig-plot6 and @fig-table5, there are no tornadoes strong enough to be able to lift a shark at all over the last 10 years. There are tornadoes that have started along the coast but each one lacked the EF strength needed to lift an object like a shark. 
 
 ## All States
 
@@ -333,7 +342,8 @@ A stacked bar chart is used to see an easier comparison of all the tornadoes for
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
-#| label: fig-plot6
+#| out-width: 70%
+#| label: fig-plot7
 #| fig-cap: "Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for FL, SC, VA, and OK, All Tornadoes Over Last 10 Years for CA"
 all_tornado <- bind_rows(
   tornado_fl,
@@ -361,10 +371,11 @@ ggplot(all_tornado, aes(x = STATE_ABBR, fill = factor(TOR_F_SCALE))) +
   theme_minimal() #outline in black, paired color scheme
 ```
 
-@fig-plot5 allows us to look at the strength of each location's tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (@salaita_how_nodate). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF4 or EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the "most dangerous sharks known to man" (@noauthor_shark_nodate). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so looking at  tornadoes over the last 10 years for Tulsa County, Oklahoma will give an insight into this possibility.
+@fig-plot7 allows us to look at the strength of each location's tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (@salaita_how_nodate). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF4 or EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the "most dangerous sharks known to man" (@noauthor_shark_nodate). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so looking at  tornadoes over the last 10 years for Tulsa County, Oklahoma will give an insight into this possibility.
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
+#| out-width: 70%
 #| label: fig-table7
 #| fig-cap: "Tulsa County, OK Tornado Data"
 tulsa <- read.csv("tulsa_ok.csv")

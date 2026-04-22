@@ -2,63 +2,38 @@
 title: "Draft: Data Documentation"
 ---
 
-
 ::: callout-note
-
-Put your name on your work and give it an appropriate title -- edit your _quarto.yml file
+Put your name on your work and give it an appropriate title -- edit your \_quarto.yml file
 
 This needs to be in paragraph format (notes are fine in the draft, but for the real thing, please format everything and connect things with words.)
 
-
 Make sure you add a date -- the release date? -- to your bibliography entry, and make sure the other fields are filled in. Zotero doesn't always catch everything perfectly.
-
 :::
 
--   Goal is to give evidence to my boss that shark-infested storms are very rare, if not impossible.
--   The data I found is from the NOAA data base. I extracted tornado data from Los Angeles (the setting of Sharknado), Florida (tropical storms are abundant), South Carolina (another more tropical place), and Oklahoma (the tornado capitol of the nation).
--   All the data sets are the same format. They were collected from the same data base NOAA.gov.
--   These are the important aspects of the data sets collected
-    -   County Location
-    -   Begin Location
-    -   Begin Date
-    -   Begin Time
-    -   Tornado F Scale
-    -   Direct Deaths
-    -   Direct Injuries
-    -   Property Damage
-    -   Tornado Length and Width
-    -   End Location
-    -   End Date
-    -   End Time
--   Measurements are take by the MWS Storm Survey, Spotters, State officials and the Public
+# Data Documentation
 
-Florida tornado data: @StormEventsDatabase
+All data was collected from NOAA (National Oceanic and Atmospheric Administration) Storm Events Database. The NOAA's storm events database contains records on various types fo severe weather collected by NOAA's National Weather Service.
 
-South Carolina tornado data: @StormEventsDatabasea
+Tornado data from NOAA Storm Events Database was collected for five different states and one county across the United States (@NOAA). These locations were chosen because of their amount of EF3 or higher tornadoes, location close to the ocean, and setting of the Sharknado movie. These locations are:
 
-Oklahoma tornado data: @StormEventsDatabaseb
+-   Florida: high frequency of tornadoes EF3 or higher for a coastal region
 
-Los Angeles tornado data: @StormEventsDatabasec
+-   South Carolina: high frequency of tornadoes EF3 or higher for a coastal region
 
--   For a tornado to lift up a Shark I compared the weight of a Great White Shark to a normal cars weight
-    -   Great White Shark Weight
-        -   NOAA Says up to 4,500 lbs
-    -   Car weight
-        -   According to autoinsurance.com a Car SUV is 3,986 lbs
-        -   According to autoinsurance.com a Truck SUV is 4,578 lbs
-    -   Great White Sharks and Car SUVs and Truck SUVs weigh relatively around the same weight.
--   oteroadjusting.com says EF3 tornadoes are likely to toss cars and trucks and EF5 can "almost certainly lift and destroy cars."
--   I will use this as a reference to say that EF3-EF5 tornadoes will be able to lift a great white shark.
+-   Virginia: high frequency of tornadoes EF3 or higher for a coastal region
 
-Great White Shark Info: @fisheries_white_2025
+-   Oklahoma: high amount of powerful tornadoes to compare the frequency of high magnitude tornadoes
 
-How much does a car weigh: @noauthor_how_nodate
+-   California and Los Angeles, CA: State and city setting of the movie "Sharknado" (@SharknadoTVMovie)
 
-Can a car be picked up by a tornado: @noauthor_can_2025
+All data was analyzed using the programming software R and these following R packages:
 
+-   `tidyverse`: data cleaning, data manipulation, and table formulation
+
+-   `gt`: to make better looking tables
+
+-   `maps`: make maps of United States for tornado data
 
 ::: callout-note
-
 These are fine (other than the author being missing), but you need to incorporate them into your writing as an organic part of the paragraphs.
-
 :::
