@@ -2,46 +2,26 @@
 title: "Draft: Results"
 ---
 
-::: callout-note
-The language you're using is a bit narrative and informal - can you make it slightly more professional
-
-"A Sharknado event requires that a shark is picked up from the ocean by a tornado and deposited inland. We first consider the physics: how much does a shark weigh, and what types of objects do tornadoes regularly disrupt? What strength of tornado is required in order to lift an object as heavy as a shark?" \<then, add your logic, which is great\>
-
-"This report considers tornadoes between 2015 and 2026 occurring in four states which were chosen because of specific characteristics which may impact the probability of a sharknado event occurring. <additional logic>"
-
-It is a bit odd to consider LA specifically instead of California?
-
-Don't show code or messages/warnings.
-
-Lots of grammar mistakes -- subject/verb agreement, tense -- "There has been nine EF3 tornadoes with one EF4 tornado"
-
-Should you use a table or perhaps consider a stacked bar chart to show the distribution of tornado strength across the regions you are considering? What would be more effective? Your figure looks reasonable to me, but the color scheme is a bit ... icky. Choose something that has a monochrome gradient, since the EF scale has a specific meaning and order.
-
-Summarize your results appropriately in a callout box for skimmability.
-
-Also, an EF1 tornado isn't supposed to be able to destroy buildings enough to be able to grab a shark from an aquarium. So that's hardly proof of anything. LMK when an aquarium is obliterated in Oklahoma or something. :) (actually, https://www.theguardian.com/us-news/2015/may/06/oklahoma-tornado-severe-weather-texas-kansas-nebraska is relevant -- but the tigers escaped because of the damage and don't seem to have been picked up by the storm itself).
-:::
-
 # Methods
 
 A Sharknado event involves a tornado being able to lift a great white shark out of the ocean and carry it onto land. To see if this is possible, we need to look at the physics: the weight of a great white shark, what objects are known to be picked up by tornadoes, and the magnitude of tornadoes required to pick up a shark. First, finding out how a great white shark could be picked up by a tornado is nessesary. The weight of a great white shark will be compared to other objects that can and have been picked up by tornadoes, such as cars. Next, figuring out what strength (in EF scale from EF3 - EF5) of a tornado would be needed to be able to lift a great white shark and a car. Lastly, identifying tornadoes from 2015-2026 that are in that EF range from 6 different places in the United States. These places are be Florida, South Carolina, Virginia, Oklahoma, California, and Los Angeles. These places were chosen for specific reasons. Florida has many tropical storms and is a coastal state (Florida, [-@StormEventsDatabaseFL]). South Carolina is also another place that can be hit by tropical storms and is another coastal state (South Carolina, [-@StormEventsDatabaseSC]). Virginia is a coastal state that has had a good amount of tornadoes of our criteria (Virginia, [-@StormEventsDatabaseVA]). Oklahoma is not a coastal state, but it is the tornado capital of the United States, so we will just look at the number of tornadoes that meet the criteria to get an idea of how rare strong tornadoes are (Oklahoma, [-@StormEventsDatabaseOK]). California ([-@StormEventsDatabaseCA]) was chosen because it is the state setting of Sharknado, while Los Angeles ([-@StormEventsDatabaseLA]) was picked because it is the city setting of the Sharknado movie (@SharknadoTVMovie).
 
 Sharks and cars weigh relatively the same in pounds (lbs). The average great white shark weighs around 4,500 lbs (@fisheries_white_2025). A car SUV weighs around 3,986 lbs while a truck SUV weighs around 4,578 lbs (@noauthor_how_nodate). This means that your average great white shark weighs more than a big car and as much as a truck or SUV. We will use a car as the base to find what EF scale level will be used to lift a great white shark out of the water.
 
-The EF scale is made up of 6 different ratings of tornado based on 3-second wind speed in mph (@us_department_of_commerce_enhanced_nodate). An EF0 tornado has the lowest wind speed, ranging between 65-85 mph, EF1 has wind speeds between 86-110 mph, EF2 has wind speeds between 111-135 mph, EF3 has wind speeds of 136-165 mph, EF4 has speeds between 166-200 mph, and EF5 has wind speeds that are over 200 mph. An EF3 tornado is likely to toss cars and trucks, while an EF4 is very likely to toss cars many feet, and an EF5 tornado is almost certain to lift and destroy cars. Because of the comparison of a great white shark to the size and weight of a car SUV, and a truck SUV, that gives a good comparison to be able to put a shark in the place of such cars in the EF scales' ability to lift cars (@quach_can_2025). Tornadoes from EF3 to EF5 are chosen because this is the strength of tornadoes that are able to lift a car (@salaita_how_nodate).
+The EF scale is made up of 6 different ratings of tornado based on 3-second wind speed in mph (@us_department_of_commerce_enhanced_nodate). An EF0 tornado has the lowest wind speed, ranging between 65-85 mph, EF1 has wind speeds between 86-110 mph, EF2 has wind speeds between 111-135 mph, EF3 has wind speeds of 136-165 mph, EF4 has speeds between 166-200 mph, and EF5 has wind speeds that are over 200 mph. An EF3 tornado is likely to toss cars and trucks, while an EF4 is very likely to toss cars many feet, and an EF5 tornado is almost certain to lift and destroy cars. EF3 tornadoes are unlikely to fully pick up a shark but it is still important to analyze them because a great white shark could be moved by an EF3 tornado. Because of the comparison of a great white shark to the size and weight of a car SUV, and a truck SUV, that gives a good comparison to be able to put a shark in the place of such cars in the EF scales' ability to lift cars (@quach_can_2025). Tornadoes from EF3 to EF5 are chosen because this is the strength of tornadoes that are able to lift a car (@salaita_how_nodate).
 
 Using these metrics, finding storms that have had the potential to produce a Sharknado allows the ability to evaluate the potential insurance risk with such events.
 
 # Results
 
-The results of this study examines tornado activity over the last 10 years from specific states across the United States. Tornado strength of EF3 - EF5 is chosen due to their capabilites to lift and toss objects that are similar to sharks weight wise, these objecting being cars or trucks. The findings are shown by state and area (FL, SC, VA, CA, Los Angeles) to be able to see where and which tornadoes had the strength and location to start a Sharknado event. California and Los Angeles, CA were chosen due to being the location of the film "Sharknado".
+The results of this study examines tornado activity over the last 10 years from specific states across the United States. Tornado strength of EF3 - EF5 is chosen due to their capabilities to lift and toss objects that are similar to sharks weight wise, these objects being cars or trucks. The findings are shown by state and area (FL, SC, VA, CA, Los Angeles) to be able to see where and which tornadoes had the strength and location to start a Sharknado event. California and Los Angeles, CA were chosen due to being the location of the film "Sharknado".
 
 Below are these tornadoes being mapped on the entire United States to get an idea of where these states and their tornadoes are and why they were chosen for this study.
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-plot1
-#| fig-cap: "Higher Than EF2 Tornado Data Accross USA"
+#| fig-cap: "EF3 - EF5 Tornado Data Accross USA"
 
 library(tidyverse)
 library(gt)
@@ -87,7 +67,7 @@ From @fig-plot1, Florida is a place that is on the coast. This would make it pos
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-table1
-#| fig-cap: "Florida Higher Than EF2 Tornado Data"
+#| fig-cap: "Florida EF3 - EF5 Tornado Data"
 
 tornado_fl <- read.csv("fl_tornado.csv")
 
@@ -105,7 +85,7 @@ tornado_fl |>
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-plot2
-#| fig-cap: "Florida Higher Than EF2 Tornado Map"
+#| fig-cap: "Florida EF3 - EF5 Tornado Map"
 
 fl_map <- map_data("state") |>
   filter(region == "florida")
@@ -130,7 +110,7 @@ ggplot() +
   theme_minimal()
 ```
 
-@fig-plot2 shows a map of Florida showing the five EF3 tornadoes that have occurred in the last 10 years. There is one tornado that shows up close to the water, but looking at the coordinates, it appears on the beach. EF3 tornadoes are likely to toss cars and trucks (@quach_can_2025). Tossing and picking up two different things in this scenario, leading to believe an EF3 tornado is not very likely to fully pick up a great white shark.
+@fig-plot2 shows a map of Florida showing the five EF3 tornadoes that have occurred in the last 10 years. There is one tornado that shows up close to the water, but looking at the coordinates, it appears on the beach. EF3 tornadoes are likely to toss cars and trucks (@quach_can_2025). Tossing and picking up two different things in this scenario, leading to believe an EF3 tornado is not very likely to fully pick up a great white shark. The EF3 tornadoes can displace the shark if its close enough to land but that is still fairly unlikely.
 
 ## Results: South Carolina
 
@@ -139,7 +119,7 @@ A place with similar properties to Florida, having tropical storms frequently an
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-table2
-#| fig-cap: "South Carolina Higher Than EF2 Tornado Data"
+#| fig-cap: "South Carolina EF3 - EF5 Tornado Data"
 tornado_sc <- read.csv("tornado_SC.csv")
 
 tornado_sc$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_sc$TOR_F_SCALE)
@@ -158,7 +138,7 @@ South Carolina is similar to Florida from @fig-table2. There are a lot of EF3 to
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-plot3
-#| fig-cap: "South Carolina Higher Than EF2 Tornado Map"
+#| fig-cap: "South Carolina EF3 - EF5 Tornado Map"
 
 sc_map <- map_data("state") |>
   filter(region == "south carolina")
@@ -192,7 +172,7 @@ Another coastal state similar to South Carolina is Virginia. @fig-plot1 shows a 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-table3
-#| fig-cap: "Virginia Higher Than EF2 Tornado Data"
+#| fig-cap: "Virginia EF3 - EF5 Tornado Data"
 tornado_va <- read.csv("virginia_tornado.csv")
 
 tornado_va$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_va$TOR_F_SCALE)
@@ -208,7 +188,7 @@ tornado_va |>
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-plot4
-#| fig-cap: "Virginia Higher Than EF2 Tornado Map"
+#| fig-cap: "Virginia EF3 - EF5 Tornado Map"
 
 va_map <- map_data("state") |>
   filter(region == "virginia")
@@ -233,7 +213,7 @@ ggplot() +
   theme_minimal()
 ```
 
-From @fig-plot4, there is only one tornado that could have the potential to become a Sharknado. The tornado starts on the land so that limits the chances of it becoming a Sharknado. This is also the same as what happened with the Florida tornado, an EF3 tornado is really only able to toss a car or truck (@quach_can_2025). This makes Virginia an unlikely candidate to have a Sharknado occur, diminishing the risk of an insurance payout.
+From @fig-plot4, there is only one tornado that could have the potential to become a Sharknado. The tornado starts on the land so that limits the chances of it becoming a Sharknado. This is also the same as what happened with the Florida tornado, an EF3 tornado is really only able to toss a car or truck (@quach_can_2025). This makes Virginia an unlikely candidate to have a Sharknado occur, diminishing the risk of an insurance payout. EF3 tornadoes can displace the shark if its close enough to land but that is still fairly unlikely.
 
 ## Results: Oklahoma
 
@@ -242,7 +222,7 @@ Oklahoma is known as the tornado capital of the United States. Tornado data from
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-table4
-#| fig-cap: "Oklahoma Higher Than EF2 Tornado Data, Ten Highest Tornadoes"
+#| fig-cap: "Oklahoma EF3 - EF5 Tornado Data, Ten Highest Tornadoes"
 tornado_ok <- read.csv("tornado_oklahoma.csv")
 
 tornado_ok$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_ok$TOR_F_SCALE)
@@ -305,7 +285,7 @@ All of the tornado data over the last ten years in Los Angeles can be seen in @f
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-plot5
-#| fig-cap: "California Higher Than EF2 Tornado Map"
+#| fig-cap: "California Tornado Map"
 
 ca_map <- map_data("state") |>
   filter(region == "california")
@@ -339,7 +319,7 @@ A stacked bar chart is used to see an easier comparison of all the tornadoes for
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
 #| label: fig-plot6
-#| fig-cap: "Bar Chart for Tornadoes Higher than EF3 Over Last 10 Years for FL, SC, VA, and OK, All Tornadoes Over Last 10 Years for CA"
+#| fig-cap: "Bar Chart for Tornadoes EF3 - EF5 Over Last 10 Years for FL, SC, VA, and OK, All Tornadoes Over Last 10 Years for CA"
 all_tornado <- bind_rows(
   tornado_fl,
   tornado_sc,
