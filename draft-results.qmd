@@ -306,13 +306,14 @@ ggplot() +
   "1" = "#ff7eb6",
   "0" = "#ffafd2"
   ))+
+  coord_fixed(1.3)+
   theme_minimal()
 
 ```
 
 As seen in @fig-plot5 and @fig-table5, there are no tornadoes strong enough to be able to lift a shark at all over the last 10 years. There are tornadoes that have started along the coast but each one lacked the EF strength needed to lift an object like a shark. As a result, there is no real risk of an insurance payout for a Sharknado in the state of California.
 
-## All States
+## Results: All States
 
 A stacked bar chart is used to see an easier comparison of all the tornadoes for each location we chose (Florida, South Carolina, Virginia, Oklahoma, California) with an EF scale rating of EF3 to EF5, and compare them to see which locations have the highest possibility of a Sharknado to occur. Note that California only has EF0 and EF1 tornadoes, these will be the only magnitude used in this chart.
 
@@ -346,7 +347,9 @@ ggplot(all_tornado, aes(x = STATE_ABBR, fill = factor(TOR_F_SCALE))) +
   theme_minimal() #outline in black, paired color scheme
 ```
 
-@fig-plot6 allows us to look at the strength of each location's tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (@salaita_how_nodate). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF4 or EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the "most dangerous sharks known to man" (@noauthor_shark_nodate). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so looking at  tornadoes over the last 10 years for Tulsa County, Oklahoma will give an insight into this possibility.
+@fig-plot6 allows us to look at the strength of each location's tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (@salaita_how_nodate). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF4 or EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. 
+
+But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the "most dangerous sharks known to man" (@noauthor_shark_nodate). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so looking at  tornadoes over the last 10 years for Tulsa County, Oklahoma will give an insight into this possibility.
 
 ```{r, message=FALSE, warning=FALSE}
 #| echo: false
@@ -355,7 +358,7 @@ ggplot(all_tornado, aes(x = STATE_ABBR, fill = factor(TOR_F_SCALE))) +
 tulsa <- read.csv("tulsa_ok.csv")
 tulsa$TOR_F_SCALE <- gsub("[A-Za-z]", "", tulsa$TOR_F_SCALE)
 tulsa <- tulsa|>
-  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, DAMAGE_PROPERTY_NUM)|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
   arrange(desc(TOR_F_SCALE))
 tulsa <- head(tulsa, n= 10)
 

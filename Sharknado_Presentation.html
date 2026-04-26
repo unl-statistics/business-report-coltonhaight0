@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="Sharknado_Presentation_files/libs/revealjs/dist/theme/quarto-2ff78e2e6999b6200d15f6cb181d00bd.css">
+  <link rel="stylesheet" href="Sharknado_Presentation_files/libs/revealjs/dist/theme/quarto-c4ba57494bdd4378e9e953c784683150.css">
   <link href="Sharknado_Presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="Sharknado_Presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="Sharknado_Presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -343,6 +343,18 @@ Colton Haight
 <li>“Your boss recently saw Sharknado (2013) while trying to battle insomnia, and has become concerned about the increased likelihood of shark-infested weather as severe weather events become more probable due to climate change.”</li>
 </ul>
 </section>
+<section id="data-documentation" class="slide level2">
+<h2>Data Documentation</h2>
+<ul>
+<li>Tornado data collected from the National Oceanic and Atmospheric Administration Storm Events Database (<a href="https://www.ncei.noaa.gov/stormevents/choosedates.jsp?statefips=-999%2CALL">NOAA</a>)</li>
+<li>R Software Packages used
+<ul>
+<li>tidyverse: data cleaning, data manipulation</li>
+<li>gt: better tables</li>
+<li>maps: US and State maps</li>
+</ul></li>
+</ul>
+</section>
 <section id="methods" class="slide level2">
 <h2>Methods</h2>
 <ul>
@@ -354,15 +366,161 @@ Colton Haight
 <h2>Methods Continued</h2>
 <ul>
 <li>Tornadoes of magnitude EF3 - EF5 can toss and lift cars</li>
-<li>Identify tornadoes form 2015 - Present</li>
-<li>Analyze tornadoes in specific states/regions <img data-src="Florida.png" alt="EF3-EF5 Tornado Data US Map"></li>
+</ul>
+<div style="font-size: .7em; line-height: 1;">
+<p>(EF3 tornadoes not strong enough to start Sharknado but important to see)</p>
+</div>
+<ul>
+<li>Identify tornadoes from 2015 - Present</li>
+<li>Analyze tornadoes in specific states/regions</li>
+</ul>
+
+<img data-src="Florida.png" class="r-stretch quarto-figure-center"><p class="caption">EF3-EF5 Tornado Data US Map</p></section>
+<section id="states" class="slide level2">
+<h2>States</h2>
+<ul>
+<li>Florida, South Carolina, Virginia chosen for amount of tornadoes EF3 and higher</li>
+<li>Oklahoma to show rarity of strong tornadoes</li>
+<li>California for the setting of the film “Sharknado”</li>
+</ul>
+<div style="font-size: 0.5em; line-height: 1;">
+<p>Data collected from <a href="https://www.ncei.noaa.gov/stormevents/choosedates.jsp?statefips=-999%2CALL">NOAA</a></p>
+<p>Sharknado <a href="https://www.imdb.com/title/tt2724064/locations/">Setting</a></p>
+</div>
+</section>
+<section id="results-florida" class="slide level2">
+<h2>Results: Florida</h2>
+<ul>
+<li>Chosen for amount and location of tornadoes</li>
+<li>Florida had only five EF3 tornadoes</li>
+<li>One tornado with potential</li>
+</ul>
+<div style="font-size: .7em; line-height: 1;">
+<p>(EF3 not strong enough to lift and throw a Great White Shark)</p>
+</div>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="fl_tornado_map.png" style="width:80.0%"></p>
+<figcaption>FL tornado map</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="fl_tornado_beach.png" style="width:80.0%"></p>
+<figcaption>FL tornado beach</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="results-south-carolina" class="slide level2">
+<h2>Results: South Carolina</h2>
+<ul>
+<li>Nine EF3 tornadoes, one EF4 tornado</li>
+<li>All away from coast</li>
+<li>Unlikely to start Sharknado</li>
+</ul>
+
+<img data-src="sc_tornado_map.png" class="r-stretch quarto-figure-center"><p class="caption">SC tornado map</p></section>
+<section id="results-virginia" class="slide level2">
+<h2>Results: Virginia</h2>
+<ul>
+<li>Five EF3 tornadoes</li>
+<li>One EF3 tornado close to coast
+<ul>
+<li>EF3 not strong enough to lift and throw a Great White Shark</li>
+</ul></li>
+</ul>
+
+<img data-src="va_tornado_map.png" class="r-stretch quarto-figure-center"><p class="caption">VA tornado map</p></section>
+<section id="results-oklahoma" class="slide level2">
+<h2>Results: Oklahoma</h2>
+<ul>
+<li>Ten strongest tornadoes in Oklahoma
+<ul>
+<li>One EF3, seven EF4, two EF5</li>
+</ul></li>
+<li>Strong tornadoes are rare even in the the tornado capital of US</li>
+</ul>
+
+<img data-src="ok_tornado_table.png" class="r-stretch quarto-figure-center"><p class="caption">OK Ten strongest tornadoes 2015 - Present</p></section>
+<section id="results-california" class="slide level2">
+<h2>Results: California</h2>
+<ul>
+<li>No tornadoes EF3 or higher since 2015</li>
+<li>Only tornadoes EF2 or lower</li>
+<li>None strong enough</li>
+<li>No chance of Sharknado even in the movie setting</li>
+</ul>
+
+<img data-src="ca_tornado_map.png" class="r-stretch quarto-figure-center"><p class="caption">CA tornado map</p></section>
+<section id="results-comparison" class="slide level2">
+<h2>Results: Comparison</h2>
+<ul>
+<li>Distribution of tornadoes by state</li>
+<li>Only a handful of strong enough tornadoes
+<ul>
+<li>OK and CA show ten strongest tornadoes</li>
+</ul></li>
+</ul>
+
+<img data-src="barchart.png" class="r-stretch quarto-figure-center"><p class="caption">All States Chart</p></section>
+<section id="results-comparison-1" class="slide level2">
+<h2>Results: Comparison</h2>
+<ul>
+<li>One tornado in coastal states that is strong enough
+<ul>
+<li>That tornado being in South Carolina</li>
+<li>Not close enough to coast</li>
+</ul></li>
+<li>Unless sharks in Oklahoma there is no chance of Sharknado</li>
+</ul>
+
+<img data-src="barchart.png" class="r-stretch quarto-figure-center"><p class="caption">All States Chart</p></section>
+<section id="results-comparison-2" class="slide level2">
+<h2>Results: Comparison</h2>
+<ul>
+<li>Unless sharks in Oklahoma there is no chance of Sharknado</li>
+<li><a href="https://www.okaquarium.org/176/Shark-Adventure">Oklahoma Aquarium</a> in Jenks, OK holds Bull Sharks
+<ul>
+<li>Jenks is in Tulsa county in OK</li>
+</ul></li>
+</ul>
+
+<img data-src="barchart.png" class="r-stretch quarto-figure-center"><p class="caption">All States Chart</p></section>
+<section id="results-tulsa-county" class="slide level2">
+<h2>Results: Tulsa County</h2>
+<ul>
+<li><a href="https://www.nwf.org/Home/Educational-Resources/Wildlife-Guide/Fish/Bull-Shark">Bull Sharks</a> weigh around 500 lbs</li>
+<li>Only EF1 and EF2 tornadoes in Tulsa county, OK</li>
+<li><a href="https://www.oreateai.com/blog/the-weighty-truth-how-much-can-a-tornado-lift/22e09faa7969386318853dd21fb2fbe4">EF2</a> tornadoes can move houses off foundations
+<ul>
+<li>Not fully strong enough to destroy an aquarium</li>
+</ul></li>
+<li>No chance of Sharknado in Oklahoma in last 10 years</li>
+</ul>
+
+<img data-src="tulsa_ok.png" class="r-stretch quarto-figure-center"><p class="caption">Tulsa County tornado table</p></section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<ul>
+<li>From whats shown for each state (FL, SC, VA, OK, CA) Sharknado events are extremely unlikely</li>
+<li>Oklahoma has many tornadoes strong enough but no Great White Sharks</li>
+<li>The probability of a Sharknado is very close to, if not, zero</li>
+<li>Sharknado is not possible but other strong storms and tornadoes pose real threat for insurance payouts</li>
 </ul>
 </section>
-<section id="results" class="slide level2">
-<h2>Results</h2>
-<ul>
-<li></li>
-</ul>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
 
 </section>
     </div>
