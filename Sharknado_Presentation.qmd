@@ -1,6 +1,7 @@
 ---
 title: "Sharknado Presentation"
 author: "Colton Haight"
+self-contained: true
 format: 
   revealjs:
     fontsize: 2.0em
