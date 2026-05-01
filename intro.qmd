@@ -1,2 +1,11 @@
 # Introduction
 
+This reports evaluates the potential insurance risk associated with a Sharknado scenario for property damage payouts . A Sharknado is explained by a tornado that generates enough wind speed to be able to lift a heavy animal, such as a great white shark, out of the water and into its vortex. A Sharknado can also be called a "Shark-infested tornado".
+
+This study starts by comparing the average great white shark to objects of similar weight, specifically cars or pickup trucks. Tornadoes are known for destroying homes and tossing around vehicles, thus finding the types of vehicles that are similar enough in weight to a great white shark makes finding the right magnitude of tornadoes required to lift a great white shark easier.
+
+Next, finding the magnitude of a tornado capable of picking up a great white shark, or a car, is found using the EF scale (Enhanced Fujita Scale) by looking at EF ratings (@us_department_of_commerce_enhanced_nodate). The Enhanced Fujita Scale uses ratings of EF0 to EF5. Tornadoes of interest for this study are tornadoes of rating EF3 to EF5. These tornadoes have strong enough wind speeds to potentially pick up and throw cars or, in this case, a great white shark.
+
+Finally, looking at places that are near the coast to be able to pick up a great white shark is essential to actually generating a Sharknado. There are 4 locations observed for their tornado data that fit this agenda in this study: Florida, South Carolina, Virginia, California, and Los Angeles (this is the setting of the Sharknado movie). For another comparison of tornado strength and amount, Oklahoma is also looked at for its tornado EF rating, even though it is landlocked and does not have any native shark population. These locations have tornado data taken from 2015 - 2026 using NOAA tornado data.
+
+Combining the magnitude of tornadoes with the areas where these tornadoes touch down gives an idea of the possibility of a potential Sharknado event occurring.

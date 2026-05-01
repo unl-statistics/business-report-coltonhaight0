@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Executive Summary</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,19 +109,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Executive Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./data-doc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Documentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methods</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -175,7 +193,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary"><span class="header-section-number">1</span> Executive Summary</a>
+  <ul class="collapse">
+  <li><a href="#purpose-of-report" id="toc-purpose-of-report" class="nav-link" data-scroll-target="#purpose-of-report"><span class="header-section-number">1.1</span> Purpose of Report</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">1.2</span> Methods</a></li>
+  <li><a href="#findings" id="toc-findings" class="nav-link" data-scroll-target="#findings"><span class="header-section-number">1.3</span> Findings</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">1.4</span> Conclusions</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -207,44 +231,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>You are a data scientist for a mid-sized business, in a small group of 3-4 data scientists. You’ve been tasked with creating a report evaluating a scenario for your business. Your colleagues will also be evaluating the same scenario, and your reports will be used in aggregate to determine a consensus (or lack thereof) on the company’s action. The reports will also be used to inform downsizing that is rumored to be coming - you want to ensure your report is better than your peers so that you aren’t as easy to cut.</p>
-<p>You may talk to your peers who are assigned the same scenario, but you do not want to collaborate too closely, lest you both become targets of the rumored layoffs.</p>
-<hr>
-<p>I’ve scaffolded this report for you to make this process easier - as we talk about different sections of a report in class and read about how to create similar sections, you will practice by writing the equivalent section of your report.</p>
-<p>The basic steps for this task are as follows:</p>
+<section id="executive-summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Executive Summary</h1>
+<section id="purpose-of-report" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="purpose-of-report"><span class="header-section-number">1.1</span> Purpose of Report</h2>
+<p>This study dives into the possibility of a Sharknado event. A Sharknado can be explained as a “shark-infested tornado”. This is a tornado that generates enough wind speed to lift a great white shark from the water and into its vortex. The purpose of this study is to assess whether a Sharknado event could be considered a risk for property damage insurance payouts.</p>
+</section>
+<section id="methods" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="methods"><span class="header-section-number">1.2</span> Methods</h2>
+<p>To start, a comparison of the weight of a great white shark (around 4500 lbs) and vehicles (around 4000 - 4600 lbs for SUVs and Trucks) is used because cars are known to be lifted and destroyed by tornadoes. Using the EF (Enhanced Fujita) Scale, the strength of tornadoes able to lift and toss cars (or a great white shark) is found to be between EF3 - EF5 tornadoes. These are wind speeds of 136 mph to 200+ mph. This study will only be looking at tornadoes of EF3 - EF5 for this reason. This study also looks at four locations of tornado data from 2015 to 2026. These locations are Florida, South Carolina, Virginia, Oklahoma, California, and Los Angeles County, CA. These places were chosen because of their abundant tropical storms and coastal area (Florida and South Carolina), historic tornado amounts and strength (Oklahoma), and the setting of the movie Sharknado (Los Angeles, CA).</p>
+</section>
+<section id="findings" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="findings"><span class="header-section-number">1.3</span> Findings</h2>
+<p>Tornadoes of strength EF3 - EF5 are fairly uncommon for coastal states like Florida and South Carolina. Florida had only five tornadoes in the last 10 years that were of strength EF3, and zero EF4 and EF5 tornadoes. All but one of these tornadoes started and ended on land. The one tornado started on a beach in Florida, where the water is not deep enough for sharks. South Carolina had nine EF3 and one EF4 tornado over the last 10 years. All of these tornadoes started and stayed on land, making a Sharknado impossible. Virginia had five EF3 tornadoes that all happened on land. Oklahoma has had plenty of tornadoes strong enough to lift and carry a shark, but there are no sharks in Oklahoma besides those in the Oklahoma Aquarium in Jenks, OK. California has not had a tornado above an EF2 over the last 10 years.</p>
+</section>
+<section id="conclusions" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="conclusions"><span class="header-section-number">1.4</span> Conclusions</h2>
+<p>The probability of a Sharknado event is extremely low, if not a zero percent chance. There was one tornado in the three coastal states that might have had the ability to lift a shark. This South Carolina tornado happened to start and end on land, making a Sharknado impossible. The Oklahoma Aquarium houses sharks in a state that is known for its number and strength of tornadoes. The Oklahoma Aquarium is in Tulsa County, OK, where only EF2 or lower tornadoes have touched down in the last 10 years, rendering this very improbable. From the findings of this study, the probability of a Sharknado happening is almost, if not, a zero percent chance.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Recommendations
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><p>Identify the research question from the business question</p></li>
-<li><p>Identify data set(s) which are (1) publicly available (you don’t have a budget to pay for private data) and (2) relevant to your task</p>
-<ul>
-<li>(HW Week 6) Document your data sets in <code>draft-data-doc.qmd</code></li>
-</ul></li>
-<li><p>Conduct a statistical analysis to support your answer to your research and business questions</p>
-<ul>
-<li><p>Write a methods section for your business report corresponding to your statistical analysis</p></li>
-<li><p>(HW Week 9) Draft of results section of business report with relevant graphics/visual aids in <code>draft-results.qmd</code></p></li>
-</ul></li>
-<li><p>Write your report</p>
-<ul>
-<li><p>(HW Week 10) Draft of Intro/Conclusion sections in <code>draft-intro-conclusions.qmd</code></p></li>
-<li><p>(HW Week 11) Draft of Executive summary section in <code>draft-exec-summary.qmd</code></p></li>
-</ul></li>
-<li><p>Revise your report</p>
-<ul>
-<li><p>(HW Week 12 – not turned in) Revise your report</p></li>
-<li><p>(HW Week 13) - Rough draft of report due. Create one or more qmd files for your report (you can overwrite or delete intro.qmd and summary.qmd), include the names of each file (in order) in <code>_quarto.yml</code>. You should use references (edit references.bib and use pandoc citations). Make sure your report compiles and looks reasonable in both html and pdf.</p></li>
-<li><p>Develop a presentation to go along with your report (Week 13). Create slides for your report using quarto.</p></li>
-</ul></li>
-<li><p>Peer revise reports</p>
-<ul>
-<li><p>Peer revise reports</p></li>
-<li><p>(HW Week 14) - Make edits to your report from comments received from peer review</p></li>
-</ul></li>
-<li><p>Final report &amp; presentation due</p></li>
+<li>Sharknados are extremely unlikely and effectively have a zero percent chance of occurring.</li>
+<li>Extreme weather like strong storms and tornadoes still pose real threat from precipitation and high winds.</li>
+<li>Insurance payouts and damages are caused by these extreme weather events across the country.</li>
+<li>More insurance risk focus should go on the common and extreme weather events rather than focusing on a highly unlikely event like a Sharknado.</li>
 </ul>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -673,7 +697,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

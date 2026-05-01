@@ -1,0 +1,357 @@
+# Results
+
+The results of this study examines tornado activity over the last 10 years from specific states across the United States. Tornado strength of EF3 - EF5 is chosen due to their capabilities to lift and toss objects that are similar to sharks weight wise, these objects being cars or trucks. The findings are shown by state and area (FL, SC, VA, CA, Los Angeles) to be able to see where and which tornadoes had the strength and location to start a Sharknado event. California and Los Angeles, CA were chosen due to being the location of the film "Sharknado".
+
+Below are these tornadoes being mapped on the entire United States to get an idea of where these states and their tornadoes are and why they were chosen for this study.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-plot1
+#| fig-cap: "EF3 - EF5 Tornado Data Accross USA"
+
+library(tidyverse)
+library(gt)
+#install.packages("maps")
+library(maps)
+
+usa_tornado <- read.csv("all_tornado_data.csv")
+
+usa_tornado$TOR_F_SCALE <- gsub("[A-Za-z]", "", usa_tornado$TOR_F_SCALE)
+
+usa_tornado <- usa_tornado|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)
+
+usa_map <- map_data("state")
+
+ggplot() +
+  geom_polygon(data = usa_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = usa_tornado,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .7)+
+  scale_color_manual(values = c(
+  "5" = "#2d0709",
+  "4" = "#740937",
+  "3" = "#da1e28",
+  "2" = "#d02670",
+  "1" = "#ff7eb6",
+  "0" = "#ffafd2"
+  ))+
+  coord_fixed(1.3)+
+  theme_minimal()
+
+```
+
+Most tornadoes happen on the eastern side of the country as shown in @fig-plot1. This shows the regions to check to see if Sharknadoes are possible. The east coast is the best place to start the search. The states that have enough tornadoes, and the states that will be examined, are Florida, South Carolina, and Virginia. 
+
+## Results: Florida
+
+From @fig-plot1, Florida is a place that is on the coast. This would make it possible to pick up a shark in the event of a strong enough tornado. There are enough tornadoes that touched down in Florida over the last 10 years which is a reason Florida is a state that will be analyzed.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-table1
+#| fig-cap: "Florida EF3 - EF5 Tornado Data"
+
+tornado_fl <- read.csv("fl_tornado.csv")
+
+tornado_fl$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_fl$TOR_F_SCALE)
+
+tornado_fl <- tornado_fl|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)
+
+tornado_fl |>
+  gt()
+```
+
+@fig-table1 shows that there have been only 5 EF3 tornadoes in the last 10 years in the state of Florida. Because of an EF3 tornado being the highest EF rating, and it being "likely to toss a car or truck", a tornado in Florida is fairly unlikely to pick up the average great white shark. Having only five EF3 tornadoes in the past 10 years seems like the chances of a Sharknado happening seem pretty slim. Below is a map showing these tornadoes.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-plot2
+#| fig-cap: "Florida EF3 - EF5 Tornado Map"
+
+fl_map <- map_data("state") |>
+  filter(region == "florida")
+
+ggplot() +
+  geom_polygon(data = fl_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_fl,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .7) +
+  scale_color_manual(values = c(
+  "5" = "#2d0709",
+  "4" = "#740937",
+  "3" = "#da1e28",
+  "2" = "#d02670",
+  "1" = "#ff7eb6",
+  "0" = "#ffafd2"
+  ))+
+  coord_fixed(1.3) +
+  theme_minimal()
+```
+
+@fig-plot2 shows a map of Florida showing the five EF3 tornadoes that have occurred in the last 10 years. There is one tornado that shows up close to the water, but looking at the coordinates, it appears on the beach. EF3 tornadoes are likely to toss cars and trucks (@quach_can_2025). Tossing and picking up two different things in this scenario, leading to believe an EF3 tornado is not very likely to fully pick up a great white shark. The EF3 tornadoes can displace the shark if its close enough to land but that is still fairly unlikely.
+
+## Results: South Carolina
+
+A place with similar properties to Florida, having tropical storms frequently and being a coastal state, is South Carolina. The data below gives another state to compare to that is in an area where great white sharks may be present.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-table2
+#| fig-cap: "South Carolina EF3 - EF5 Tornado Data"
+tornado_sc <- read.csv("tornado_SC.csv")
+
+tornado_sc$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_sc$TOR_F_SCALE)
+tornado_sc <- tornado_sc|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
+  filter(
+    TOR_F_SCALE > 2
+  )
+
+tornado_sc |>
+  gt()
+```
+
+South Carolina is similar to Florida from @fig-table2. There are a lot of EF3 tornadoes with one EF4 tornado. But it's in the same boat as Florida; there has been a very limited number of powerful tornadoes over the past 10 years in South Carolina. There have been nine EF3 tornadoes and one EF4 tornado over that span. The surprising thing is that the EF4 and six of the EF3 tornadoes all happened on the same day. But the possibility of a Sharknado is very low because these tornadoes all happened away from the coast. The EF4 happened in Estill and Hampton Counties (@zotero-item-1). Below is a map showing all the tornadoes from South Carolina over the last 10 years.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-plot3
+#| fig-cap: "South Carolina EF3 - EF5 Tornado Map"
+
+sc_map <- map_data("state") |>
+  filter(region == "south carolina")
+
+ggplot() +
+  geom_polygon(data = sc_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_sc,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .7) +
+  scale_color_manual(values = c(
+  "5" = "#2d0709",
+  "4" = "#740937",
+  "3" = "#da1e28",
+  "2" = "#d02670",
+  "1" = "#ff7eb6",
+  "0" = "#ffafd2"
+  ))+
+  coord_fixed(1.3) +
+  theme_minimal()
+```
+
+The EF4 tornado is the main Sharknado threat. As seen in @fig-plot3, all tornadoes EF3 and above only appear on land and are far enough from the coast to have any real threat of a Sharknado. From the evidence from Florida and now South Carolina, a Sharknado is looking less and less possible. The insurance payout risk associated with a Sharknado in South Carolina is negligible.
+
+## Results: Virginia
+
+Another coastal state similar to South Carolina is Virginia. @fig-plot1 shows a plethora of tornadoes in VA over the last 10 years that fit the criteria of EF3 or higher tornadoes to test the potential of a Sharknado. Below is Virginia tornado data from the last 10 years.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-table3
+#| fig-cap: "Virginia EF3 - EF5 Tornado Data"
+tornado_va <- read.csv("virginia_tornado.csv")
+
+tornado_va$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_va$TOR_F_SCALE)
+tornado_va <- tornado_va|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)
+
+tornado_va |>
+  gt()
+```
+
+@fig-table3 shows 5 tornadoes that are only EF3 tornadoes. This looks very similar to Florida's tornado data in @fig-table1. The tornadoes appear to be spread out and not concentrated in one area of the state. Below is a map of the tornadoes for Virginia to get a better idea of where the tornadoes are located.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-plot4
+#| fig-cap: "Virginia EF3 - EF5 Tornado Map"
+
+va_map <- map_data("state") |>
+  filter(region == "virginia")
+
+ggplot() +
+  geom_polygon(data = va_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_va,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .7) +
+  scale_color_manual(values = c(
+  "5" = "#2d0709",
+  "4" = "#740937",
+  "3" = "#da1e28",
+  "2" = "#d02670",
+  "1" = "#ff7eb6",
+  "0" = "#ffafd2"
+  ))+
+  coord_fixed(1.3) +
+  theme_minimal()
+```
+
+From @fig-plot4, there is only one tornado that could have the potential to become a Sharknado. The tornado starts on the land so that limits the chances of it becoming a Sharknado. This is also the same as what happened with the Florida tornado, an EF3 tornado is really only able to toss a car or truck (@quach_can_2025). This makes Virginia an unlikely candidate to have a Sharknado occur, diminishing the risk of an insurance payout. EF3 tornadoes can displace the shark if its close enough to land but that is still fairly unlikely.
+
+## Results: Oklahoma
+
+Oklahoma is known as the tornado capital of the United States. Tornado data from Oklahoma will give a good comparison for the amount of tornadoes that occur at the levels needed to cause a Sharknado.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-table4
+#| fig-cap: "Oklahoma EF3 - EF5 Tornado Data, Ten Highest Tornadoes"
+tornado_ok <- read.csv("tornado_oklahoma.csv")
+
+tornado_ok$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_ok$TOR_F_SCALE)
+tornado_ok <- tornado_ok|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
+  filter(
+    TOR_F_SCALE > 2
+  )|>
+  arrange(desc(TOR_F_SCALE))
+tornado_ok_10 <- head(tornado_ok, n= 10)
+
+tornado_ok_10 |>
+  gt()
+```
+
+From @fig-table4, this displays only the ten highest EF scale tornadoes to hit Oklahoma because there are 27 tornadoes in the EF3 to EF5 rating. The ten highest tornadoes in Oklahoma over the last 10 years have been two EF5 tornadoes, seven EF4 tornadoes, and one EF3 tornado. This data tells that EF5s are a very rare occurrence even for the tornado capital of the country. Sharknado's would be very rare even in a place that gets strong tornadoes at the highest rate in the country. There is no risk of a Sharknado in Oklahoma due to being a land locked state. There is also no insurance payout risk because of this.
+
+## Results: Califorinia & Los Angeles, CA
+
+To make a real connection to the Sharknado movie, examining the actual setting of the movie, which is California and Los Angeles, CA is the next step. The tornadoes recorded in California over the past ten years give a real idea of the possible strength of tornadoes that could hit Los Angeles, to see how it compares to the Sharknado film. The table below shows the top 10 tornadoes in EF scale strength over the last 10 years.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-table5
+#| fig-cap: "California Tornado Data"
+
+tornado_ca <- read.csv("california_tornado.csv")
+
+tornado_ca$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_ca$TOR_F_SCALE)
+tornado_ca <- tornado_ca|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON) |>
+  arrange(desc(TOR_F_SCALE)) |>
+  filter(TOR_F_SCALE %in% c(0,1,2,3,4,5))
+tornado_ca_10 <- head(tornado_ca, n = 10)
+
+tornado_ca_10 |>
+  gt()
+```
+
+@fig-table5 shows the 10 highest tornadoes from the last 10 years in California. There are no tornadoes that are EF3 or higher that have taken place in CA from this table. There are no tornadoes that can pick up a great white shark.
+
+Sharknado takes place in Los Angeles, CA, as the main setting for the movie. Because of this, the table below shows only tornadoes from Los Angeles County. Los Angeles County is where the city of Los Angeles is located.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-table6
+#| fig-cap: "Los Angeles, California Tornado Data"
+tornado_la <- read.csv("tornado_LA.csv")
+
+tornado_la$TOR_F_SCALE <- gsub("[A-Za-z]", "", tornado_la$TOR_F_SCALE)
+tornado_la <- tornado_la|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)
+
+tornado_la|>
+  gt()
+```
+
+All of the tornado data over the last ten years in Los Angeles can be seen in @fig-table6. As shown, there have been only EF0 and EF1 tornadoes to hit Los Angeles over this span of time. By comparing the levels of EF ratings specified before (needing between EF3 - EF5), we can see there is not really a possibility of getting a tornado with wind speeds strong enough to pick up a shark to create a Sharknado. The mph of wind speed needed to lift a shark off the ground is about 200 mph (@salaita_how_nodate). The wind speed of an EF0 tornado is 65 - 85 mph, while an EF1 tornado has wind speeds 86 - 110 mph. This shows us that we are barely able to get to half the wind speed needed to pick a shark up off the ground in Los Angeles. Below is a map showing the tornadoes that occurred in California over the last 10 years.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-plot5
+#| fig-cap: "California Tornado Map"
+
+ca_map <- map_data("state") |>
+  filter(region == "california")
+
+ggplot() +
+  geom_polygon(data = ca_map, 
+               aes(x = long, y = lat, group = group),
+               fill = "gray90", color = "black") +
+  
+  geom_point(data = tornado_ca,
+             aes(x = BEGIN_LON, y = BEGIN_LAT, color = TOR_F_SCALE),
+             size = 2, alpha = .7) +
+  scale_color_manual(values = c(
+  "5" = "#2d0709",
+  "4" = "#740937",
+  "3" = "#da1e28",
+  "2" = "#d02670",
+  "1" = "#ff7eb6",
+  "0" = "#ffafd2"
+  ))+
+  coord_fixed(1.3)+
+  theme_minimal()
+
+```
+
+As seen in @fig-plot5 and @fig-table5, there are no tornadoes strong enough to be able to lift a shark at all over the last 10 years. There are tornadoes that have started along the coast but each one lacked the EF strength needed to lift an object like a shark. As a result, there is no real risk of an insurance payout for a Sharknado in the state of California.
+
+## Results: All States
+
+A stacked bar chart is used to see an easier comparison of all the tornadoes for each location we chose (Florida, South Carolina, Virginia, Oklahoma, California) with an EF scale rating of EF3 to EF5, and compare them to see which locations have the highest possibility of a Sharknado to occur. Note that California only has EF0 and EF1 tornadoes, these will be the only magnitude used in this chart.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-plot6
+#| fig-cap: "Bar Chart for Tornadoes EF3 - EF5 Over Last 10 Years for FL, SC, VA, and OK, All Tornadoes Over Last 10 Years for CA"
+all_tornado <- bind_rows(
+  tornado_fl,
+  tornado_sc,
+  tornado_va,
+  tornado_ok_10,
+  tornado_ca_10
+)
+
+ggplot(all_tornado, aes(x = STATE_ABBR, fill = factor(TOR_F_SCALE))) +
+  geom_bar(color = "black")+
+    scale_fill_manual(
+    name = "Tornado Strength",
+  values = c(
+  "5" = "#2d0709",
+  "4" = "#740937",
+  "3" = "#da1e28",
+  "2" = "#d02670",
+  "1" = "#ff7eb6",
+  "0" = "#ffafd2"
+  ) ,
+  labels = c("EF0","EF1","EF3","EF4","EF5")
+  ) +
+  scale_y_continuous(breaks = seq(0, 10,by = 2)) +
+  theme_minimal() #outline in black, paired color scheme
+```
+
+@fig-plot6 allows us to look at the strength of each location's tornadoes on the EF scale compared to each other. The wind speed needed to lift a shark off the ground is 200 mph (@salaita_how_nodate). An EF3 tornado has wind speeds of 136-165 mph, an EF4 tornado has speeds between 166-200 mph, and an EF5 tornado has wind speeds that are over 200 mph. This means that an EF4 or EF5 tornado is only strong enough to lift a shark off the ground. It is shown that there have only been two tornadoes in the last ten years that have been strong enough to have wind speeds of 200 mph or more. So there were only two tornadoes that were strong enough to be able to pick up a shark, but they happened in Oklahoma. That means there is no chance that there is a possibility that a Sharknado can happen in Florida, South Carolina, or Los Angeles. 
+
+But in Oklahoma, there might be a possibility of a Sharknado. At the Oklahoma Aquarium in Jenks, OK, there is Shark Adventure, which is home to ten of the "most dangerous sharks known to man" (@noauthor_shark_nodate). These sharks are bull sharks. Jenks, OK, is in Tulsa County, so looking at  tornadoes over the last 10 years for Tulsa County, Oklahoma will give an insight into this possibility.
+
+```{r, message=FALSE, warning=FALSE}
+#| echo: false
+#| label: fig-table7
+#| fig-cap: "Tulsa County, OK Tornado Data"
+tulsa <- read.csv("tulsa_ok.csv")
+tulsa$TOR_F_SCALE <- gsub("[A-Za-z]", "", tulsa$TOR_F_SCALE)
+tulsa <- tulsa|>
+  select(STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON)|>
+  arrange(desc(TOR_F_SCALE))
+tulsa <- head(tulsa, n= 10)
+
+tulsa |>
+  gt()
+```
+
+@fig-table7 shows all tornadoes that have gone through Tulsa County, Oklahoma, and shows that these tornadoes don't reach EF3 or higher at all. But Bull Sharks only weigh around 500 lbs (@noauthor_bull_nodate). This means that they are much easier for a tornado to lift up than a great white shark. An EF2 tornado has the strength to slightly move houses off their foundations and destroy mobile homes (@noauthor_weighty_2025). If an EF2 tornado went through the Oklahoma Aquarium in Jenks and destroyed the aquarium, it could potentially pick up sharks from the "most dangerous sharks known to man" exhibit to create a real-life Sharknado. Thinking of this logic, this could also apply to a lot of other aquariums throughout the country. But the chances of this happening are relatively low. The last time a tornado hit an aquarium was in 2024 when an EF1 tornado went through the Pittsburgh Zoo & Aquarium (@noauthor_pittsburgh_2024). This only resulted in little damage to the property and some trees being knocked over. This means that an EF1 tornado going through a zoo/aquarium will not cause enough damage to destroy buildings and have wind speeds strong enough to pick up objects as heavy as a shark. Thinking about the possibility of a Sharknado is pretty slim when there is a record of a tornado that went through an aquarium; there was still no chance.
+
+With the insurance payout possibilities in mind, storms and tornadoes that are not shark-infested will still cause property damage. Storms and tornadoes with high wind speeds and storms with varying precipitation types and amounts are still possible and can still cause massive amounts of property damage. Sharknados may be out of the picture, but there are many other ways that weather-related events can cause property damage.

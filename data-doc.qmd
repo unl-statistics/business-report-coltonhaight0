@@ -1,0 +1,31 @@
+# Data Documentation
+
+The data used for this analysis was collected from the National Oceanic and Atmospheric Administrations (NOAA) Storm Events Database. NOAA is a very credible as being recognized by the U.S. Department of Commerce as an agency that "enriches life through science" and "supports economic vitality and effect over one third of America's gross domestic product" (@NationalOceanicAtmospheric2026).
+
+From NOAA Storm Events Database, tornado data was collected for Florida, South Carolina, Virginia, Oklahoma, California, and Los Angeles County, CA. Florida, South Carolina, and Viginia were selected for being coastal states and the amount of EF3 and higher tornadoes that occur close to the coast. Oklahoma was selected to see the frequency of high magnitude tornadoes (EF4 & EF5). Califorina and Los Angeles County, CA were selected for being the state and city setting of the movie "Sharknado" (@SharknadoTVMovie).
+
+All tornado data was collect from 2015 to 2026 to analyze the recency of tornadoes as climate change has started to cause more severe weather events.
+
+The NOAA tornado data collected consists of:
+
+EVENT_ID, CZ_NAME_STR, BEGIN_LOCATION, BEGIN_DATE, BEGIN_TIME, EVENT_TYPE, MAGNITUDE, TOR_F_SCALE, DEATHS_DIRECT, INJURIES_DIRECT, DAMAGE_PROPERTY_NUM, DAMAGE_CROPS_NUM, STATE_ABBR, CZ_TIMEZONE, MAGNITUDE_TYPE, EPISODE_ID, CZ_TYPE, CZ_FIPS, WFO, INJURIES_INDIRECT, DEATHS_INDIRECT, SOURCE, FLOOD_CAUSE, TOR_LENGTH, TOR_WIDTH, BEGIN_RANGE, BEGIN_AZIMUTH, END_LOCATION, END_DATE, END_TIME, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON, EVENT_NARRATIVE, EPISODE_NARRATIVE, and ABSOLUTE_ROWNUMBER
+
+The NOAA tornado data was filtered down to include STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON. Tornadoes F scale was filtered down to just the number to be able to give a real number value to compare better.
+
+The main components of data used in the analysis are below:
+
+| Column Name | Data Type | Data Format | Description | Example |
+|---------------|:--------------|:--------------|:--------------|:--------------|
+| STATE_ABBR | Character | Text | Two Letter abbreviation of the US state where event occurred | FL |
+| EVENT_TYPE | Character | Text | Recorded weather event in data | Tornado |
+| TOR_F_SCALE | Character | Text. | EF scale rating of tornado in the data | 3 |
+| BEGIN_LAT | dbl | Numeric | Beginning Latitude coordinate of the tornado | 30.8707 |
+| BEGIN_LON | dbl | Numeric | Beginning Longitude coordinate of the tornado | -87.3810 |
+
+All data was analyzed using the programming software R and these following R packages:
+
+-   `tidyverse`: data cleaning, data manipulation, and table formulation
+
+-   `gt`: to make better looking tables
+
+-   `maps`: make maps of United States for tornado data

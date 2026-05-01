@@ -1,49 +1,26 @@
-# Preface {.unnumbered}
+# Executive Summary
 
-You are a data scientist for a mid-sized business, in a small group of 3-4 data scientists. You've been tasked with creating a report evaluating a scenario for your business. 
-Your colleagues will also be evaluating the same scenario, and your reports will be used in aggregate to determine a consensus (or lack thereof) on the company's action. 
-The reports will also be used to inform downsizing that is rumored to be coming - you want to ensure your report is better than your peers so that you aren't as easy to cut. 
+## Purpose of Report
 
-You may talk to your peers who are assigned the same scenario, but you do not want to collaborate too closely, lest you both become targets of the rumored layoffs. 
+This study dives into the possibility of a Sharknado event. A Sharknado can be explained as a "shark-infested tornado". This is a tornado that generates enough wind speed to lift a great white shark from the water and into its vortex. The purpose of this study is to assess whether a Sharknado event could be considered a risk for property damage insurance payouts.
 
+## Methods
 
----
+To start, a comparison of the weight of a great white shark (around 4500 lbs) and vehicles (around 4000 - 4600 lbs for SUVs and Trucks) is used because cars are known to be lifted and destroyed by tornadoes. Using the EF (Enhanced Fujita) Scale, the strength of tornadoes able to lift and toss cars (or a great white shark) is found to be between EF3 - EF5 tornadoes. These are wind speeds of 136 mph to 200+ mph. This study will only be looking at tornadoes of EF3 - EF5 for this reason. This study also looks at four locations of tornado data from 2015 to 2026. These locations are Florida, South Carolina, Virginia, Oklahoma, California, and Los Angeles County, CA. These places were chosen because of their abundant tropical storms and coastal area (Florida and South Carolina), historic tornado amounts and strength (Oklahoma), and the setting of the movie Sharknado (Los Angeles, CA).
 
-I've scaffolded this report for you to make this process easier - as we talk about different sections of a report in class and read about how to create similar sections, you will practice by writing the equivalent section of your report.
+## Findings
 
+Tornadoes of strength EF3 - EF5 are fairly uncommon for coastal states like Florida and South Carolina. Florida had only five tornadoes in the last 10 years that were of strength EF3, and zero EF4 and EF5 tornadoes. All but one of these tornadoes started and ended on land. The one tornado started on a beach in Florida, where the water is not deep enough for sharks. South Carolina had nine EF3 and one EF4 tornado over the last 10 years. All of these tornadoes started and stayed on land, making a Sharknado impossible. Virginia had five EF3 tornadoes that all happened on land. Oklahoma has had plenty of tornadoes strong enough to lift and carry a shark, but there are no sharks in Oklahoma besides those in the Oklahoma Aquarium in Jenks, OK. California has not had a tornado above an EF2 over the last 10 years.
 
-The basic steps for this task are as follows:
+## Conclusions
 
-- Identify the research question from the business question
+The probability of a Sharknado event is extremely low, if not a zero percent chance. There was one tornado in the three coastal states that might have had the ability to lift a shark. This South Carolina tornado happened to start and end on land, making a Sharknado impossible. The Oklahoma Aquarium houses sharks in a state that is known for its number and strength of tornadoes. The Oklahoma Aquarium is in Tulsa County, OK, where only EF2 or lower tornadoes have touched down in the last 10 years, rendering this very improbable. From the findings of this study, the probability of a Sharknado happening is almost, if not, a zero percent chance.
 
-- Identify data set(s) which are (1) publicly available (you don't have a budget to pay for private data) and (2) relevant to your task
+::: callout-note
+## Recommendations
 
-    - (HW Week 6) Document your data sets in `draft-data-doc.qmd`
-
-- Conduct a statistical analysis to support your answer to your research and business questions
-
-    - Write a methods section for your business report corresponding to your statistical analysis
-
-    - (HW Week 9) Draft of results section of business report with relevant graphics/visual aids in `draft-results.qmd`
-    
-- Write your report
-
-    - (HW Week 10) Draft of Intro/Conclusion sections in `draft-intro-conclusions.qmd`
-    
-    - (HW Week 11) Draft of Executive summary section in `draft-exec-summary.qmd`
-    
-- Revise your report
-
-    - (HW Week 12 -- not turned in) Revise your report
-    
-    - (HW Week 13) - Rough draft of report due. Create one or more qmd files for your report (you can overwrite or delete intro.qmd and summary.qmd), include the names of each file (in order) in `_quarto.yml`. You should use references (edit references.bib and use pandoc citations). Make sure your report compiles and looks reasonable in both html and pdf. 
-    
-    - Develop a presentation to go along with your report (Week 13). Create slides for your report using quarto. 
-
-- Peer revise reports
-
-    - Peer revise reports
-    
-    - (HW Week 14) - Make edits to your report from comments received from peer review
-
-- Final report & presentation due
+-   Sharknados are extremely unlikely and effectively have a zero percent chance of occurring.
+-   Extreme weather like strong storms and tornadoes still pose real threat from precipitation and high winds.
+-   Insurance payouts and damages are caused by these extreme weather events across the country.
+-   More insurance risk focus should go on the common and extreme weather events rather than focusing on a highly unlikely event like a Sharknado.
+:::

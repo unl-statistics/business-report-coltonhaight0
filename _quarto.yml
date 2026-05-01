@@ -10,7 +10,10 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
+    - data-doc.qmd
+    - methods.qmd
+    - results.qmd
+    - conclusion.qmd
     - references.qmd
   appendices:
     - draft-data-doc.qmd
@@ -24,8 +27,5 @@ format:
   html:
     highlight-style: a11y
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
-
 
 

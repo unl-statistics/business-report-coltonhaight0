@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2&nbsp; Summary – Evaluation of Sharknado!</title>
+<title>3&nbsp; Data Documentation – Evaluation of Sharknado!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./methods.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./summary.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data-doc.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Documentation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -109,19 +129,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Executive Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+  <a href="./data-doc.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Documentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./methods.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methods</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -178,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Data Documentation</span></h1>
 </div>
 
 
@@ -195,9 +233,84 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In summary, this book has no content whatsoever.</p>
+<p>The data used for this analysis was collected from the National Oceanic and Atmospheric Administrations (NOAA) Storm Events Database. NOAA is a very credible as being recognized by the U.S. Department of Commerce as an agency that “enriches life through science” and “supports economic vitality and effect over one third of America’s gross domestic product” (<span class="citation" data-cites="NationalOceanicAtmospheric2026">Department of Commerce (<a href="references.html#ref-NationalOceanicAtmospheric2026" role="doc-biblioref">2026</a>)</span>).</p>
+<p>From NOAA Storm Events Database, tornado data was collected for Florida, South Carolina, Virginia, Oklahoma, California, and Los Angeles County, CA. Florida, South Carolina, and Viginia were selected for being coastal states and the amount of EF3 and higher tornadoes that occur close to the coast. Oklahoma was selected to see the frequency of high magnitude tornadoes (EF4 &amp; EF5). Califorina and Los Angeles County, CA were selected for being the state and city setting of the movie “Sharknado” (<span class="citation" data-cites="SharknadoTVMovie">IMDb (<a href="references.html#ref-SharknadoTVMovie" role="doc-biblioref">2013</a>)</span>).</p>
+<p>All tornado data was collect from 2015 to 2026 to analyze the recency of tornadoes as climate change has started to cause more severe weather events.</p>
+<p>The NOAA tornado data collected consists of:</p>
+<p>EVENT_ID, CZ_NAME_STR, BEGIN_LOCATION, BEGIN_DATE, BEGIN_TIME, EVENT_TYPE, MAGNITUDE, TOR_F_SCALE, DEATHS_DIRECT, INJURIES_DIRECT, DAMAGE_PROPERTY_NUM, DAMAGE_CROPS_NUM, STATE_ABBR, CZ_TIMEZONE, MAGNITUDE_TYPE, EPISODE_ID, CZ_TYPE, CZ_FIPS, WFO, INJURIES_INDIRECT, DEATHS_INDIRECT, SOURCE, FLOOD_CAUSE, TOR_LENGTH, TOR_WIDTH, BEGIN_RANGE, BEGIN_AZIMUTH, END_LOCATION, END_DATE, END_TIME, BEGIN_LAT, BEGIN_LON, END_LAT, END_LON, EVENT_NARRATIVE, EPISODE_NARRATIVE, and ABSOLUTE_ROWNUMBER</p>
+<p>The NOAA tornado data was filtered down to include STATE_ABBR, EVENT_TYPE, TOR_F_SCALE, BEGIN_LAT, BEGIN_LON. Tornadoes F scale was filtered down to just the number to be able to give a real number value to compare better.</p>
+<p>The main components of data used in the analysis are below:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th style="text-align: left;">Data Type</th>
+<th style="text-align: left;">Data Format</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>STATE_ABBR</td>
+<td style="text-align: left;">Character</td>
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">Two Letter abbreviation of the US state where event occurred</td>
+<td style="text-align: left;">FL</td>
+</tr>
+<tr class="even">
+<td>EVENT_TYPE</td>
+<td style="text-align: left;">Character</td>
+<td style="text-align: left;">Text</td>
+<td style="text-align: left;">Recorded weather event in data</td>
+<td style="text-align: left;">Tornado</td>
+</tr>
+<tr class="odd">
+<td>TOR_F_SCALE</td>
+<td style="text-align: left;">Character</td>
+<td style="text-align: left;">Text.</td>
+<td style="text-align: left;">EF scale rating of tornado in the data</td>
+<td style="text-align: left;">3</td>
+</tr>
+<tr class="even">
+<td>BEGIN_LAT</td>
+<td style="text-align: left;">dbl</td>
+<td style="text-align: left;">Numeric</td>
+<td style="text-align: left;">Beginning Latitude coordinate of the tornado</td>
+<td style="text-align: left;">30.8707</td>
+</tr>
+<tr class="odd">
+<td>BEGIN_LON</td>
+<td style="text-align: left;">dbl</td>
+<td style="text-align: left;">Numeric</td>
+<td style="text-align: left;">Beginning Longitude coordinate of the tornado</td>
+<td style="text-align: left;">-87.3810</td>
+</tr>
+</tbody>
+</table>
+<p>All data was analyzed using the programming software R and these following R packages:</p>
+<ul>
+<li><p><code>tidyverse</code>: data cleaning, data manipulation, and table formulation</p></li>
+<li><p><code>gt</code>: to make better looking tables</p></li>
+<li><p><code>maps</code>: make maps of United States for tornado data</p></li>
+</ul>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-NationalOceanicAtmospheric2026" class="csl-entry" role="listitem">
+Department of Commerce, U. S. 2026. <span>“National Oceanic and Atmospheric Administration <span></span> u.s. Department of Commerce.”</span> January 23, 2026. <a href="https://www.commerce.gov/bureaus-and-offices/noaa">https://www.commerce.gov/bureaus-and-offices/noaa</a>.
+</div>
+<div id="ref-SharknadoTVMovie" class="csl-entry" role="listitem">
+IMDb, Sharknado. 2013. <span>“Sharknado (<span>TV</span> Movie 2013) - Filming &amp; Production - <span>IMDb</span>.”</span> July 11, 2013. <a href="https://www.imdb.com/title/tt2724064/locations/">https://www.imdb.com/title/tt2724064/locations/</a>.
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -623,12 +736,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./methods.html" class="pagination-link" aria-label="Methods">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methods</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
