@@ -15,7 +15,7 @@ The NOAA tornado data was filtered down to include STATE_ABBR, EVENT_TYPE, TOR_F
 The main components of data used in the analysis are below:
 
 | Column Name | Data Type | Data Format | Description | Example |
-|---------------|:--------------|:--------------|:--------------|:--------------|
+|----|:---|:---|:---|:---|
 | STATE_ABBR | Character | Text | Two Letter abbreviation of the US state where event occurred | FL |
 | EVENT_TYPE | Character | Text | Recorded weather event in data | Tornado |
 | TOR_F_SCALE | Character | Text. | EF scale rating of tornado in the data | 3 |
